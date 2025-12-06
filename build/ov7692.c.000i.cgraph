@@ -1,0 +1,2813 @@
+Trivially needed symbols: sensor_register/162
+
+
+Initial Symbol table:
+
+snprintf/167 (snprintf) @0636ab28
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: dump_registers/144 
+  Calls: 
+printf/166 (printf) @0636aa80
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: dump_registers/144 
+  Calls: 
+MXC_Delay/165 (MXC_Delay) @0636a9d8
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: reset/145 
+  Calls: 
+sccb_write_byt/164 (sccb_write_byt) @0636a930
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: reset/145 reset/145 sleep/146 write_reg/148 set_pixformat/149 set_pixformat/149 set_pixformat/149 set_pixformat/149 set_framesize/151 set_framesize/151 set_framesize/151 set_framesize/151 set_framesize/151 set_framesize/151 set_framesize/151 set_framesize/151 set_windowing/152 set_windowing/152 set_windowing/152 set_windowing/152 set_windowing/152 set_windowing/152 set_windowing/152 set_windowing/152 set_windowing/152 set_windowing/152 set_windowing/152 set_windowing/152 set_windowing/152 set_windowing/152 set_windowing/152 set_windowing/152 set_contrast/153 set_contrast/153 set_contrast/153 set_contrast/153 set_contrast/153 set_contrast/153 set_contrast/153 set_contrast/153 set_contrast/153 set_contrast/153 set_contrast/153 set_contrast/153 set_contrast/153 set_contrast/153 set_contrast/153 set_contrast/153 set_contrast/153 set_contrast/153 set_contrast/153 set_contrast/153 set_brightness/154 set_brightness/154 set_brightness/154 set_brightness/154 set_brightness/154 set_brightness/154 set_brightness/154 set_brightness/154 set_brightness/154 set_brightness/154 set_brightness/154 set_brightness/154 set_brightness/154 set_brightness/154 set_brightness/154 set_gainceiling/156 set_gainceiling/156 set_gainceiling/156 set_gainceiling/156 set_gainceiling/156 set_gainceiling/156 set_gainceiling/156 set_colorbar/157 set_hmirror/158 set_vflip/160 set_negateimage/159 set_negateimage/159 set_negateimage/159 set_negateimage/159 set_negateimage/159 set_negateimage/159 set_negateimage/159 set_negateimage/159 set_negateimage/159 set_negateimage/159 
+  Calls: 
+sccb_read_byt/163 (sccb_read_byt) @0636a888
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: get_product_id/142 get_product_id/142 get_manufacture_id/143 get_manufacture_id/143 dump_registers/144 reset/145 sleep/146 read_reg/147 set_gainceiling/156 set_colorbar/157 set_hmirror/158 set_vflip/160 get_luminance/161 get_luminance/161 get_luminance/161 
+  Calls: 
+sensor_register/162 (sensor_register) @0636a7e0
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @01c61e00
+  References: init/140 (addr) get_slave_address/141 (addr) get_product_id/142 (addr) get_manufacture_id/143 (addr) dump_registers/144 (addr) reset/145 (addr) sleep/146 (addr) read_reg/147 (addr) write_reg/148 (addr) set_pixformat/149 (addr) get_pixformat/150 (addr) set_framesize/151 (addr) set_windowing/152 (addr) set_contrast/153 (addr) set_brightness/154 (addr) set_saturation/155 (addr) set_gainceiling/156 (addr) set_colorbar/157 (addr) set_hmirror/158 (addr) set_vflip/160 (addr) set_negateimage/159 (addr) get_luminance/161 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+get_luminance/161 (get_luminance) @0636a690
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  Aux: @0636a150
+  References: g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) 
+  Referring: sensor_register/162 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: sccb_read_byt/163 sccb_read_byt/163 sccb_read_byt/163 
+set_vflip/160 (set_vflip) @0636a348
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  Aux: @0636a000
+  References: g_slv_addr/137 (read) g_slv_addr/137 (read) 
+  Referring: sensor_register/162 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: sccb_write_byt/164 sccb_read_byt/163 
+set_negateimage/159 (set_negateimage) @0636a150
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  Aux: @0636a348
+  References: g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) 
+  Referring: sensor_register/162 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 
+set_hmirror/158 (set_hmirror) @0636a000
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  Aux: @0635edc8
+  References: g_slv_addr/137 (read) g_slv_addr/137 (read) 
+  Referring: sensor_register/162 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: sccb_write_byt/164 sccb_read_byt/163 
+set_colorbar/157 (set_colorbar) @0635edc8
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  Aux: @0635ebd0
+  References: g_slv_addr/137 (read) g_slv_addr/137 (read) 
+  Referring: sensor_register/162 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: sccb_write_byt/164 sccb_read_byt/163 
+set_gainceiling/156 (set_gainceiling) @0635ebd0
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  Aux: @0635e9d8
+  References: g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) 
+  Referring: sensor_register/162 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_read_byt/163 
+set_saturation/155 (set_saturation) @0635e9d8
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  Aux: @0635e888
+  References: 
+  Referring: sensor_register/162 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: 
+set_brightness/154 (set_brightness) @0635e888
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  Aux: @0635e738
+  References: g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) 
+  Referring: sensor_register/162 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 
+set_contrast/153 (set_contrast) @0635e738
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  Aux: @0635e5e8
+  References: g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) 
+  Referring: sensor_register/162 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 
+set_windowing/152 (set_windowing) @0635e5e8
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  Aux: @0635e1f8
+  References: g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) 
+  Referring: sensor_register/162 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 
+set_framesize/151 (set_framesize) @0635e1f8
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  Aux: @0635e0a8
+  References: g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) 
+  Referring: sensor_register/162 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 
+get_pixformat/150 (get_pixformat) @0635e0a8
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  Aux: @06355f18
+  References: g_pixelformat/138 (read) 
+  Referring: sensor_register/162 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: 
+set_pixformat/149 (set_pixformat) @06355f18
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  Aux: @06355b28
+  References: g_pixelformat/138 (write) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) 
+  Referring: sensor_register/162 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 
+write_reg/148 (write_reg) @06355b28
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  Aux: @063559d8
+  References: g_slv_addr/137 (read) 
+  Referring: sensor_register/162 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: sccb_write_byt/164 
+read_reg/147 (read_reg) @063559d8
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  Aux: @06355888
+  References: g_slv_addr/137 (read) 
+  Referring: sensor_register/162 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: sccb_read_byt/163 
+sleep/146 (sleep) @06355888
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  Aux: @06355690
+  References: g_slv_addr/137 (read) g_slv_addr/137 (read) 
+  Referring: sensor_register/162 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: sccb_write_byt/164 sccb_read_byt/163 
+reset/145 (reset) @06355690
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  Aux: @063553f0
+  References: g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) default_regs/139 (read) default_regs/139 (read) default_regs/139 (read) 
+  Referring: sensor_register/162 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: sccb_write_byt/164 MXC_Delay/165 sccb_read_byt/163 sccb_write_byt/164 
+dump_registers/144 (dump_registers) @063553f0
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  Aux: @063552a0
+  References: g_slv_addr/137 (read) 
+  Referring: sensor_register/162 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: snprintf/167 sccb_read_byt/163 printf/166 
+get_manufacture_id/143 (get_manufacture_id) @063552a0
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  Aux: @06355000
+  References: g_slv_addr/137 (read) g_slv_addr/137 (read) 
+  Referring: sensor_register/162 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: sccb_read_byt/163 sccb_read_byt/163 
+get_product_id/142 (get_product_id) @06355000
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  Aux: @06313dc8
+  References: g_slv_addr/137 (read) g_slv_addr/137 (read) 
+  Referring: sensor_register/162 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: sccb_read_byt/163 sccb_read_byt/163 
+get_slave_address/141 (get_slave_address) @06313dc8
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  Aux: @06313c78
+  References: g_slv_addr/137 (read) 
+  Referring: sensor_register/162 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: 
+init/140 (init) @06313c78
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  Aux: @01c61e00
+  References: g_slv_addr/137 (write) g_slv_addr/137 (read) 
+  Referring: sensor_register/162 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: 
+default_regs/139 (default_regs) @0625ae10
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  Aux: @063553f0
+  References: 
+  Referring: reset/145 (read) reset/145 (read) reset/145 (read) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+g_pixelformat/138 (g_pixelformat) @0625ad80
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  Aux: @06355f18
+  References: 
+  Referring: get_pixformat/150 (read) set_pixformat/149 (write) 
+  Availability: not-ready
+  Varpool flags: initialized
+g_slv_addr/137 (g_slv_addr) @0625ad38
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0636a150
+  References: 
+  Referring: get_luminance/161 (read) get_luminance/161 (read) get_luminance/161 (read) set_negateimage/159 (read) set_negateimage/159 (read) set_negateimage/159 (read) set_negateimage/159 (read) set_negateimage/159 (read) set_negateimage/159 (read) set_negateimage/159 (read) set_negateimage/159 (read) set_negateimage/159 (read) set_negateimage/159 (read) set_vflip/160 (read) set_vflip/160 (read) set_hmirror/158 (read) set_hmirror/158 (read) set_colorbar/157 (read) set_colorbar/157 (read) set_gainceiling/156 (read) set_gainceiling/156 (read) set_gainceiling/156 (read) set_gainceiling/156 (read) set_gainceiling/156 (read) set_gainceiling/156 (read) set_gainceiling/156 (read) set_gainceiling/156 (read) set_brightness/154 (read) set_brightness/154 (read) set_brightness/154 (read) set_brightness/154 (read) set_brightness/154 (read) set_brightness/154 (read) set_brightness/154 (read) set_brightness/154 (read) set_brightness/154 (read) set_brightness/154 (read) set_brightness/154 (read) set_brightness/154 (read) set_brightness/154 (read) set_brightness/154 (read) set_brightness/154 (read) set_contrast/153 (read) set_contrast/153 (read) set_contrast/153 (read) set_contrast/153 (read) set_contrast/153 (read) set_contrast/153 (read) set_contrast/153 (read) set_contrast/153 (read) set_contrast/153 (read) set_contrast/153 (read) set_contrast/153 (read) set_contrast/153 (read) set_contrast/153 (read) set_contrast/153 (read) set_contrast/153 (read) set_contrast/153 (read) set_contrast/153 (read) set_contrast/153 (read) set_contrast/153 (read) set_contrast/153 (read) set_windowing/152 (read) set_windowing/152 (read) set_windowing/152 (read) set_windowing/152 (read) set_windowing/152 (read) set_windowing/152 (read) set_windowing/152 (read) set_windowing/152 (read) set_windowing/152 (read) set_windowing/152 (read) set_windowing/152 (read) set_windowing/152 (read) set_windowing/152 (read) set_windowing/152 (read) set_windowing/152 (read) set_windowing/152 (read) set_framesize/151 (read) set_framesize/151 (read) set_framesize/151 (read) set_framesize/151 (read) set_framesize/151 (read) set_framesize/151 (read) set_framesize/151 (read) set_framesize/151 (read) set_pixformat/149 (read) set_pixformat/149 (read) set_pixformat/149 (read) set_pixformat/149 (read) write_reg/148 (read) read_reg/147 (read) sleep/146 (read) sleep/146 (read) reset/145 (read) reset/145 (read) reset/145 (read) dump_registers/144 (read) get_manufacture_id/143 (read) get_manufacture_id/143 (read) get_product_id/142 (read) get_product_id/142 (read) get_slave_address/141 (read) init/140 (write) init/140 (read) 
+  Availability: not-ready
+  Varpool flags:
+ITM_CheckChar/136 (ITM_CheckChar) @06309738
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+ITM_ReceiveChar/135 (ITM_ReceiveChar) @063095e8
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+ITM_SendChar/134 (ITM_SendChar) @06309498
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+SysTick_Config/133 (SysTick_Config) @06309150
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+SCB_GetFPUType/132 (SCB_GetFPUType) @06309000
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+ARM_MPU_Load/131 (ARM_MPU_Load) @06300540
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+ARM_MPU_OrderedMemcpy/130 (ARM_MPU_OrderedMemcpy) @06300e70
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+ARM_MPU_SetRegionEx/129 (ARM_MPU_SetRegionEx) @06300d20
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+ARM_MPU_SetRegion/128 (ARM_MPU_SetRegion) @06300bd0
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+ARM_MPU_ClrRegion/127 (ARM_MPU_ClrRegion) @06300a80
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+ARM_MPU_Disable/126 (ARM_MPU_Disable) @06300930
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+ARM_MPU_Enable/125 (ARM_MPU_Enable) @063007e0
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__NVIC_SystemReset/124 (__NVIC_SystemReset) @062fb000
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__NVIC_GetVector/123 (__NVIC_GetVector) @062f3e70
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__NVIC_SetVector/122 (__NVIC_SetVector) @062f3d20
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+NVIC_DecodePriority/121 (NVIC_DecodePriority) @062f3bd0
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+NVIC_EncodePriority/120 (NVIC_EncodePriority) @062f3a80
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__NVIC_GetPriority/119 (__NVIC_GetPriority) @062f3930
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__NVIC_SetPriority/118 (__NVIC_SetPriority) @062f37e0
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__NVIC_GetActive/117 (__NVIC_GetActive) @062f3690
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__NVIC_ClearPendingIRQ/116 (__NVIC_ClearPendingIRQ) @062f3540
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__NVIC_SetPendingIRQ/115 (__NVIC_SetPendingIRQ) @062f33f0
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__NVIC_GetPendingIRQ/114 (__NVIC_GetPendingIRQ) @062f32a0
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__NVIC_DisableIRQ/113 (__NVIC_DisableIRQ) @062f3150
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__NVIC_GetEnableIRQ/112 (__NVIC_GetEnableIRQ) @062f3000
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__NVIC_EnableIRQ/111 (__NVIC_EnableIRQ) @062d8e70
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__NVIC_GetPriorityGrouping/110 (__NVIC_GetPriorityGrouping) @062d8d20
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__NVIC_SetPriorityGrouping/109 (__NVIC_SetPriorityGrouping) @062d8bd0
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__SMMLA/108 (__SMMLA) @0629df18
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__QSUB/107 (__QSUB) @0629ddc8
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__QADD/106 (__QADD) @0629dc78
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__SEL/105 (__SEL) @0629db28
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__SMLSLDX/104 (__SMLSLDX) @0629d9d8
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__SMLSLD/103 (__SMLSLD) @0629d888
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__SMLSDX/102 (__SMLSDX) @0629d738
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__SMLSD/101 (__SMLSD) @0629d5e8
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__SMUSDX/100 (__SMUSDX) @0629d498
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__SMUSD/99 (__SMUSD) @0629d348
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__SMLALDX/98 (__SMLALDX) @0629d1f8
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__SMLALD/97 (__SMLALD) @0629d0a8
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__SMLADX/96 (__SMLADX) @06296f18
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__SMLAD/95 (__SMLAD) @06296dc8
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__SMUADX/94 (__SMUADX) @06296c78
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__SMUAD/93 (__SMUAD) @06296b28
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__SXTAB16_RORn/92 (__SXTAB16_RORn) @062969d8
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__SXTAB16/91 (__SXTAB16) @06296888
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__SXTB16_RORn/90 (__SXTB16_RORn) @06296738
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__SXTB16/89 (__SXTB16) @062965e8
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__UXTAB16/88 (__UXTAB16) @06296498
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__UXTB16/87 (__UXTB16) @06296348
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__USADA8/86 (__USADA8) @062960a8
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__USAD8/85 (__USAD8) @06291f18
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__UHSAX/84 (__UHSAX) @06291dc8
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__UQSAX/83 (__UQSAX) @06291c78
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__USAX/82 (__USAX) @06291b28
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__SHSAX/81 (__SHSAX) @062919d8
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__QSAX/80 (__QSAX) @06291888
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__SSAX/79 (__SSAX) @06291738
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__UHASX/78 (__UHASX) @062915e8
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__UQASX/77 (__UQASX) @06291498
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__UASX/76 (__UASX) @06291348
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__SHASX/75 (__SHASX) @062911f8
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__QASX/74 (__QASX) @062910a8
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__SASX/73 (__SASX) @06286f18
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__UHSUB16/72 (__UHSUB16) @06286dc8
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__UQSUB16/71 (__UQSUB16) @06286c78
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__USUB16/70 (__USUB16) @06286b28
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__SHSUB16/69 (__SHSUB16) @062869d8
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__QSUB16/68 (__QSUB16) @06286888
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__SSUB16/67 (__SSUB16) @06286738
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__UHADD16/66 (__UHADD16) @062865e8
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__UQADD16/65 (__UQADD16) @06286498
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__UADD16/64 (__UADD16) @06286348
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__SHADD16/63 (__SHADD16) @062861f8
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__QADD16/62 (__QADD16) @062860a8
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__SADD16/61 (__SADD16) @06284f18
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__UHSUB8/60 (__UHSUB8) @06284dc8
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__UQSUB8/59 (__UQSUB8) @06284c78
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__USUB8/58 (__USUB8) @06284b28
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__SHSUB8/57 (__SHSUB8) @062849d8
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__QSUB8/56 (__QSUB8) @06284888
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__SSUB8/55 (__SSUB8) @06284738
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__UHADD8/54 (__UHADD8) @062845e8
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__UQADD8/53 (__UQADD8) @06284498
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__UADD8/52 (__UADD8) @06284348
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__SHADD8/51 (__SHADD8) @062841f8
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__QADD8/50 (__QADD8) @062840a8
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__SADD8/49 (__SADD8) @0627ef18
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__set_FPSCR/48 (__set_FPSCR) @0627edc8
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__get_FPSCR/47 (__get_FPSCR) @0627ec78
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__set_FAULTMASK/46 (__set_FAULTMASK) @0627eb28
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__get_FAULTMASK/45 (__get_FAULTMASK) @0627e9d8
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__set_BASEPRI_MAX/44 (__set_BASEPRI_MAX) @0627e888
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__set_BASEPRI/43 (__set_BASEPRI) @0627e738
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__get_BASEPRI/42 (__get_BASEPRI) @0627e5e8
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__disable_fault_irq/41 (__disable_fault_irq) @0627e498
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__enable_fault_irq/40 (__enable_fault_irq) @0627e348
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__set_PRIMASK/39 (__set_PRIMASK) @0627e1f8
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__get_PRIMASK/38 (__get_PRIMASK) @0627e0a8
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__set_MSP/37 (__set_MSP) @06277f18
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__get_MSP/36 (__get_MSP) @06277dc8
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__set_PSP/35 (__set_PSP) @06277c78
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__get_PSP/34 (__get_PSP) @06277b28
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__get_xPSR/33 (__get_xPSR) @062779d8
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__get_APSR/32 (__get_APSR) @06277888
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__get_IPSR/31 (__get_IPSR) @06277738
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__set_CONTROL/30 (__set_CONTROL) @062775e8
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__get_CONTROL/29 (__get_CONTROL) @06277498
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__disable_irq/28 (__disable_irq) @06277348
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__enable_irq/27 (__enable_irq) @062771f8
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__STRT/26 (__STRT) @062770a8
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__STRHT/25 (__STRHT) @06271f18
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__STRBT/24 (__STRBT) @06271dc8
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__LDRT/23 (__LDRT) @06271c78
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__LDRHT/22 (__LDRHT) @06271b28
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__LDRBT/21 (__LDRBT) @062719d8
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__RRX/20 (__RRX) @06271888
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__CLREX/19 (__CLREX) @062715e8
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__STREXW/18 (__STREXW) @06271498
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__STREXH/17 (__STREXH) @06271348
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__STREXB/16 (__STREXB) @062711f8
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__LDREXW/15 (__LDREXW) @062710a8
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__LDREXH/14 (__LDREXH) @0623bf18
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__LDREXB/13 (__LDREXB) @0623bdc8
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__CLZ/12 (__CLZ) @0623bc78
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__RBIT/11 (__RBIT) @0623bb28
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__ROR/10 (__ROR) @0623b930
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__REVSH/9 (__REVSH) @0623b7e0
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__REV16/8 (__REV16) @0623b690
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__REV/7 (__REV) @0623b540
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__DMB/6 (__DMB) @0623b3f0
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__DSB/5 (__DSB) @0623b2a0
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__ISB/4 (__ISB) @0623b150
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__cmsis_start/3 (__cmsis_start) @0623b000
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+_putchar_unlocked/2 (_putchar_unlocked) @060f4930
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+_getchar_unlocked/1 (_getchar_unlocked) @060f47e0
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__sputc_r/0 (__sputc_r) @060f45e8
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+
+Removing unused symbols: ITM_CheckChar/136 ITM_ReceiveChar/135 ITM_SendChar/134 SysTick_Config/133 SCB_GetFPUType/132 ARM_MPU_Load/131 ARM_MPU_OrderedMemcpy/130 ARM_MPU_SetRegionEx/129 ARM_MPU_SetRegion/128 ARM_MPU_ClrRegion/127 ARM_MPU_Disable/126 ARM_MPU_Enable/125 __NVIC_SystemReset/124 __NVIC_GetVector/123 __NVIC_SetVector/122 NVIC_DecodePriority/121 NVIC_EncodePriority/120 __NVIC_GetPriority/119 __NVIC_SetPriority/118 __NVIC_GetActive/117 __NVIC_ClearPendingIRQ/116 __NVIC_SetPendingIRQ/115 __NVIC_GetPendingIRQ/114 __NVIC_DisableIRQ/113 __NVIC_GetEnableIRQ/112 __NVIC_EnableIRQ/111 __NVIC_GetPriorityGrouping/110 __NVIC_SetPriorityGrouping/109 __SMMLA/108 __QSUB/107 __QADD/106 __SEL/105 __SMLSLDX/104 __SMLSLD/103 __SMLSDX/102 __SMLSD/101 __SMUSDX/100 __SMUSD/99 __SMLALDX/98 __SMLALD/97 __SMLADX/96 __SMLAD/95 __SMUADX/94 __SMUAD/93 __SXTAB16_RORn/92 __SXTAB16/91 __SXTB16_RORn/90 __SXTB16/89 __UXTAB16/88 __UXTB16/87 __USADA8/86 __USAD8/85 __UHSAX/84 __UQSAX/83 __USAX/82 __SHSAX/81 __QSAX/80 __SSAX/79 __UHASX/78 __UQASX/77 __UASX/76 __SHASX/75 __QASX/74 __SASX/73 __UHSUB16/72 __UQSUB16/71 __USUB16/70 __SHSUB16/69 __QSUB16/68 __SSUB16/67 __UHADD16/66 __UQADD16/65 __UADD16/64 __SHADD16/63 __QADD16/62 __SADD16/61 __UHSUB8/60 __UQSUB8/59 __USUB8/58 __SHSUB8/57 __QSUB8/56 __SSUB8/55 __UHADD8/54 __UQADD8/53 __UADD8/52 __SHADD8/51 __QADD8/50 __SADD8/49 __set_FPSCR/48 __get_FPSCR/47 __set_FAULTMASK/46 __get_FAULTMASK/45 __set_BASEPRI_MAX/44 __set_BASEPRI/43 __get_BASEPRI/42 __disable_fault_irq/41 __enable_fault_irq/40 __set_PRIMASK/39 __get_PRIMASK/38 __set_MSP/37 __get_MSP/36 __set_PSP/35 __get_PSP/34 __get_xPSR/33 __get_APSR/32 __get_IPSR/31 __set_CONTROL/30 __get_CONTROL/29 __disable_irq/28 __enable_irq/27 __STRT/26 __STRHT/25 __STRBT/24 __LDRT/23 __LDRHT/22 __LDRBT/21 __RRX/20 __CLREX/19 __STREXW/18 __STREXH/17 __STREXB/16 __LDREXW/15 __LDREXH/14 __LDREXB/13 __CLZ/12 __RBIT/11 __ROR/10 __REVSH/9 __REV16/8 __REV/7 __DMB/6 __DSB/5 __ISB/4 __cmsis_start/3 _putchar_unlocked/2 _getchar_unlocked/1 __sputc_r/0
+
+Reclaimed Symbol table:
+
+snprintf/167 (snprintf) @0636ab28
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: dump_registers/144 
+  Calls: 
+printf/166 (printf) @0636aa80
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: dump_registers/144 
+  Calls: 
+MXC_Delay/165 (MXC_Delay) @0636a9d8
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: reset/145 
+  Calls: 
+sccb_write_byt/164 (sccb_write_byt) @0636a930
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: reset/145 reset/145 sleep/146 write_reg/148 set_pixformat/149 set_pixformat/149 set_pixformat/149 set_pixformat/149 set_framesize/151 set_framesize/151 set_framesize/151 set_framesize/151 set_framesize/151 set_framesize/151 set_framesize/151 set_framesize/151 set_windowing/152 set_windowing/152 set_windowing/152 set_windowing/152 set_windowing/152 set_windowing/152 set_windowing/152 set_windowing/152 set_windowing/152 set_windowing/152 set_windowing/152 set_windowing/152 set_windowing/152 set_windowing/152 set_windowing/152 set_windowing/152 set_contrast/153 set_contrast/153 set_contrast/153 set_contrast/153 set_contrast/153 set_contrast/153 set_contrast/153 set_contrast/153 set_contrast/153 set_contrast/153 set_contrast/153 set_contrast/153 set_contrast/153 set_contrast/153 set_contrast/153 set_contrast/153 set_contrast/153 set_contrast/153 set_contrast/153 set_contrast/153 set_brightness/154 set_brightness/154 set_brightness/154 set_brightness/154 set_brightness/154 set_brightness/154 set_brightness/154 set_brightness/154 set_brightness/154 set_brightness/154 set_brightness/154 set_brightness/154 set_brightness/154 set_brightness/154 set_brightness/154 set_gainceiling/156 set_gainceiling/156 set_gainceiling/156 set_gainceiling/156 set_gainceiling/156 set_gainceiling/156 set_gainceiling/156 set_colorbar/157 set_hmirror/158 set_vflip/160 set_negateimage/159 set_negateimage/159 set_negateimage/159 set_negateimage/159 set_negateimage/159 set_negateimage/159 set_negateimage/159 set_negateimage/159 set_negateimage/159 set_negateimage/159 
+  Calls: 
+sccb_read_byt/163 (sccb_read_byt) @0636a888
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: get_product_id/142 get_product_id/142 get_manufacture_id/143 get_manufacture_id/143 dump_registers/144 reset/145 sleep/146 read_reg/147 set_gainceiling/156 set_colorbar/157 set_hmirror/158 set_vflip/160 get_luminance/161 get_luminance/161 get_luminance/161 
+  Calls: 
+sensor_register/162 (sensor_register) @0636a7e0
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: init/140 (addr) get_slave_address/141 (addr) get_product_id/142 (addr) get_manufacture_id/143 (addr) dump_registers/144 (addr) reset/145 (addr) sleep/146 (addr) read_reg/147 (addr) write_reg/148 (addr) set_pixformat/149 (addr) get_pixformat/150 (addr) set_framesize/151 (addr) set_windowing/152 (addr) set_contrast/153 (addr) set_brightness/154 (addr) set_saturation/155 (addr) set_gainceiling/156 (addr) set_colorbar/157 (addr) set_hmirror/158 (addr) set_vflip/160 (addr) set_negateimage/159 (addr) get_luminance/161 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+get_luminance/161 (get_luminance) @0636a690
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) 
+  Referring: sensor_register/162 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: sccb_read_byt/163 sccb_read_byt/163 sccb_read_byt/163 
+set_vflip/160 (set_vflip) @0636a348
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: g_slv_addr/137 (read) g_slv_addr/137 (read) 
+  Referring: sensor_register/162 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: sccb_write_byt/164 sccb_read_byt/163 
+set_negateimage/159 (set_negateimage) @0636a150
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) 
+  Referring: sensor_register/162 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 
+set_hmirror/158 (set_hmirror) @0636a000
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: g_slv_addr/137 (read) g_slv_addr/137 (read) 
+  Referring: sensor_register/162 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: sccb_write_byt/164 sccb_read_byt/163 
+set_colorbar/157 (set_colorbar) @0635edc8
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: g_slv_addr/137 (read) g_slv_addr/137 (read) 
+  Referring: sensor_register/162 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: sccb_write_byt/164 sccb_read_byt/163 
+set_gainceiling/156 (set_gainceiling) @0635ebd0
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) 
+  Referring: sensor_register/162 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_read_byt/163 
+set_saturation/155 (set_saturation) @0635e9d8
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: 
+  Referring: sensor_register/162 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: 
+set_brightness/154 (set_brightness) @0635e888
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) 
+  Referring: sensor_register/162 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 
+set_contrast/153 (set_contrast) @0635e738
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) 
+  Referring: sensor_register/162 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 
+set_windowing/152 (set_windowing) @0635e5e8
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) 
+  Referring: sensor_register/162 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 
+set_framesize/151 (set_framesize) @0635e1f8
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) 
+  Referring: sensor_register/162 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 
+get_pixformat/150 (get_pixformat) @0635e0a8
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: g_pixelformat/138 (read) 
+  Referring: sensor_register/162 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: 
+set_pixformat/149 (set_pixformat) @06355f18
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: g_pixelformat/138 (write) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) 
+  Referring: sensor_register/162 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 
+write_reg/148 (write_reg) @06355b28
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: g_slv_addr/137 (read) 
+  Referring: sensor_register/162 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: sccb_write_byt/164 
+read_reg/147 (read_reg) @063559d8
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: g_slv_addr/137 (read) 
+  Referring: sensor_register/162 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: sccb_read_byt/163 
+sleep/146 (sleep) @06355888
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: g_slv_addr/137 (read) g_slv_addr/137 (read) 
+  Referring: sensor_register/162 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: sccb_write_byt/164 sccb_read_byt/163 
+reset/145 (reset) @06355690
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) default_regs/139 (read) default_regs/139 (read) default_regs/139 (read) 
+  Referring: sensor_register/162 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: sccb_write_byt/164 MXC_Delay/165 sccb_read_byt/163 sccb_write_byt/164 
+dump_registers/144 (dump_registers) @063553f0
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: g_slv_addr/137 (read) 
+  Referring: sensor_register/162 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: snprintf/167 sccb_read_byt/163 printf/166 
+get_manufacture_id/143 (get_manufacture_id) @063552a0
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: g_slv_addr/137 (read) g_slv_addr/137 (read) 
+  Referring: sensor_register/162 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: sccb_read_byt/163 sccb_read_byt/163 
+get_product_id/142 (get_product_id) @06355000
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: g_slv_addr/137 (read) g_slv_addr/137 (read) 
+  Referring: sensor_register/162 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: sccb_read_byt/163 sccb_read_byt/163 
+get_slave_address/141 (get_slave_address) @06313dc8
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: g_slv_addr/137 (read) 
+  Referring: sensor_register/162 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: 
+init/140 (init) @06313c78
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: g_slv_addr/137 (write) g_slv_addr/137 (read) 
+  Referring: sensor_register/162 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: 
+default_regs/139 (default_regs) @0625ae10
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: reset/145 (read) reset/145 (read) reset/145 (read) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+g_pixelformat/138 (g_pixelformat) @0625ad80
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: get_pixformat/150 (read) set_pixformat/149 (write) 
+  Availability: not-ready
+  Varpool flags: initialized
+g_slv_addr/137 (g_slv_addr) @0625ad38
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: get_luminance/161 (read) get_luminance/161 (read) get_luminance/161 (read) set_negateimage/159 (read) set_negateimage/159 (read) set_negateimage/159 (read) set_negateimage/159 (read) set_negateimage/159 (read) set_negateimage/159 (read) set_negateimage/159 (read) set_negateimage/159 (read) set_negateimage/159 (read) set_negateimage/159 (read) set_vflip/160 (read) set_vflip/160 (read) set_hmirror/158 (read) set_hmirror/158 (read) set_colorbar/157 (read) set_colorbar/157 (read) set_gainceiling/156 (read) set_gainceiling/156 (read) set_gainceiling/156 (read) set_gainceiling/156 (read) set_gainceiling/156 (read) set_gainceiling/156 (read) set_gainceiling/156 (read) set_gainceiling/156 (read) set_brightness/154 (read) set_brightness/154 (read) set_brightness/154 (read) set_brightness/154 (read) set_brightness/154 (read) set_brightness/154 (read) set_brightness/154 (read) set_brightness/154 (read) set_brightness/154 (read) set_brightness/154 (read) set_brightness/154 (read) set_brightness/154 (read) set_brightness/154 (read) set_brightness/154 (read) set_brightness/154 (read) set_contrast/153 (read) set_contrast/153 (read) set_contrast/153 (read) set_contrast/153 (read) set_contrast/153 (read) set_contrast/153 (read) set_contrast/153 (read) set_contrast/153 (read) set_contrast/153 (read) set_contrast/153 (read) set_contrast/153 (read) set_contrast/153 (read) set_contrast/153 (read) set_contrast/153 (read) set_contrast/153 (read) set_contrast/153 (read) set_contrast/153 (read) set_contrast/153 (read) set_contrast/153 (read) set_contrast/153 (read) set_windowing/152 (read) set_windowing/152 (read) set_windowing/152 (read) set_windowing/152 (read) set_windowing/152 (read) set_windowing/152 (read) set_windowing/152 (read) set_windowing/152 (read) set_windowing/152 (read) set_windowing/152 (read) set_windowing/152 (read) set_windowing/152 (read) set_windowing/152 (read) set_windowing/152 (read) set_windowing/152 (read) set_windowing/152 (read) set_framesize/151 (read) set_framesize/151 (read) set_framesize/151 (read) set_framesize/151 (read) set_framesize/151 (read) set_framesize/151 (read) set_framesize/151 (read) set_framesize/151 (read) set_pixformat/149 (read) set_pixformat/149 (read) set_pixformat/149 (read) set_pixformat/149 (read) write_reg/148 (read) read_reg/147 (read) sleep/146 (read) sleep/146 (read) reset/145 (read) reset/145 (read) reset/145 (read) dump_registers/144 (read) get_manufacture_id/143 (read) get_manufacture_id/143 (read) get_product_id/142 (read) get_product_id/142 (read) get_slave_address/141 (read) init/140 (write) init/140 (read) 
+  Availability: not-ready
+  Varpool flags:
+
+
+Initial Symbol table:
+
+snprintf/167 (snprintf) @0636ab28
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: dump_registers/144 
+  Calls: 
+printf/166 (printf) @0636aa80
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: dump_registers/144 
+  Calls: 
+MXC_Delay/165 (MXC_Delay) @0636a9d8
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: reset/145 
+  Calls: 
+sccb_write_byt/164 (sccb_write_byt) @0636a930
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: reset/145 reset/145 sleep/146 write_reg/148 set_pixformat/149 set_pixformat/149 set_pixformat/149 set_pixformat/149 set_framesize/151 set_framesize/151 set_framesize/151 set_framesize/151 set_framesize/151 set_framesize/151 set_framesize/151 set_framesize/151 set_windowing/152 set_windowing/152 set_windowing/152 set_windowing/152 set_windowing/152 set_windowing/152 set_windowing/152 set_windowing/152 set_windowing/152 set_windowing/152 set_windowing/152 set_windowing/152 set_windowing/152 set_windowing/152 set_windowing/152 set_windowing/152 set_contrast/153 set_contrast/153 set_contrast/153 set_contrast/153 set_contrast/153 set_contrast/153 set_contrast/153 set_contrast/153 set_contrast/153 set_contrast/153 set_contrast/153 set_contrast/153 set_contrast/153 set_contrast/153 set_contrast/153 set_contrast/153 set_contrast/153 set_contrast/153 set_contrast/153 set_contrast/153 set_brightness/154 set_brightness/154 set_brightness/154 set_brightness/154 set_brightness/154 set_brightness/154 set_brightness/154 set_brightness/154 set_brightness/154 set_brightness/154 set_brightness/154 set_brightness/154 set_brightness/154 set_brightness/154 set_brightness/154 set_gainceiling/156 set_gainceiling/156 set_gainceiling/156 set_gainceiling/156 set_gainceiling/156 set_gainceiling/156 set_gainceiling/156 set_colorbar/157 set_hmirror/158 set_vflip/160 set_negateimage/159 set_negateimage/159 set_negateimage/159 set_negateimage/159 set_negateimage/159 set_negateimage/159 set_negateimage/159 set_negateimage/159 set_negateimage/159 set_negateimage/159 
+  Calls: 
+sccb_read_byt/163 (sccb_read_byt) @0636a888
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: get_product_id/142 get_product_id/142 get_manufacture_id/143 get_manufacture_id/143 dump_registers/144 reset/145 sleep/146 read_reg/147 set_gainceiling/156 set_colorbar/157 set_hmirror/158 set_vflip/160 get_luminance/161 get_luminance/161 get_luminance/161 
+  Calls: 
+sensor_register/162 (sensor_register) @0636a7e0
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: init/140 (addr) get_slave_address/141 (addr) get_product_id/142 (addr) get_manufacture_id/143 (addr) dump_registers/144 (addr) reset/145 (addr) sleep/146 (addr) read_reg/147 (addr) write_reg/148 (addr) set_pixformat/149 (addr) get_pixformat/150 (addr) set_framesize/151 (addr) set_windowing/152 (addr) set_contrast/153 (addr) set_brightness/154 (addr) set_saturation/155 (addr) set_gainceiling/156 (addr) set_colorbar/157 (addr) set_hmirror/158 (addr) set_vflip/160 (addr) set_negateimage/159 (addr) get_luminance/161 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+get_luminance/161 (get_luminance) @0636a690
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) 
+  Referring: sensor_register/162 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: sccb_read_byt/163 sccb_read_byt/163 sccb_read_byt/163 
+set_vflip/160 (set_vflip) @0636a348
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: g_slv_addr/137 (read) g_slv_addr/137 (read) 
+  Referring: sensor_register/162 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: sccb_write_byt/164 sccb_read_byt/163 
+set_negateimage/159 (set_negateimage) @0636a150
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) 
+  Referring: sensor_register/162 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 
+set_hmirror/158 (set_hmirror) @0636a000
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: g_slv_addr/137 (read) g_slv_addr/137 (read) 
+  Referring: sensor_register/162 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: sccb_write_byt/164 sccb_read_byt/163 
+set_colorbar/157 (set_colorbar) @0635edc8
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: g_slv_addr/137 (read) g_slv_addr/137 (read) 
+  Referring: sensor_register/162 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: sccb_write_byt/164 sccb_read_byt/163 
+set_gainceiling/156 (set_gainceiling) @0635ebd0
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) 
+  Referring: sensor_register/162 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_read_byt/163 
+set_saturation/155 (set_saturation) @0635e9d8
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: 
+  Referring: sensor_register/162 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: 
+set_brightness/154 (set_brightness) @0635e888
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) 
+  Referring: sensor_register/162 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 
+set_contrast/153 (set_contrast) @0635e738
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) 
+  Referring: sensor_register/162 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 
+set_windowing/152 (set_windowing) @0635e5e8
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) 
+  Referring: sensor_register/162 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 
+set_framesize/151 (set_framesize) @0635e1f8
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) 
+  Referring: sensor_register/162 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 
+get_pixformat/150 (get_pixformat) @0635e0a8
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: g_pixelformat/138 (read) 
+  Referring: sensor_register/162 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: 
+set_pixformat/149 (set_pixformat) @06355f18
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: g_pixelformat/138 (write) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) 
+  Referring: sensor_register/162 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 
+write_reg/148 (write_reg) @06355b28
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: g_slv_addr/137 (read) 
+  Referring: sensor_register/162 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: sccb_write_byt/164 
+read_reg/147 (read_reg) @063559d8
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: g_slv_addr/137 (read) 
+  Referring: sensor_register/162 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: sccb_read_byt/163 
+sleep/146 (sleep) @06355888
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: g_slv_addr/137 (read) g_slv_addr/137 (read) 
+  Referring: sensor_register/162 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: sccb_write_byt/164 sccb_read_byt/163 
+reset/145 (reset) @06355690
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) default_regs/139 (read) default_regs/139 (read) default_regs/139 (read) 
+  Referring: sensor_register/162 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: sccb_write_byt/164 MXC_Delay/165 sccb_read_byt/163 sccb_write_byt/164 
+dump_registers/144 (dump_registers) @063553f0
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: g_slv_addr/137 (read) 
+  Referring: sensor_register/162 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: snprintf/167 sccb_read_byt/163 printf/166 
+get_manufacture_id/143 (get_manufacture_id) @063552a0
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: g_slv_addr/137 (read) g_slv_addr/137 (read) 
+  Referring: sensor_register/162 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: sccb_read_byt/163 sccb_read_byt/163 
+get_product_id/142 (get_product_id) @06355000
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: g_slv_addr/137 (read) g_slv_addr/137 (read) 
+  Referring: sensor_register/162 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: sccb_read_byt/163 sccb_read_byt/163 
+get_slave_address/141 (get_slave_address) @06313dc8
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: g_slv_addr/137 (read) 
+  Referring: sensor_register/162 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: 
+init/140 (init) @06313c78
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: g_slv_addr/137 (write) g_slv_addr/137 (read) 
+  Referring: sensor_register/162 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: 
+default_regs/139 (default_regs) @0625ae10
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: reset/145 (read) reset/145 (read) reset/145 (read) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+g_pixelformat/138 (g_pixelformat) @0625ad80
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: get_pixformat/150 (read) set_pixformat/149 (write) 
+  Availability: not-ready
+  Varpool flags: initialized
+g_slv_addr/137 (g_slv_addr) @0625ad38
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: get_luminance/161 (read) get_luminance/161 (read) get_luminance/161 (read) set_negateimage/159 (read) set_negateimage/159 (read) set_negateimage/159 (read) set_negateimage/159 (read) set_negateimage/159 (read) set_negateimage/159 (read) set_negateimage/159 (read) set_negateimage/159 (read) set_negateimage/159 (read) set_negateimage/159 (read) set_vflip/160 (read) set_vflip/160 (read) set_hmirror/158 (read) set_hmirror/158 (read) set_colorbar/157 (read) set_colorbar/157 (read) set_gainceiling/156 (read) set_gainceiling/156 (read) set_gainceiling/156 (read) set_gainceiling/156 (read) set_gainceiling/156 (read) set_gainceiling/156 (read) set_gainceiling/156 (read) set_gainceiling/156 (read) set_brightness/154 (read) set_brightness/154 (read) set_brightness/154 (read) set_brightness/154 (read) set_brightness/154 (read) set_brightness/154 (read) set_brightness/154 (read) set_brightness/154 (read) set_brightness/154 (read) set_brightness/154 (read) set_brightness/154 (read) set_brightness/154 (read) set_brightness/154 (read) set_brightness/154 (read) set_brightness/154 (read) set_contrast/153 (read) set_contrast/153 (read) set_contrast/153 (read) set_contrast/153 (read) set_contrast/153 (read) set_contrast/153 (read) set_contrast/153 (read) set_contrast/153 (read) set_contrast/153 (read) set_contrast/153 (read) set_contrast/153 (read) set_contrast/153 (read) set_contrast/153 (read) set_contrast/153 (read) set_contrast/153 (read) set_contrast/153 (read) set_contrast/153 (read) set_contrast/153 (read) set_contrast/153 (read) set_contrast/153 (read) set_windowing/152 (read) set_windowing/152 (read) set_windowing/152 (read) set_windowing/152 (read) set_windowing/152 (read) set_windowing/152 (read) set_windowing/152 (read) set_windowing/152 (read) set_windowing/152 (read) set_windowing/152 (read) set_windowing/152 (read) set_windowing/152 (read) set_windowing/152 (read) set_windowing/152 (read) set_windowing/152 (read) set_windowing/152 (read) set_framesize/151 (read) set_framesize/151 (read) set_framesize/151 (read) set_framesize/151 (read) set_framesize/151 (read) set_framesize/151 (read) set_framesize/151 (read) set_framesize/151 (read) set_pixformat/149 (read) set_pixformat/149 (read) set_pixformat/149 (read) set_pixformat/149 (read) write_reg/148 (read) read_reg/147 (read) sleep/146 (read) sleep/146 (read) reset/145 (read) reset/145 (read) reset/145 (read) dump_registers/144 (read) get_manufacture_id/143 (read) get_manufacture_id/143 (read) get_product_id/142 (read) get_product_id/142 (read) get_slave_address/141 (read) init/140 (write) init/140 (read) 
+  Availability: not-ready
+  Varpool flags:
+
+Removing unused symbols:
+
+Reclaimed Symbol table:
+
+snprintf/167 (snprintf) @0636ab28
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: dump_registers/144 
+  Calls: 
+printf/166 (printf) @0636aa80
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: dump_registers/144 
+  Calls: 
+MXC_Delay/165 (MXC_Delay) @0636a9d8
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: reset/145 
+  Calls: 
+sccb_write_byt/164 (sccb_write_byt) @0636a930
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: reset/145 reset/145 sleep/146 write_reg/148 set_pixformat/149 set_pixformat/149 set_pixformat/149 set_pixformat/149 set_framesize/151 set_framesize/151 set_framesize/151 set_framesize/151 set_framesize/151 set_framesize/151 set_framesize/151 set_framesize/151 set_windowing/152 set_windowing/152 set_windowing/152 set_windowing/152 set_windowing/152 set_windowing/152 set_windowing/152 set_windowing/152 set_windowing/152 set_windowing/152 set_windowing/152 set_windowing/152 set_windowing/152 set_windowing/152 set_windowing/152 set_windowing/152 set_contrast/153 set_contrast/153 set_contrast/153 set_contrast/153 set_contrast/153 set_contrast/153 set_contrast/153 set_contrast/153 set_contrast/153 set_contrast/153 set_contrast/153 set_contrast/153 set_contrast/153 set_contrast/153 set_contrast/153 set_contrast/153 set_contrast/153 set_contrast/153 set_contrast/153 set_contrast/153 set_brightness/154 set_brightness/154 set_brightness/154 set_brightness/154 set_brightness/154 set_brightness/154 set_brightness/154 set_brightness/154 set_brightness/154 set_brightness/154 set_brightness/154 set_brightness/154 set_brightness/154 set_brightness/154 set_brightness/154 set_gainceiling/156 set_gainceiling/156 set_gainceiling/156 set_gainceiling/156 set_gainceiling/156 set_gainceiling/156 set_gainceiling/156 set_colorbar/157 set_hmirror/158 set_vflip/160 set_negateimage/159 set_negateimage/159 set_negateimage/159 set_negateimage/159 set_negateimage/159 set_negateimage/159 set_negateimage/159 set_negateimage/159 set_negateimage/159 set_negateimage/159 
+  Calls: 
+sccb_read_byt/163 (sccb_read_byt) @0636a888
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: get_product_id/142 get_product_id/142 get_manufacture_id/143 get_manufacture_id/143 dump_registers/144 reset/145 sleep/146 read_reg/147 set_gainceiling/156 set_colorbar/157 set_hmirror/158 set_vflip/160 get_luminance/161 get_luminance/161 get_luminance/161 
+  Calls: 
+sensor_register/162 (sensor_register) @0636a7e0
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: init/140 (addr) get_slave_address/141 (addr) get_product_id/142 (addr) get_manufacture_id/143 (addr) dump_registers/144 (addr) reset/145 (addr) sleep/146 (addr) read_reg/147 (addr) write_reg/148 (addr) set_pixformat/149 (addr) get_pixformat/150 (addr) set_framesize/151 (addr) set_windowing/152 (addr) set_contrast/153 (addr) set_brightness/154 (addr) set_saturation/155 (addr) set_gainceiling/156 (addr) set_colorbar/157 (addr) set_hmirror/158 (addr) set_vflip/160 (addr) set_negateimage/159 (addr) get_luminance/161 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: 
+get_luminance/161 (get_luminance) @0636a690
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) 
+  Referring: sensor_register/162 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: sccb_read_byt/163 sccb_read_byt/163 sccb_read_byt/163 
+set_vflip/160 (set_vflip) @0636a348
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: g_slv_addr/137 (read) g_slv_addr/137 (read) 
+  Referring: sensor_register/162 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: sccb_write_byt/164 sccb_read_byt/163 
+set_negateimage/159 (set_negateimage) @0636a150
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) 
+  Referring: sensor_register/162 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 
+set_hmirror/158 (set_hmirror) @0636a000
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: g_slv_addr/137 (read) g_slv_addr/137 (read) 
+  Referring: sensor_register/162 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: sccb_write_byt/164 sccb_read_byt/163 
+set_colorbar/157 (set_colorbar) @0635edc8
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: g_slv_addr/137 (read) g_slv_addr/137 (read) 
+  Referring: sensor_register/162 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: sccb_write_byt/164 sccb_read_byt/163 
+set_gainceiling/156 (set_gainceiling) @0635ebd0
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) 
+  Referring: sensor_register/162 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_read_byt/163 
+set_saturation/155 (set_saturation) @0635e9d8
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: 
+  Referring: sensor_register/162 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: 
+set_brightness/154 (set_brightness) @0635e888
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) 
+  Referring: sensor_register/162 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 
+set_contrast/153 (set_contrast) @0635e738
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) 
+  Referring: sensor_register/162 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 
+set_windowing/152 (set_windowing) @0635e5e8
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) 
+  Referring: sensor_register/162 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 
+set_framesize/151 (set_framesize) @0635e1f8
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) 
+  Referring: sensor_register/162 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 
+get_pixformat/150 (get_pixformat) @0635e0a8
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: g_pixelformat/138 (read) 
+  Referring: sensor_register/162 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: 
+set_pixformat/149 (set_pixformat) @06355f18
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: g_pixelformat/138 (write) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) 
+  Referring: sensor_register/162 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 sccb_write_byt/164 
+write_reg/148 (write_reg) @06355b28
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: g_slv_addr/137 (read) 
+  Referring: sensor_register/162 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: sccb_write_byt/164 
+read_reg/147 (read_reg) @063559d8
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: g_slv_addr/137 (read) 
+  Referring: sensor_register/162 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: sccb_read_byt/163 
+sleep/146 (sleep) @06355888
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: g_slv_addr/137 (read) g_slv_addr/137 (read) 
+  Referring: sensor_register/162 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: sccb_write_byt/164 sccb_read_byt/163 
+reset/145 (reset) @06355690
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) default_regs/139 (read) default_regs/139 (read) default_regs/139 (read) 
+  Referring: sensor_register/162 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: sccb_write_byt/164 MXC_Delay/165 sccb_read_byt/163 sccb_write_byt/164 
+dump_registers/144 (dump_registers) @063553f0
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: g_slv_addr/137 (read) 
+  Referring: sensor_register/162 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: snprintf/167 sccb_read_byt/163 printf/166 
+get_manufacture_id/143 (get_manufacture_id) @063552a0
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: g_slv_addr/137 (read) g_slv_addr/137 (read) 
+  Referring: sensor_register/162 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: sccb_read_byt/163 sccb_read_byt/163 
+get_product_id/142 (get_product_id) @06355000
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: g_slv_addr/137 (read) g_slv_addr/137 (read) 
+  Referring: sensor_register/162 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: sccb_read_byt/163 sccb_read_byt/163 
+get_slave_address/141 (get_slave_address) @06313dc8
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: g_slv_addr/137 (read) 
+  Referring: sensor_register/162 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: 
+init/140 (init) @06313c78
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Address is taken.
+  References: g_slv_addr/137 (write) g_slv_addr/137 (read) 
+  Referring: sensor_register/162 (addr) 
+  Function flags: body
+  Called by: 
+  Calls: 
+default_regs/139 (default_regs) @0625ae10
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: reset/145 (read) reset/145 (read) reset/145 (read) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+g_pixelformat/138 (g_pixelformat) @0625ad80
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: get_pixformat/150 (read) set_pixformat/149 (write) 
+  Availability: not-ready
+  Varpool flags: initialized
+g_slv_addr/137 (g_slv_addr) @0625ad38
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: get_luminance/161 (read) get_luminance/161 (read) get_luminance/161 (read) set_negateimage/159 (read) set_negateimage/159 (read) set_negateimage/159 (read) set_negateimage/159 (read) set_negateimage/159 (read) set_negateimage/159 (read) set_negateimage/159 (read) set_negateimage/159 (read) set_negateimage/159 (read) set_negateimage/159 (read) set_vflip/160 (read) set_vflip/160 (read) set_hmirror/158 (read) set_hmirror/158 (read) set_colorbar/157 (read) set_colorbar/157 (read) set_gainceiling/156 (read) set_gainceiling/156 (read) set_gainceiling/156 (read) set_gainceiling/156 (read) set_gainceiling/156 (read) set_gainceiling/156 (read) set_gainceiling/156 (read) set_gainceiling/156 (read) set_brightness/154 (read) set_brightness/154 (read) set_brightness/154 (read) set_brightness/154 (read) set_brightness/154 (read) set_brightness/154 (read) set_brightness/154 (read) set_brightness/154 (read) set_brightness/154 (read) set_brightness/154 (read) set_brightness/154 (read) set_brightness/154 (read) set_brightness/154 (read) set_brightness/154 (read) set_brightness/154 (read) set_contrast/153 (read) set_contrast/153 (read) set_contrast/153 (read) set_contrast/153 (read) set_contrast/153 (read) set_contrast/153 (read) set_contrast/153 (read) set_contrast/153 (read) set_contrast/153 (read) set_contrast/153 (read) set_contrast/153 (read) set_contrast/153 (read) set_contrast/153 (read) set_contrast/153 (read) set_contrast/153 (read) set_contrast/153 (read) set_contrast/153 (read) set_contrast/153 (read) set_contrast/153 (read) set_contrast/153 (read) set_windowing/152 (read) set_windowing/152 (read) set_windowing/152 (read) set_windowing/152 (read) set_windowing/152 (read) set_windowing/152 (read) set_windowing/152 (read) set_windowing/152 (read) set_windowing/152 (read) set_windowing/152 (read) set_windowing/152 (read) set_windowing/152 (read) set_windowing/152 (read) set_windowing/152 (read) set_windowing/152 (read) set_windowing/152 (read) set_framesize/151 (read) set_framesize/151 (read) set_framesize/151 (read) set_framesize/151 (read) set_framesize/151 (read) set_framesize/151 (read) set_framesize/151 (read) set_framesize/151 (read) set_pixformat/149 (read) set_pixformat/149 (read) set_pixformat/149 (read) set_pixformat/149 (read) write_reg/148 (read) read_reg/147 (read) sleep/146 (read) sleep/146 (read) reset/145 (read) reset/145 (read) reset/145 (read) dump_registers/144 (read) get_manufacture_id/143 (read) get_manufacture_id/143 (read) get_product_id/142 (read) get_product_id/142 (read) get_slave_address/141 (read) init/140 (write) init/140 (read) 
+  Availability: not-ready
+  Varpool flags:
+
+Reclaiming functions:
+Reclaiming variables:
+Clearing address taken flags:
+Optimized Symbol table:
+
+snprintf/167 (snprintf) @0636ab28
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: dump_registers/144 (351560006 (estimated locally),12.67 per call) 
+  Calls: 
+printf/166 (printf) @0636aa80
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: dump_registers/144 (277479583 (estimated locally),10.00 per call) 
+  Calls: 
+MXC_Delay/165 (MXC_Delay) @0636a9d8
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: reset/145 (955630225 (estimated locally),8.09 per call) 
+  Calls: 
+sccb_write_byt/164 (sccb_write_byt) @0636a930
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: reset/145 (955630225 (estimated locally),8.09 per call) reset/145 (118111600 (estimated locally),1.00 per call) sleep/146 (536870913 (estimated locally),0.50 per call) write_reg/148 (1073741824 (estimated locally),1.00 per call) set_pixformat/149 (214748365 (estimated locally),0.20 per call) set_pixformat/149 (214748365 (estimated locally),0.20 per call) set_pixformat/149 (214748365 (estimated locally),0.20 per call) set_pixformat/149 (214748365 (estimated locally),0.20 per call) set_framesize/151 (1073741824 (estimated locally),1.00 per call) set_framesize/151 (1073741824 (estimated locally),1.00 per call) set_framesize/151 (1073741824 (estimated locally),1.00 per call) set_framesize/151 (1073741824 (estimated locally),1.00 per call) set_framesize/151 (1073741824 (estimated locally),1.00 per call) set_framesize/151 (1073741824 (estimated locally),1.00 per call) set_framesize/151 (1073741824 (estimated locally),1.00 per call) set_framesize/151 (1073741824 (estimated locally),1.00 per call) set_windowing/152 (1073741824 (estimated locally),1.00 per call) set_windowing/152 (1073741824 (estimated locally),1.00 per call) set_windowing/152 (1073741824 (estimated locally),1.00 per call) set_windowing/152 (1073741824 (estimated locally),1.00 per call) set_windowing/152 (1073741824 (estimated locally),1.00 per call) set_windowing/152 (1073741824 (estimated locally),1.00 per call) set_windowing/152 (1073741824 (estimated locally),1.00 per call) set_windowing/152 (1073741824 (estimated locally),1.00 per call) set_windowing/152 (1073741824 (estimated locally),1.00 per call) set_windowing/152 (1073741824 (estimated locally),1.00 per call) set_windowing/152 (1073741824 (estimated locally),1.00 per call) set_windowing/152 (1073741824 (estimated locally),1.00 per call) set_windowing/152 (1073741824 (estimated locally),1.00 per call) set_windowing/152 (1073741824 (estimated locally),1.00 per call) set_windowing/152 (1073741824 (estimated locally),1.00 per call) set_windowing/152 (1073741824 (estimated locally),1.00 per call) set_contrast/153 (178956968 (estimated locally),0.17 per call) set_contrast/153 (178956968 (estimated locally),0.17 per call) set_contrast/153 (178956968 (estimated locally),0.17 per call) set_contrast/153 (178956968 (estimated locally),0.17 per call) set_contrast/153 (178956968 (estimated locally),0.17 per call) set_contrast/153 (178956968 (estimated locally),0.17 per call) set_contrast/153 (178956968 (estimated locally),0.17 per call) set_contrast/153 (178956968 (estimated locally),0.17 per call) set_contrast/153 (178956968 (estimated locally),0.17 per call) set_contrast/153 (178956968 (estimated locally),0.17 per call) set_contrast/153 (178956968 (estimated locally),0.17 per call) set_contrast/153 (178956968 (estimated locally),0.17 per call) set_contrast/153 (178956968 (estimated locally),0.17 per call) set_contrast/153 (178956968 (estimated locally),0.17 per call) set_contrast/153 (178956968 (estimated locally),0.17 per call) set_contrast/153 (178956968 (estimated locally),0.17 per call) set_contrast/153 (178956968 (estimated locally),0.17 per call) set_contrast/153 (178956968 (estimated locally),0.17 per call) set_contrast/153 (178956968 (estimated locally),0.17 per call) set_contrast/153 (178956968 (estimated locally),0.17 per call) set_brightness/154 (178956968 (estimated locally),0.17 per call) set_brightness/154 (178956968 (estimated locally),0.17 per call) set_brightness/154 (178956968 (estimated locally),0.17 per call) set_brightness/154 (178956968 (estimated locally),0.17 per call) set_brightness/154 (178956968 (estimated locally),0.17 per call) set_brightness/154 (178956968 (estimated locally),0.17 per call) set_brightness/154 (178956968 (estimated locally),0.17 per call) set_brightness/154 (178956968 (estimated locally),0.17 per call) set_brightness/154 (178956968 (estimated locally),0.17 per call) set_brightness/154 (178956968 (estimated locally),0.17 per call) set_brightness/154 (178956968 (estimated locally),0.17 per call) set_brightness/154 (178956968 (estimated locally),0.17 per call) set_brightness/154 (178956968 (estimated locally),0.17 per call) set_brightness/154 (178956968 (estimated locally),0.17 per call) set_brightness/154 (178956968 (estimated locally),0.17 per call) set_gainceiling/156 (402653184 (estimated locally),0.38 per call) set_gainceiling/156 (268435456 (estimated locally),0.25 per call) set_gainceiling/156 (134217728 (estimated locally),0.12 per call) set_gainceiling/156 (134217728 (estimated locally),0.12 per call) set_gainceiling/156 (134217728 (estimated locally),0.12 per call) set_gainceiling/156 (134217728 (estimated locally),0.12 per call) set_gainceiling/156 (134217728 (estimated locally),0.12 per call) set_colorbar/157 (1073741824 (estimated locally),1.00 per call) set_hmirror/158 (1073741824 (estimated locally),1.00 per call) set_vflip/160 (1073741824 (estimated locally),1.00 per call) set_negateimage/159 (536870913 (estimated locally),0.50 per call) set_negateimage/159 (536870913 (estimated locally),0.50 per call) set_negateimage/159 (536870913 (estimated locally),0.50 per call) set_negateimage/159 (536870913 (estimated locally),0.50 per call) set_negateimage/159 (536870913 (estimated locally),0.50 per call) set_negateimage/159 (536870913 (estimated locally),0.50 per call) set_negateimage/159 (536870913 (estimated locally),0.50 per call) set_negateimage/159 (536870913 (estimated locally),0.50 per call) set_negateimage/159 (536870913 (estimated locally),0.50 per call) set_negateimage/159 (536870913 (estimated locally),0.50 per call) 
+  Calls: 
+sccb_read_byt/163 (sccb_read_byt) @0636a888
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: dump_registers/144 (1065333357 (estimated locally),38.40 per call) reset/145 (955630225 (estimated locally),8.09 per call) sleep/146 (1073741824 (estimated locally),1.00 per call) set_gainceiling/156 (1073741824 (estimated locally),1.00 per call) set_colorbar/157 (1073741824 (estimated locally),1.00 per call) set_hmirror/158 (1073741824 (estimated locally),1.00 per call) set_vflip/160 (1073741824 (estimated locally),1.00 per call) get_product_id/142 (1073741824 (estimated locally),1.00 per call) get_product_id/142 (1073741824 (estimated locally),1.00 per call) get_manufacture_id/143 (1073741824 (estimated locally),1.00 per call) get_manufacture_id/143 (1073741824 (estimated locally),1.00 per call) read_reg/147 (1073741824 (estimated locally),1.00 per call) get_luminance/161 (1073741824 (estimated locally),1.00 per call) get_luminance/161 (1073741824 (estimated locally),1.00 per call) get_luminance/161 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+sensor_register/162 (sensor_register) @0636a7e0
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: init/140 (addr) get_slave_address/141 (addr) get_product_id/142 (addr) get_manufacture_id/143 (addr) dump_registers/144 (addr) reset/145 (addr) sleep/146 (addr) read_reg/147 (addr) write_reg/148 (addr) set_pixformat/149 (addr) get_pixformat/150 (addr) set_framesize/151 (addr) set_windowing/152 (addr) set_contrast/153 (addr) set_brightness/154 (addr) set_saturation/155 (addr) set_gainceiling/156 (addr) set_colorbar/157 (addr) set_hmirror/158 (addr) set_vflip/160 (addr) set_negateimage/159 (addr) get_luminance/161 (addr) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body nonfreeing_fn
+  Called by: 
+  Calls: 
+get_luminance/161 (get_luminance) @0636a690
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  Address is taken.
+  References: g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) 
+  Referring: sensor_register/162 (addr) 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: sccb_read_byt/163 (1073741824 (estimated locally),1.00 per call) sccb_read_byt/163 (1073741824 (estimated locally),1.00 per call) sccb_read_byt/163 (1073741824 (estimated locally),1.00 per call) 
+set_vflip/160 (set_vflip) @0636a348
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  Address is taken.
+  References: g_slv_addr/137 (read) g_slv_addr/137 (read) 
+  Referring: sensor_register/162 (addr) 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: sccb_write_byt/164 (1073741824 (estimated locally),1.00 per call) sccb_read_byt/163 (1073741824 (estimated locally),1.00 per call) 
+set_negateimage/159 (set_negateimage) @0636a150
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  Address is taken.
+  References: g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) 
+  Referring: sensor_register/162 (addr) 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: sccb_write_byt/164 (536870913 (estimated locally),0.50 per call) sccb_write_byt/164 (536870913 (estimated locally),0.50 per call) sccb_write_byt/164 (536870913 (estimated locally),0.50 per call) sccb_write_byt/164 (536870913 (estimated locally),0.50 per call) sccb_write_byt/164 (536870913 (estimated locally),0.50 per call) sccb_write_byt/164 (536870913 (estimated locally),0.50 per call) sccb_write_byt/164 (536870913 (estimated locally),0.50 per call) sccb_write_byt/164 (536870913 (estimated locally),0.50 per call) sccb_write_byt/164 (536870913 (estimated locally),0.50 per call) sccb_write_byt/164 (536870913 (estimated locally),0.50 per call) 
+set_hmirror/158 (set_hmirror) @0636a000
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  Address is taken.
+  References: g_slv_addr/137 (read) g_slv_addr/137 (read) 
+  Referring: sensor_register/162 (addr) 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: sccb_write_byt/164 (1073741824 (estimated locally),1.00 per call) sccb_read_byt/163 (1073741824 (estimated locally),1.00 per call) 
+set_colorbar/157 (set_colorbar) @0635edc8
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  Address is taken.
+  References: g_slv_addr/137 (read) g_slv_addr/137 (read) 
+  Referring: sensor_register/162 (addr) 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: sccb_write_byt/164 (1073741824 (estimated locally),1.00 per call) sccb_read_byt/163 (1073741824 (estimated locally),1.00 per call) 
+set_gainceiling/156 (set_gainceiling) @0635ebd0
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  Address is taken.
+  References: g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) 
+  Referring: sensor_register/162 (addr) 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: sccb_write_byt/164 (402653184 (estimated locally),0.38 per call) sccb_write_byt/164 (268435456 (estimated locally),0.25 per call) sccb_write_byt/164 (134217728 (estimated locally),0.12 per call) sccb_write_byt/164 (134217728 (estimated locally),0.12 per call) sccb_write_byt/164 (134217728 (estimated locally),0.12 per call) sccb_write_byt/164 (134217728 (estimated locally),0.12 per call) sccb_write_byt/164 (134217728 (estimated locally),0.12 per call) sccb_read_byt/163 (1073741824 (estimated locally),1.00 per call) 
+set_saturation/155 (set_saturation) @0635e9d8
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  Address is taken.
+  References: 
+  Referring: sensor_register/162 (addr) 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body nonfreeing_fn
+  Called by: 
+  Calls: 
+set_brightness/154 (set_brightness) @0635e888
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  Address is taken.
+  References: g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) 
+  Referring: sensor_register/162 (addr) 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: sccb_write_byt/164 (178956968 (estimated locally),0.17 per call) sccb_write_byt/164 (178956968 (estimated locally),0.17 per call) sccb_write_byt/164 (178956968 (estimated locally),0.17 per call) sccb_write_byt/164 (178956968 (estimated locally),0.17 per call) sccb_write_byt/164 (178956968 (estimated locally),0.17 per call) sccb_write_byt/164 (178956968 (estimated locally),0.17 per call) sccb_write_byt/164 (178956968 (estimated locally),0.17 per call) sccb_write_byt/164 (178956968 (estimated locally),0.17 per call) sccb_write_byt/164 (178956968 (estimated locally),0.17 per call) sccb_write_byt/164 (178956968 (estimated locally),0.17 per call) sccb_write_byt/164 (178956968 (estimated locally),0.17 per call) sccb_write_byt/164 (178956968 (estimated locally),0.17 per call) sccb_write_byt/164 (178956968 (estimated locally),0.17 per call) sccb_write_byt/164 (178956968 (estimated locally),0.17 per call) sccb_write_byt/164 (178956968 (estimated locally),0.17 per call) 
+set_contrast/153 (set_contrast) @0635e738
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  Address is taken.
+  References: g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) 
+  Referring: sensor_register/162 (addr) 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: sccb_write_byt/164 (178956968 (estimated locally),0.17 per call) sccb_write_byt/164 (178956968 (estimated locally),0.17 per call) sccb_write_byt/164 (178956968 (estimated locally),0.17 per call) sccb_write_byt/164 (178956968 (estimated locally),0.17 per call) sccb_write_byt/164 (178956968 (estimated locally),0.17 per call) sccb_write_byt/164 (178956968 (estimated locally),0.17 per call) sccb_write_byt/164 (178956968 (estimated locally),0.17 per call) sccb_write_byt/164 (178956968 (estimated locally),0.17 per call) sccb_write_byt/164 (178956968 (estimated locally),0.17 per call) sccb_write_byt/164 (178956968 (estimated locally),0.17 per call) sccb_write_byt/164 (178956968 (estimated locally),0.17 per call) sccb_write_byt/164 (178956968 (estimated locally),0.17 per call) sccb_write_byt/164 (178956968 (estimated locally),0.17 per call) sccb_write_byt/164 (178956968 (estimated locally),0.17 per call) sccb_write_byt/164 (178956968 (estimated locally),0.17 per call) sccb_write_byt/164 (178956968 (estimated locally),0.17 per call) sccb_write_byt/164 (178956968 (estimated locally),0.17 per call) sccb_write_byt/164 (178956968 (estimated locally),0.17 per call) sccb_write_byt/164 (178956968 (estimated locally),0.17 per call) sccb_write_byt/164 (178956968 (estimated locally),0.17 per call) 
+set_windowing/152 (set_windowing) @0635e5e8
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  Address is taken.
+  References: g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) 
+  Referring: sensor_register/162 (addr) 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: sccb_write_byt/164 (1073741824 (estimated locally),1.00 per call) sccb_write_byt/164 (1073741824 (estimated locally),1.00 per call) sccb_write_byt/164 (1073741824 (estimated locally),1.00 per call) sccb_write_byt/164 (1073741824 (estimated locally),1.00 per call) sccb_write_byt/164 (1073741824 (estimated locally),1.00 per call) sccb_write_byt/164 (1073741824 (estimated locally),1.00 per call) sccb_write_byt/164 (1073741824 (estimated locally),1.00 per call) sccb_write_byt/164 (1073741824 (estimated locally),1.00 per call) sccb_write_byt/164 (1073741824 (estimated locally),1.00 per call) sccb_write_byt/164 (1073741824 (estimated locally),1.00 per call) sccb_write_byt/164 (1073741824 (estimated locally),1.00 per call) sccb_write_byt/164 (1073741824 (estimated locally),1.00 per call) sccb_write_byt/164 (1073741824 (estimated locally),1.00 per call) sccb_write_byt/164 (1073741824 (estimated locally),1.00 per call) sccb_write_byt/164 (1073741824 (estimated locally),1.00 per call) sccb_write_byt/164 (1073741824 (estimated locally),1.00 per call) 
+set_framesize/151 (set_framesize) @0635e1f8
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  Address is taken.
+  References: g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) 
+  Referring: sensor_register/162 (addr) 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: sccb_write_byt/164 (1073741824 (estimated locally),1.00 per call) sccb_write_byt/164 (1073741824 (estimated locally),1.00 per call) sccb_write_byt/164 (1073741824 (estimated locally),1.00 per call) sccb_write_byt/164 (1073741824 (estimated locally),1.00 per call) sccb_write_byt/164 (1073741824 (estimated locally),1.00 per call) sccb_write_byt/164 (1073741824 (estimated locally),1.00 per call) sccb_write_byt/164 (1073741824 (estimated locally),1.00 per call) sccb_write_byt/164 (1073741824 (estimated locally),1.00 per call) 
+get_pixformat/150 (get_pixformat) @0635e0a8
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  Address is taken.
+  References: g_pixelformat/138 (read) 
+  Referring: sensor_register/162 (addr) 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body nonfreeing_fn
+  Called by: 
+  Calls: 
+set_pixformat/149 (set_pixformat) @06355f18
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  Address is taken.
+  References: g_pixelformat/138 (write) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) 
+  Referring: sensor_register/162 (addr) 
+  Availability: available
+  Function flags: count:1073741809 (estimated locally) body
+  Called by: 
+  Calls: sccb_write_byt/164 (214748365 (estimated locally),0.20 per call) sccb_write_byt/164 (214748365 (estimated locally),0.20 per call) sccb_write_byt/164 (214748365 (estimated locally),0.20 per call) sccb_write_byt/164 (214748365 (estimated locally),0.20 per call) 
+write_reg/148 (write_reg) @06355b28
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  Address is taken.
+  References: g_slv_addr/137 (read) 
+  Referring: sensor_register/162 (addr) 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: sccb_write_byt/164 (1073741824 (estimated locally),1.00 per call) 
+read_reg/147 (read_reg) @063559d8
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  Address is taken.
+  References: g_slv_addr/137 (read) 
+  Referring: sensor_register/162 (addr) 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: sccb_read_byt/163 (1073741824 (estimated locally),1.00 per call) 
+sleep/146 (sleep) @06355888
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  Address is taken.
+  References: g_slv_addr/137 (read) g_slv_addr/137 (read) 
+  Referring: sensor_register/162 (addr) 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: sccb_write_byt/164 (536870913 (estimated locally),0.50 per call) sccb_read_byt/163 (1073741824 (estimated locally),1.00 per call) 
+reset/145 (reset) @06355690
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  Address is taken.
+  References: g_slv_addr/137 (read) g_slv_addr/137 (read) g_slv_addr/137 (read) default_regs/139 (read) default_regs/139 (read) 
+  Referring: sensor_register/162 (addr) 
+  Availability: available
+  Function flags: count:118111600 (estimated locally) body
+  Called by: 
+  Calls: sccb_write_byt/164 (955630225 (estimated locally),8.09 per call) MXC_Delay/165 (955630225 (estimated locally),8.09 per call) sccb_read_byt/163 (955630225 (estimated locally),8.09 per call) sccb_write_byt/164 (118111600 (estimated locally),1.00 per call) 
+dump_registers/144 (dump_registers) @063553f0
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  Address is taken.
+  References: g_slv_addr/137 (read) 
+  Referring: sensor_register/162 (addr) 
+  Availability: available
+  Function flags: count:27744268 (estimated locally) body
+  Called by: 
+  Calls: snprintf/167 (351560006 (estimated locally),12.67 per call) sccb_read_byt/163 (1065333357 (estimated locally),38.40 per call) printf/166 (277479583 (estimated locally),10.00 per call) 
+get_manufacture_id/143 (get_manufacture_id) @063552a0
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  Address is taken.
+  References: g_slv_addr/137 (read) g_slv_addr/137 (read) 
+  Referring: sensor_register/162 (addr) 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: sccb_read_byt/163 (1073741824 (estimated locally),1.00 per call) sccb_read_byt/163 (1073741824 (estimated locally),1.00 per call) 
+get_product_id/142 (get_product_id) @06355000
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  Address is taken.
+  References: g_slv_addr/137 (read) g_slv_addr/137 (read) 
+  Referring: sensor_register/162 (addr) 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: sccb_read_byt/163 (1073741824 (estimated locally),1.00 per call) sccb_read_byt/163 (1073741824 (estimated locally),1.00 per call) 
+get_slave_address/141 (get_slave_address) @06313dc8
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  Address is taken.
+  References: g_slv_addr/137 (read) 
+  Referring: sensor_register/162 (addr) 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body nonfreeing_fn
+  Called by: 
+  Calls: 
+init/140 (init) @06313c78
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  Address is taken.
+  References: g_slv_addr/137 (write) 
+  Referring: sensor_register/162 (addr) 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body nonfreeing_fn
+  Called by: 
+  Calls: 
+default_regs/139 (default_regs) @0625ae10
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: reset/145 (read) reset/145 (read) 
+  Availability: available
+  Varpool flags: initialized used-by-single-function read-only const-value-known
+g_pixelformat/138 (g_pixelformat) @0625ad80
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: get_pixformat/150 (read) set_pixformat/149 (write) 
+  Availability: available
+  Varpool flags: initialized
+g_slv_addr/137 (g_slv_addr) @0625ad38
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: reset/145 (read) sleep/146 (read) init/140 (write) set_pixformat/149 (read) write_reg/148 (read) sleep/146 (read) set_pixformat/149 (read) get_luminance/161 (read) get_luminance/161 (read) read_reg/147 (read) set_framesize/151 (read) get_manufacture_id/143 (read) get_manufacture_id/143 (read) get_product_id/142 (read) get_product_id/142 (read) set_negateimage/159 (read) set_negateimage/159 (read) set_vflip/160 (read) set_vflip/160 (read) set_contrast/153 (read) set_windowing/152 (read) set_windowing/152 (read) set_windowing/152 (read) set_windowing/152 (read) get_luminance/161 (read) set_hmirror/158 (read) set_hmirror/158 (read) set_framesize/151 (read) get_slave_address/141 (read) set_framesize/151 (read) set_pixformat/149 (read) set_framesize/151 (read) set_contrast/153 (read) set_contrast/153 (read) set_negateimage/159 (read) set_negateimage/159 (read) set_negateimage/159 (read) set_negateimage/159 (read) set_negateimage/159 (read) set_negateimage/159 (read) set_colorbar/157 (read) set_colorbar/157 (read) set_contrast/153 (read) set_windowing/152 (read) set_windowing/152 (read) set_windowing/152 (read) set_windowing/152 (read) set_contrast/153 (read) set_contrast/153 (read) set_contrast/153 (read) set_contrast/153 (read) set_contrast/153 (read) set_negateimage/159 (read) set_negateimage/159 (read) set_gainceiling/156 (read) set_gainceiling/156 (read) set_gainceiling/156 (read) set_gainceiling/156 (read) set_gainceiling/156 (read) set_gainceiling/156 (read) set_gainceiling/156 (read) set_gainceiling/156 (read) set_contrast/153 (read) set_brightness/154 (read) set_brightness/154 (read) set_brightness/154 (read) set_brightness/154 (read) set_brightness/154 (read) set_brightness/154 (read) set_brightness/154 (read) set_brightness/154 (read) set_brightness/154 (read) set_brightness/154 (read) set_brightness/154 (read) set_brightness/154 (read) set_brightness/154 (read) set_brightness/154 (read) set_brightness/154 (read) set_contrast/153 (read) set_contrast/153 (read) set_contrast/153 (read) set_contrast/153 (read) set_contrast/153 (read) set_contrast/153 (read) set_contrast/153 (read) set_contrast/153 (read) set_contrast/153 (read) set_contrast/153 (read) set_windowing/152 (read) set_windowing/152 (read) set_windowing/152 (read) set_windowing/152 (read) set_windowing/152 (read) set_windowing/152 (read) set_windowing/152 (read) set_windowing/152 (read) set_framesize/151 (read) set_framesize/151 (read) set_framesize/151 (read) set_framesize/151 (read) set_pixformat/149 (read) reset/145 (read) reset/145 (read) dump_registers/144 (read) 
+  Availability: available
+  Varpool flags:
+Trivially needed variables: default_regs/139 g_pixelformat/138 g_slv_addr/137
+Removing variables:
+
+Final Symbol table:
+
+snprintf/167 (snprintf) @0636ab28
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+printf/166 (printf) @0636aa80
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+MXC_Delay/165 (MXC_Delay) @0636a9d8
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+sccb_write_byt/164 (sccb_write_byt) @0636a930
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+sccb_read_byt/163 (sccb_read_byt) @0636a888
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+sensor_register/162 (sensor_register) @0636a7e0
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.sensor_register (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) nonfreeing_fn
+  Called by: 
+  Calls: 
+get_luminance/161 (get_luminance) @0636a690
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.get_luminance (implicit_section)
+  Address is taken.
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+set_vflip/160 (set_vflip) @0636a348
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.set_vflip (implicit_section)
+  Address is taken.
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+set_negateimage/159 (set_negateimage) @0636a150
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.set_negateimage (implicit_section)
+  Address is taken.
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+set_hmirror/158 (set_hmirror) @0636a000
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.set_hmirror (implicit_section)
+  Address is taken.
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+set_colorbar/157 (set_colorbar) @0635edc8
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.set_colorbar (implicit_section)
+  Address is taken.
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+set_gainceiling/156 (set_gainceiling) @0635ebd0
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.set_gainceiling (implicit_section)
+  Address is taken.
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+set_saturation/155 (set_saturation) @0635e9d8
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.set_saturation (implicit_section)
+  Address is taken.
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) nonfreeing_fn
+  Called by: 
+  Calls: 
+set_brightness/154 (set_brightness) @0635e888
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.set_brightness (implicit_section)
+  Address is taken.
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+set_contrast/153 (set_contrast) @0635e738
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.set_contrast (implicit_section)
+  Address is taken.
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+set_windowing/152 (set_windowing) @0635e5e8
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.set_windowing (implicit_section)
+  Address is taken.
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+set_framesize/151 (set_framesize) @0635e1f8
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.set_framesize (implicit_section)
+  Address is taken.
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+get_pixformat/150 (get_pixformat) @0635e0a8
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.get_pixformat (implicit_section)
+  Address is taken.
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) nonfreeing_fn
+  Called by: 
+  Calls: 
+set_pixformat/149 (set_pixformat) @06355f18
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.set_pixformat (implicit_section)
+  Address is taken.
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741809 (estimated locally)
+  Called by: 
+  Calls: 
+write_reg/148 (write_reg) @06355b28
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.write_reg (implicit_section)
+  Address is taken.
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+read_reg/147 (read_reg) @063559d8
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.read_reg (implicit_section)
+  Address is taken.
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+sleep/146 (sleep) @06355888
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.sleep (implicit_section)
+  Address is taken.
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+reset/145 (reset) @06355690
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.reset (implicit_section)
+  Address is taken.
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:118111600 (estimated locally)
+  Called by: 
+  Calls: 
+dump_registers/144 (dump_registers) @063553f0
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.dump_registers (implicit_section)
+  Address is taken.
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:27744268 (estimated locally)
+  Called by: 
+  Calls: 
+get_manufacture_id/143 (get_manufacture_id) @063552a0
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.get_manufacture_id (implicit_section)
+  Address is taken.
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+get_product_id/142 (get_product_id) @06355000
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.get_product_id (implicit_section)
+  Address is taken.
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+get_slave_address/141 (get_slave_address) @06313dc8
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.get_slave_address (implicit_section)
+  Address is taken.
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) nonfreeing_fn
+  Called by: 
+  Calls: 
+init/140 (init) @06313c78
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.init (implicit_section)
+  Address is taken.
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) nonfreeing_fn
+  Called by: 
+  Calls: 
+default_regs/139 (default_regs) @0625ae10
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.rodata.default_regs (implicit_section)
+  Aux: @00000001
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags: initialized used-by-single-function read-only const-value-known
+g_pixelformat/138 (g_pixelformat) @0625ad80
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.data.g_pixelformat (implicit_section)
+  Aux: @0625ae10
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags: initialized
+g_slv_addr/137 (g_slv_addr) @0625ad38
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.bss.g_slv_addr (implicit_section)
+  Aux: @0625ad80
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags:

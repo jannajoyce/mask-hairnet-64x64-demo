@@ -1,0 +1,2236 @@
+Trivially needed symbols: sccb_write_reg16/155 sccb_read_reg16/154 sccb_write_byt/153 sccb_read_byt/152 sccb_scan/151 sccb_vssel/150 sccb_init/149
+
+
+Initial Symbol table:
+
+MXC_Delay/159 (MXC_Delay) @0631de70
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sccb_read_reg16/154 sccb_write_byt/153 sccb_write_byt/153 sccb_write_byt/153 send_NACK/146 send_NACK/146 send_NACK/146 send_NACK/146 get_byte/148 get_byte/148 get_byte/148 sccb_read_byt/152 stop/145 stop/145 stop/145 send_byte/147 send_byte/147 send_byte/147 send_byte/147 send_byte/147 start/144 start/144 start/144 start/144 
+  Calls: 
+MXC_GPIO_SetVSSEL/158 (MXC_GPIO_SetVSSEL) @0631ddc8
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sccb_vssel/150 sccb_vssel/150 
+  Calls: 
+MXC_GPIO_OutGet/157 (MXC_GPIO_OutGet) @0631dd20
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sccb_vssel/150 sccb_vssel/150 
+  Calls: 
+MXC_GPIO_Config/156 (MXC_GPIO_Config) @0631dc78
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sccb_init/149 sccb_init/149 
+  Calls: 
+sccb_write_reg16/155 (sccb_write_reg16) @0631dbd0
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @01c61e00
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: stop/145 send_byte/147 send_byte/147 send_byte/147 send_byte/147 start/144 
+sccb_read_reg16/154 (sccb_read_reg16) @0631da80
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0631dbd0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: stop/145 send_NACK/146 get_byte/148 send_byte/147 start/144 MXC_Delay/159 stop/145 send_byte/147 send_byte/147 send_byte/147 start/144 
+sccb_write_byt/153 (sccb_write_byt) @0631d930
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0631da80
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: stop/145 MXC_Delay/159 send_byte/147 MXC_Delay/159 send_byte/147 MXC_Delay/159 send_byte/147 start/144 
+sccb_read_byt/152 (sccb_read_byt) @0631d7e0
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0631d930
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: stop/145 send_NACK/146 get_byte/148 send_byte/147 start/144 MXC_Delay/159 stop/145 send_byte/147 send_byte/147 start/144 
+sccb_scan/151 (sccb_scan) @0631d690
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0631d7e0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: stop/145 send_byte/147 start/144 
+sccb_vssel/150 (sccb_vssel) @0631d540
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0631d690
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: MXC_GPIO_SetVSSEL/158 MXC_GPIO_SetVSSEL/158 MXC_GPIO_OutGet/157 MXC_GPIO_OutGet/157 
+sccb_init/149 (sccb_init) @0631d3f0
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  Aux: @0631d540
+  References: gpio_cfg_scl/142 (addr) gpio_cfg_sda/143 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: MXC_GPIO_Config/156 MXC_GPIO_Config/156 
+get_byte/148 (get_byte) @0631d2a0
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0631d000
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sccb_read_reg16/154 sccb_read_byt/152 
+  Calls: MXC_Delay/159 MXC_Delay/159 MXC_Delay/159 
+send_byte/147 (send_byte) @0631d150
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @06310690
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sccb_write_reg16/155 sccb_write_reg16/155 sccb_write_reg16/155 sccb_write_reg16/155 sccb_read_reg16/154 sccb_read_reg16/154 sccb_read_reg16/154 sccb_read_reg16/154 sccb_write_byt/153 sccb_write_byt/153 sccb_write_byt/153 sccb_read_byt/152 sccb_read_byt/152 sccb_read_byt/152 sccb_scan/151 
+  Calls: MXC_Delay/159 MXC_Delay/159 MXC_Delay/159 MXC_Delay/159 MXC_Delay/159 
+send_NACK/146 (send_NACK) @0631d000
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0631d930
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sccb_read_reg16/154 sccb_read_byt/152 
+  Calls: MXC_Delay/159 MXC_Delay/159 MXC_Delay/159 MXC_Delay/159 
+stop/145 (stop) @06310690
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0631d7e0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sccb_write_reg16/155 sccb_read_reg16/154 sccb_read_reg16/154 sccb_write_byt/153 sccb_read_byt/152 sccb_read_byt/152 sccb_scan/151 
+  Calls: MXC_Delay/159 MXC_Delay/159 MXC_Delay/159 
+start/144 (start) @063103f0
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0631d150
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sccb_write_reg16/155 sccb_read_reg16/154 sccb_read_reg16/154 sccb_write_byt/153 sccb_read_byt/152 sccb_read_byt/152 sccb_scan/151 
+  Calls: MXC_Delay/159 MXC_Delay/159 MXC_Delay/159 MXC_Delay/159 
+gpio_cfg_sda/143 (gpio_cfg_sda) @06314120
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  Aux: @06314090
+  References: 
+  Referring: sccb_init/149 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+gpio_cfg_scl/142 (gpio_cfg_scl) @06314090
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  Aux: @0631d540
+  References: 
+  Referring: sccb_init/149 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+MXC_SYS_In_Crit_Section/141 (MXC_SYS_In_Crit_Section) @062def18
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+MXC_SYS_Crit_Exit/140 (MXC_SYS_Crit_Exit) @062dedc8
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+MXC_SYS_Crit_Enter/139 (MXC_SYS_Crit_Enter) @062dec78
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+_mxc_crit_get_state/138 (_mxc_crit_get_state) @062deb28
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+_state/137 (_state) @062d95e8
+  Type: variable definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Availability: not-ready
+  Varpool flags: initialized
+ITM_CheckChar/136 (ITM_CheckChar) @0627bdc8
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+ITM_ReceiveChar/135 (ITM_ReceiveChar) @0627bc78
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+ITM_SendChar/134 (ITM_SendChar) @0627bb28
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+SysTick_Config/133 (SysTick_Config) @0627b7e0
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+SCB_GetFPUType/132 (SCB_GetFPUType) @0627b690
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+ARM_MPU_Load/131 (ARM_MPU_Load) @0627b540
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+ARM_MPU_OrderedMemcpy/130 (ARM_MPU_OrderedMemcpy) @0627b3f0
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+ARM_MPU_SetRegionEx/129 (ARM_MPU_SetRegionEx) @0627b2a0
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+ARM_MPU_SetRegion/128 (ARM_MPU_SetRegion) @0627b150
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+ARM_MPU_ClrRegion/127 (ARM_MPU_ClrRegion) @0627b000
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+ARM_MPU_Disable/126 (ARM_MPU_Disable) @06270bd0
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+ARM_MPU_Enable/125 (ARM_MPU_Enable) @06270e70
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__NVIC_SystemReset/124 (__NVIC_SystemReset) @0626c690
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__NVIC_GetVector/123 (__NVIC_GetVector) @0626c540
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__NVIC_SetVector/122 (__NVIC_SetVector) @0626c3f0
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+NVIC_DecodePriority/121 (NVIC_DecodePriority) @0626c2a0
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+NVIC_EncodePriority/120 (NVIC_EncodePriority) @0626c150
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__NVIC_GetPriority/119 (__NVIC_GetPriority) @0626c000
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__NVIC_SetPriority/118 (__NVIC_SetPriority) @06260e70
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__NVIC_GetActive/117 (__NVIC_GetActive) @06260d20
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__NVIC_ClearPendingIRQ/116 (__NVIC_ClearPendingIRQ) @06260bd0
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__NVIC_SetPendingIRQ/115 (__NVIC_SetPendingIRQ) @06260a80
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__NVIC_GetPendingIRQ/114 (__NVIC_GetPendingIRQ) @06260930
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__NVIC_DisableIRQ/113 (__NVIC_DisableIRQ) @062607e0
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__NVIC_GetEnableIRQ/112 (__NVIC_GetEnableIRQ) @06260690
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__NVIC_EnableIRQ/111 (__NVIC_EnableIRQ) @06260540
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__NVIC_GetPriorityGrouping/110 (__NVIC_GetPriorityGrouping) @062603f0
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__NVIC_SetPriorityGrouping/109 (__NVIC_SetPriorityGrouping) @062602a0
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__SMMLA/108 (__SMMLA) @06218738
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__QSUB/107 (__QSUB) @062185e8
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__QADD/106 (__QADD) @06218498
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__SEL/105 (__SEL) @06218348
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__SMLSLDX/104 (__SMLSLDX) @062181f8
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__SMLSLD/103 (__SMLSLD) @062180a8
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__SMLSDX/102 (__SMLSDX) @06210f18
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__SMLSD/101 (__SMLSD) @06210dc8
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__SMUSDX/100 (__SMUSDX) @06210c78
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__SMUSD/99 (__SMUSD) @06210b28
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__SMLALDX/98 (__SMLALDX) @062109d8
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__SMLALD/97 (__SMLALD) @06210888
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__SMLADX/96 (__SMLADX) @06210738
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__SMLAD/95 (__SMLAD) @062105e8
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__SMUADX/94 (__SMUADX) @06210498
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__SMUAD/93 (__SMUAD) @06210348
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__SXTAB16_RORn/92 (__SXTAB16_RORn) @062101f8
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__SXTAB16/91 (__SXTAB16) @062100a8
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__SXTB16_RORn/90 (__SXTB16_RORn) @06208f18
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__SXTB16/89 (__SXTB16) @06208dc8
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__UXTAB16/88 (__UXTAB16) @06208c78
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__UXTB16/87 (__UXTB16) @06208b28
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__USADA8/86 (__USADA8) @06208888
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__USAD8/85 (__USAD8) @06208738
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__UHSAX/84 (__UHSAX) @062085e8
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__UQSAX/83 (__UQSAX) @06208498
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__USAX/82 (__USAX) @06208348
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__SHSAX/81 (__SHSAX) @062081f8
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__QSAX/80 (__QSAX) @062080a8
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__SSAX/79 (__SSAX) @06202f18
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__UHASX/78 (__UHASX) @06202dc8
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__UQASX/77 (__UQASX) @06202c78
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__UASX/76 (__UASX) @06202b28
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__SHASX/75 (__SHASX) @062029d8
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__QASX/74 (__QASX) @06202888
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__SASX/73 (__SASX) @06202738
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__UHSUB16/72 (__UHSUB16) @062025e8
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__UQSUB16/71 (__UQSUB16) @06202498
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__USUB16/70 (__USUB16) @06202348
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__SHSUB16/69 (__SHSUB16) @062021f8
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__QSUB16/68 (__QSUB16) @062020a8
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__SSUB16/67 (__SSUB16) @061fef18
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__UHADD16/66 (__UHADD16) @061fedc8
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__UQADD16/65 (__UQADD16) @061fec78
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__UADD16/64 (__UADD16) @061feb28
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__SHADD16/63 (__SHADD16) @061fe9d8
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__QADD16/62 (__QADD16) @061fe888
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__SADD16/61 (__SADD16) @061fe738
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__UHSUB8/60 (__UHSUB8) @061fe5e8
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__UQSUB8/59 (__UQSUB8) @061fe498
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__USUB8/58 (__USUB8) @061fe348
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__SHSUB8/57 (__SHSUB8) @061fe1f8
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__QSUB8/56 (__QSUB8) @061fe0a8
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__SSUB8/55 (__SSUB8) @061f5f18
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__UHADD8/54 (__UHADD8) @061f5dc8
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__UQADD8/53 (__UQADD8) @061f5c78
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__UADD8/52 (__UADD8) @061f5b28
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__SHADD8/51 (__SHADD8) @061f59d8
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__QADD8/50 (__QADD8) @061f5888
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__SADD8/49 (__SADD8) @061f5738
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__set_FPSCR/48 (__set_FPSCR) @061f55e8
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__get_FPSCR/47 (__get_FPSCR) @061f5498
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__set_FAULTMASK/46 (__set_FAULTMASK) @061f5348
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__get_FAULTMASK/45 (__get_FAULTMASK) @061f51f8
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__set_BASEPRI_MAX/44 (__set_BASEPRI_MAX) @061f50a8
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__set_BASEPRI/43 (__set_BASEPRI) @061eef18
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__get_BASEPRI/42 (__get_BASEPRI) @061eedc8
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__disable_fault_irq/41 (__disable_fault_irq) @061eec78
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__enable_fault_irq/40 (__enable_fault_irq) @061eeb28
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__set_PRIMASK/39 (__set_PRIMASK) @061ee9d8
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__get_PRIMASK/38 (__get_PRIMASK) @061ee888
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__set_MSP/37 (__set_MSP) @061ee738
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__get_MSP/36 (__get_MSP) @061ee5e8
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__set_PSP/35 (__set_PSP) @061ee498
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__get_PSP/34 (__get_PSP) @061ee348
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__get_xPSR/33 (__get_xPSR) @061ee1f8
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__get_APSR/32 (__get_APSR) @061ee0a8
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__get_IPSR/31 (__get_IPSR) @061e9f18
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__set_CONTROL/30 (__set_CONTROL) @061e9dc8
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__get_CONTROL/29 (__get_CONTROL) @061e9c78
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__disable_irq/28 (__disable_irq) @061e9b28
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__enable_irq/27 (__enable_irq) @061e99d8
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__STRT/26 (__STRT) @061e9888
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__STRHT/25 (__STRHT) @061e9738
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__STRBT/24 (__STRBT) @061e95e8
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__LDRT/23 (__LDRT) @061e9498
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__LDRHT/22 (__LDRHT) @061e9348
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__LDRBT/21 (__LDRBT) @061e91f8
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__RRX/20 (__RRX) @061e90a8
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__CLREX/19 (__CLREX) @061e0dc8
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__STREXW/18 (__STREXW) @061e0c78
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__STREXH/17 (__STREXH) @061e0b28
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__STREXB/16 (__STREXB) @061e09d8
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__LDREXW/15 (__LDREXW) @061e0888
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__LDREXH/14 (__LDREXH) @061e0738
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__LDREXB/13 (__LDREXB) @061e05e8
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__CLZ/12 (__CLZ) @061e0498
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__RBIT/11 (__RBIT) @061e0348
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__ROR/10 (__ROR) @061e0150
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__REVSH/9 (__REVSH) @061e0000
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__REV16/8 (__REV16) @061a4bd0
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__REV/7 (__REV) @061a4a80
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__DMB/6 (__DMB) @061a4930
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__DSB/5 (__DSB) @061a47e0
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__ISB/4 (__ISB) @061a4f18
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__cmsis_start/3 (__cmsis_start) @061a4dc8
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+_putchar_unlocked/2 (_putchar_unlocked) @060e4930
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+_getchar_unlocked/1 (_getchar_unlocked) @060e47e0
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+__sputc_r/0 (__sputc_r) @060e45e8
+  Type: function definition
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+
+Removing unused symbols: MXC_SYS_In_Crit_Section/141 MXC_SYS_Crit_Exit/140 MXC_SYS_Crit_Enter/139 _mxc_crit_get_state/138 _state/137 ITM_CheckChar/136 ITM_ReceiveChar/135 ITM_SendChar/134 SysTick_Config/133 SCB_GetFPUType/132 ARM_MPU_Load/131 ARM_MPU_OrderedMemcpy/130 ARM_MPU_SetRegionEx/129 ARM_MPU_SetRegion/128 ARM_MPU_ClrRegion/127 ARM_MPU_Disable/126 ARM_MPU_Enable/125 __NVIC_SystemReset/124 __NVIC_GetVector/123 __NVIC_SetVector/122 NVIC_DecodePriority/121 NVIC_EncodePriority/120 __NVIC_GetPriority/119 __NVIC_SetPriority/118 __NVIC_GetActive/117 __NVIC_ClearPendingIRQ/116 __NVIC_SetPendingIRQ/115 __NVIC_GetPendingIRQ/114 __NVIC_DisableIRQ/113 __NVIC_GetEnableIRQ/112 __NVIC_EnableIRQ/111 __NVIC_GetPriorityGrouping/110 __NVIC_SetPriorityGrouping/109 __SMMLA/108 __QSUB/107 __QADD/106 __SEL/105 __SMLSLDX/104 __SMLSLD/103 __SMLSDX/102 __SMLSD/101 __SMUSDX/100 __SMUSD/99 __SMLALDX/98 __SMLALD/97 __SMLADX/96 __SMLAD/95 __SMUADX/94 __SMUAD/93 __SXTAB16_RORn/92 __SXTAB16/91 __SXTB16_RORn/90 __SXTB16/89 __UXTAB16/88 __UXTB16/87 __USADA8/86 __USAD8/85 __UHSAX/84 __UQSAX/83 __USAX/82 __SHSAX/81 __QSAX/80 __SSAX/79 __UHASX/78 __UQASX/77 __UASX/76 __SHASX/75 __QASX/74 __SASX/73 __UHSUB16/72 __UQSUB16/71 __USUB16/70 __SHSUB16/69 __QSUB16/68 __SSUB16/67 __UHADD16/66 __UQADD16/65 __UADD16/64 __SHADD16/63 __QADD16/62 __SADD16/61 __UHSUB8/60 __UQSUB8/59 __USUB8/58 __SHSUB8/57 __QSUB8/56 __SSUB8/55 __UHADD8/54 __UQADD8/53 __UADD8/52 __SHADD8/51 __QADD8/50 __SADD8/49 __set_FPSCR/48 __get_FPSCR/47 __set_FAULTMASK/46 __get_FAULTMASK/45 __set_BASEPRI_MAX/44 __set_BASEPRI/43 __get_BASEPRI/42 __disable_fault_irq/41 __enable_fault_irq/40 __set_PRIMASK/39 __get_PRIMASK/38 __set_MSP/37 __get_MSP/36 __set_PSP/35 __get_PSP/34 __get_xPSR/33 __get_APSR/32 __get_IPSR/31 __set_CONTROL/30 __get_CONTROL/29 __disable_irq/28 __enable_irq/27 __STRT/26 __STRHT/25 __STRBT/24 __LDRT/23 __LDRHT/22 __LDRBT/21 __RRX/20 __CLREX/19 __STREXW/18 __STREXH/17 __STREXB/16 __LDREXW/15 __LDREXH/14 __LDREXB/13 __CLZ/12 __RBIT/11 __ROR/10 __REVSH/9 __REV16/8 __REV/7 __DMB/6 __DSB/5 __ISB/4 __cmsis_start/3 _putchar_unlocked/2 _getchar_unlocked/1 __sputc_r/0
+
+Reclaimed Symbol table:
+
+MXC_Delay/159 (MXC_Delay) @0631de70
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sccb_read_reg16/154 sccb_write_byt/153 sccb_write_byt/153 sccb_write_byt/153 send_NACK/146 send_NACK/146 send_NACK/146 send_NACK/146 get_byte/148 get_byte/148 get_byte/148 sccb_read_byt/152 stop/145 stop/145 stop/145 send_byte/147 send_byte/147 send_byte/147 send_byte/147 send_byte/147 start/144 start/144 start/144 start/144 
+  Calls: 
+MXC_GPIO_SetVSSEL/158 (MXC_GPIO_SetVSSEL) @0631ddc8
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sccb_vssel/150 sccb_vssel/150 
+  Calls: 
+MXC_GPIO_OutGet/157 (MXC_GPIO_OutGet) @0631dd20
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sccb_vssel/150 sccb_vssel/150 
+  Calls: 
+MXC_GPIO_Config/156 (MXC_GPIO_Config) @0631dc78
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sccb_init/149 sccb_init/149 
+  Calls: 
+sccb_write_reg16/155 (sccb_write_reg16) @0631dbd0
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: stop/145 send_byte/147 send_byte/147 send_byte/147 send_byte/147 start/144 
+sccb_read_reg16/154 (sccb_read_reg16) @0631da80
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: stop/145 send_NACK/146 get_byte/148 send_byte/147 start/144 MXC_Delay/159 stop/145 send_byte/147 send_byte/147 send_byte/147 start/144 
+sccb_write_byt/153 (sccb_write_byt) @0631d930
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: stop/145 MXC_Delay/159 send_byte/147 MXC_Delay/159 send_byte/147 MXC_Delay/159 send_byte/147 start/144 
+sccb_read_byt/152 (sccb_read_byt) @0631d7e0
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: stop/145 send_NACK/146 get_byte/148 send_byte/147 start/144 MXC_Delay/159 stop/145 send_byte/147 send_byte/147 start/144 
+sccb_scan/151 (sccb_scan) @0631d690
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: stop/145 send_byte/147 start/144 
+sccb_vssel/150 (sccb_vssel) @0631d540
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: MXC_GPIO_SetVSSEL/158 MXC_GPIO_SetVSSEL/158 MXC_GPIO_OutGet/157 MXC_GPIO_OutGet/157 
+sccb_init/149 (sccb_init) @0631d3f0
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: gpio_cfg_scl/142 (addr) gpio_cfg_sda/143 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: MXC_GPIO_Config/156 MXC_GPIO_Config/156 
+get_byte/148 (get_byte) @0631d2a0
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sccb_read_reg16/154 sccb_read_byt/152 
+  Calls: MXC_Delay/159 MXC_Delay/159 MXC_Delay/159 
+send_byte/147 (send_byte) @0631d150
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sccb_write_reg16/155 sccb_write_reg16/155 sccb_write_reg16/155 sccb_write_reg16/155 sccb_read_reg16/154 sccb_read_reg16/154 sccb_read_reg16/154 sccb_read_reg16/154 sccb_write_byt/153 sccb_write_byt/153 sccb_write_byt/153 sccb_read_byt/152 sccb_read_byt/152 sccb_read_byt/152 sccb_scan/151 
+  Calls: MXC_Delay/159 MXC_Delay/159 MXC_Delay/159 MXC_Delay/159 MXC_Delay/159 
+send_NACK/146 (send_NACK) @0631d000
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sccb_read_reg16/154 sccb_read_byt/152 
+  Calls: MXC_Delay/159 MXC_Delay/159 MXC_Delay/159 MXC_Delay/159 
+stop/145 (stop) @06310690
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sccb_write_reg16/155 sccb_read_reg16/154 sccb_read_reg16/154 sccb_write_byt/153 sccb_read_byt/152 sccb_read_byt/152 sccb_scan/151 
+  Calls: MXC_Delay/159 MXC_Delay/159 MXC_Delay/159 
+start/144 (start) @063103f0
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sccb_write_reg16/155 sccb_read_reg16/154 sccb_read_reg16/154 sccb_write_byt/153 sccb_read_byt/152 sccb_read_byt/152 sccb_scan/151 
+  Calls: MXC_Delay/159 MXC_Delay/159 MXC_Delay/159 MXC_Delay/159 
+gpio_cfg_sda/143 (gpio_cfg_sda) @06314120
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: sccb_init/149 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+gpio_cfg_scl/142 (gpio_cfg_scl) @06314090
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: sccb_init/149 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+
+
+Initial Symbol table:
+
+MXC_Delay/159 (MXC_Delay) @0631de70
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sccb_read_reg16/154 sccb_write_byt/153 sccb_write_byt/153 sccb_write_byt/153 send_NACK/146 send_NACK/146 send_NACK/146 send_NACK/146 get_byte/148 get_byte/148 get_byte/148 sccb_read_byt/152 stop/145 stop/145 stop/145 send_byte/147 send_byte/147 send_byte/147 send_byte/147 send_byte/147 start/144 start/144 start/144 start/144 
+  Calls: 
+MXC_GPIO_SetVSSEL/158 (MXC_GPIO_SetVSSEL) @0631ddc8
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sccb_vssel/150 sccb_vssel/150 
+  Calls: 
+MXC_GPIO_OutGet/157 (MXC_GPIO_OutGet) @0631dd20
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sccb_vssel/150 sccb_vssel/150 
+  Calls: 
+MXC_GPIO_Config/156 (MXC_GPIO_Config) @0631dc78
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sccb_init/149 sccb_init/149 
+  Calls: 
+sccb_write_reg16/155 (sccb_write_reg16) @0631dbd0
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: stop/145 send_byte/147 send_byte/147 send_byte/147 send_byte/147 start/144 
+sccb_read_reg16/154 (sccb_read_reg16) @0631da80
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: stop/145 send_NACK/146 get_byte/148 send_byte/147 start/144 MXC_Delay/159 stop/145 send_byte/147 send_byte/147 send_byte/147 start/144 
+sccb_write_byt/153 (sccb_write_byt) @0631d930
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: stop/145 MXC_Delay/159 send_byte/147 MXC_Delay/159 send_byte/147 MXC_Delay/159 send_byte/147 start/144 
+sccb_read_byt/152 (sccb_read_byt) @0631d7e0
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: stop/145 send_NACK/146 get_byte/148 send_byte/147 start/144 MXC_Delay/159 stop/145 send_byte/147 send_byte/147 start/144 
+sccb_scan/151 (sccb_scan) @0631d690
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: stop/145 send_byte/147 start/144 
+sccb_vssel/150 (sccb_vssel) @0631d540
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: MXC_GPIO_SetVSSEL/158 MXC_GPIO_SetVSSEL/158 MXC_GPIO_OutGet/157 MXC_GPIO_OutGet/157 
+sccb_init/149 (sccb_init) @0631d3f0
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: gpio_cfg_scl/142 (addr) gpio_cfg_sda/143 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: MXC_GPIO_Config/156 MXC_GPIO_Config/156 
+get_byte/148 (get_byte) @0631d2a0
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sccb_read_reg16/154 sccb_read_byt/152 
+  Calls: MXC_Delay/159 MXC_Delay/159 MXC_Delay/159 
+send_byte/147 (send_byte) @0631d150
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sccb_write_reg16/155 sccb_write_reg16/155 sccb_write_reg16/155 sccb_write_reg16/155 sccb_read_reg16/154 sccb_read_reg16/154 sccb_read_reg16/154 sccb_read_reg16/154 sccb_write_byt/153 sccb_write_byt/153 sccb_write_byt/153 sccb_read_byt/152 sccb_read_byt/152 sccb_read_byt/152 sccb_scan/151 
+  Calls: MXC_Delay/159 MXC_Delay/159 MXC_Delay/159 MXC_Delay/159 MXC_Delay/159 
+send_NACK/146 (send_NACK) @0631d000
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sccb_read_reg16/154 sccb_read_byt/152 
+  Calls: MXC_Delay/159 MXC_Delay/159 MXC_Delay/159 MXC_Delay/159 
+stop/145 (stop) @06310690
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sccb_write_reg16/155 sccb_read_reg16/154 sccb_read_reg16/154 sccb_write_byt/153 sccb_read_byt/152 sccb_read_byt/152 sccb_scan/151 
+  Calls: MXC_Delay/159 MXC_Delay/159 MXC_Delay/159 
+start/144 (start) @063103f0
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sccb_write_reg16/155 sccb_read_reg16/154 sccb_read_reg16/154 sccb_write_byt/153 sccb_read_byt/152 sccb_read_byt/152 sccb_scan/151 
+  Calls: MXC_Delay/159 MXC_Delay/159 MXC_Delay/159 MXC_Delay/159 
+gpio_cfg_sda/143 (gpio_cfg_sda) @06314120
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: sccb_init/149 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+gpio_cfg_scl/142 (gpio_cfg_scl) @06314090
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: sccb_init/149 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+
+Removing unused symbols:
+
+Reclaimed Symbol table:
+
+MXC_Delay/159 (MXC_Delay) @0631de70
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sccb_read_reg16/154 sccb_write_byt/153 sccb_write_byt/153 sccb_write_byt/153 send_NACK/146 send_NACK/146 send_NACK/146 send_NACK/146 get_byte/148 get_byte/148 get_byte/148 sccb_read_byt/152 stop/145 stop/145 stop/145 send_byte/147 send_byte/147 send_byte/147 send_byte/147 send_byte/147 start/144 start/144 start/144 start/144 
+  Calls: 
+MXC_GPIO_SetVSSEL/158 (MXC_GPIO_SetVSSEL) @0631ddc8
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sccb_vssel/150 sccb_vssel/150 
+  Calls: 
+MXC_GPIO_OutGet/157 (MXC_GPIO_OutGet) @0631dd20
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sccb_vssel/150 sccb_vssel/150 
+  Calls: 
+MXC_GPIO_Config/156 (MXC_GPIO_Config) @0631dc78
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: sccb_init/149 sccb_init/149 
+  Calls: 
+sccb_write_reg16/155 (sccb_write_reg16) @0631dbd0
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: stop/145 send_byte/147 send_byte/147 send_byte/147 send_byte/147 start/144 
+sccb_read_reg16/154 (sccb_read_reg16) @0631da80
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: stop/145 send_NACK/146 get_byte/148 send_byte/147 start/144 MXC_Delay/159 stop/145 send_byte/147 send_byte/147 send_byte/147 start/144 
+sccb_write_byt/153 (sccb_write_byt) @0631d930
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: stop/145 MXC_Delay/159 send_byte/147 MXC_Delay/159 send_byte/147 MXC_Delay/159 send_byte/147 start/144 
+sccb_read_byt/152 (sccb_read_byt) @0631d7e0
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: stop/145 send_NACK/146 get_byte/148 send_byte/147 start/144 MXC_Delay/159 stop/145 send_byte/147 send_byte/147 start/144 
+sccb_scan/151 (sccb_scan) @0631d690
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: stop/145 send_byte/147 start/144 
+sccb_vssel/150 (sccb_vssel) @0631d540
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: MXC_GPIO_SetVSSEL/158 MXC_GPIO_SetVSSEL/158 MXC_GPIO_OutGet/157 MXC_GPIO_OutGet/157 
+sccb_init/149 (sccb_init) @0631d3f0
+  Type: function definition analyzed
+  Visibility: semantic_interposition public
+  References: gpio_cfg_scl/142 (addr) gpio_cfg_sda/143 (addr) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: MXC_GPIO_Config/156 MXC_GPIO_Config/156 
+get_byte/148 (get_byte) @0631d2a0
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sccb_read_reg16/154 sccb_read_byt/152 
+  Calls: MXC_Delay/159 MXC_Delay/159 MXC_Delay/159 
+send_byte/147 (send_byte) @0631d150
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sccb_write_reg16/155 sccb_write_reg16/155 sccb_write_reg16/155 sccb_write_reg16/155 sccb_read_reg16/154 sccb_read_reg16/154 sccb_read_reg16/154 sccb_read_reg16/154 sccb_write_byt/153 sccb_write_byt/153 sccb_write_byt/153 sccb_read_byt/152 sccb_read_byt/152 sccb_read_byt/152 sccb_scan/151 
+  Calls: MXC_Delay/159 MXC_Delay/159 MXC_Delay/159 MXC_Delay/159 MXC_Delay/159 
+send_NACK/146 (send_NACK) @0631d000
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sccb_read_reg16/154 sccb_read_byt/152 
+  Calls: MXC_Delay/159 MXC_Delay/159 MXC_Delay/159 MXC_Delay/159 
+stop/145 (stop) @06310690
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sccb_write_reg16/155 sccb_read_reg16/154 sccb_read_reg16/154 sccb_write_byt/153 sccb_read_byt/152 sccb_read_byt/152 sccb_scan/151 
+  Calls: MXC_Delay/159 MXC_Delay/159 MXC_Delay/159 
+start/144 (start) @063103f0
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: sccb_write_reg16/155 sccb_read_reg16/154 sccb_read_reg16/154 sccb_write_byt/153 sccb_read_byt/152 sccb_read_byt/152 sccb_scan/151 
+  Calls: MXC_Delay/159 MXC_Delay/159 MXC_Delay/159 MXC_Delay/159 
+gpio_cfg_sda/143 (gpio_cfg_sda) @06314120
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: sccb_init/149 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+gpio_cfg_scl/142 (gpio_cfg_scl) @06314090
+  Type: variable definition analyzed
+  Visibility: semantic_interposition
+  References: 
+  Referring: sccb_init/149 (addr) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+
+Reclaiming functions:
+Reclaiming variables:
+Clearing address taken flags:
+Optimized Symbol table:
+
+start/174 (start) @06208498
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  next sharing asm name: 169
+  References: 
+  Referring: 
+  Function start/174 is inline copy in sccb_read_reg16/154
+  Clone of start/144
+  Availability: local
+  Function flags: count:265751100 (estimated locally) body local
+  Called by: sccb_read_reg16/154 (inlined) (265751100 (estimated locally),0.25 per call) 
+  Calls: MXC_Delay/159 (265751100 (estimated locally),0.25 per call) MXC_Delay/159 (265751100 (estimated locally),0.25 per call) MXC_Delay/159 (265751100 (estimated locally),0.25 per call) MXC_Delay/159 (265751100 (estimated locally),0.25 per call) 
+stop/173 (stop) @06208348
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  next sharing asm name: 172
+  References: 
+  Referring: 
+  Function stop/173 is inline copy in sccb_read_reg16/154
+  Clone of stop/145
+  Availability: local
+  Function flags: count:265751100 (estimated locally) body local
+  Called by: sccb_read_reg16/154 (inlined) (265751100 (estimated locally),0.25 per call) 
+  Calls: MXC_Delay/159 (265751100 (estimated locally),0.25 per call) MXC_Delay/159 (265751100 (estimated locally),0.25 per call) MXC_Delay/159 (265751100 (estimated locally),0.25 per call) 
+stop/172 (stop) @062081f8
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  next sharing asm name: 171
+  previous sharing asm name: 173
+  References: 
+  Referring: 
+  Function stop/172 is inline copy in sccb_read_reg16/154
+  Clone of stop/145
+  Availability: local
+  Function flags: count:268435456 (estimated locally) body local
+  Called by: sccb_read_reg16/154 (inlined) (268435456 (estimated locally),0.25 per call) 
+  Calls: MXC_Delay/159 (268435456 (estimated locally),0.25 per call) MXC_Delay/159 (268435456 (estimated locally),0.25 per call) MXC_Delay/159 (268435456 (estimated locally),0.25 per call) 
+stop/171 (stop) @062080a8
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  next sharing asm name: 170
+  previous sharing asm name: 172
+  References: 
+  Referring: 
+  Function stop/171 is inline copy in sccb_read_byt/152
+  Clone of stop/145
+  Availability: local
+  Function flags: count:536870911 (estimated locally) body local
+  Called by: sccb_read_byt/152 (inlined) (536870911 (estimated locally),0.50 per call) 
+  Calls: MXC_Delay/159 (536870911 (estimated locally),0.50 per call) MXC_Delay/159 (536870911 (estimated locally),0.50 per call) MXC_Delay/159 (536870911 (estimated locally),0.50 per call) 
+stop/170 (stop) @06208f18
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  next sharing asm name: 167
+  previous sharing asm name: 171
+  References: 
+  Referring: 
+  Function stop/170 is inline copy in sccb_read_byt/152
+  Clone of stop/145
+  Availability: local
+  Function flags: count:536870911 (estimated locally) body local
+  Called by: sccb_read_byt/152 (inlined) (536870911 (estimated locally),0.50 per call) 
+  Calls: MXC_Delay/159 (536870911 (estimated locally),0.50 per call) MXC_Delay/159 (536870911 (estimated locally),0.50 per call) MXC_Delay/159 (536870911 (estimated locally),0.50 per call) 
+start/169 (start) @06202dc8
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  next sharing asm name: 168
+  previous sharing asm name: 174
+  References: 
+  Referring: 
+  Function start/169 is inline copy in sccb_read_reg16/154
+  Clone of start/144
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) body local
+  Called by: sccb_read_reg16/154 (inlined) (1073741824 (estimated locally),1.00 per call) 
+  Calls: MXC_Delay/159 (1073741824 (estimated locally),1.00 per call) MXC_Delay/159 (1073741824 (estimated locally),1.00 per call) MXC_Delay/159 (1073741824 (estimated locally),1.00 per call) MXC_Delay/159 (1073741824 (estimated locally),1.00 per call) 
+start/168 (start) @06202c78
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  next sharing asm name: 166
+  previous sharing asm name: 169
+  References: 
+  Referring: 
+  Function start/168 is inline copy in sccb_read_byt/152
+  Clone of start/144
+  Availability: local
+  Function flags: count:1073741823 (estimated locally) body local
+  Called by: sccb_read_byt/152 (inlined) (1073741823 (estimated locally),1.00 per call) 
+  Calls: MXC_Delay/159 (1073741823 (estimated locally),1.00 per call) MXC_Delay/159 (1073741823 (estimated locally),1.00 per call) MXC_Delay/159 (1073741823 (estimated locally),1.00 per call) MXC_Delay/159 (1073741823 (estimated locally),1.00 per call) 
+stop/167 (stop) @06202b28
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  next sharing asm name: 164
+  previous sharing asm name: 170
+  References: 
+  Referring: 
+  Function stop/167 is inline copy in sccb_read_reg16/154
+  Clone of stop/145
+  Availability: local
+  Function flags: count:805306369 (estimated locally) body local
+  Called by: sccb_read_reg16/154 (inlined) (805306369 (estimated locally),0.75 per call) 
+  Calls: MXC_Delay/159 (805306369 (estimated locally),0.75 per call) MXC_Delay/159 (805306369 (estimated locally),0.75 per call) MXC_Delay/159 (805306369 (estimated locally),0.75 per call) 
+start/166 (start) @062029d8
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  next sharing asm name: 165
+  previous sharing asm name: 168
+  References: 
+  Referring: 
+  Function start/166 is inline copy in sccb_write_reg16/155
+  Clone of start/144
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) body local
+  Called by: sccb_write_reg16/155 (inlined) (1073741824 (estimated locally),1.00 per call) 
+  Calls: MXC_Delay/159 (1073741824 (estimated locally),1.00 per call) MXC_Delay/159 (1073741824 (estimated locally),1.00 per call) MXC_Delay/159 (1073741824 (estimated locally),1.00 per call) MXC_Delay/159 (1073741824 (estimated locally),1.00 per call) 
+start/165 (start) @06202888
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  next sharing asm name: 161
+  previous sharing asm name: 166
+  References: 
+  Referring: 
+  Function start/165 is inline copy in sccb_write_byt/153
+  Clone of start/144
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) body local
+  Called by: sccb_write_byt/153 (inlined) (1073741824 (estimated locally),1.00 per call) 
+  Calls: MXC_Delay/159 (1073741824 (estimated locally),1.00 per call) MXC_Delay/159 (1073741824 (estimated locally),1.00 per call) MXC_Delay/159 (1073741824 (estimated locally),1.00 per call) MXC_Delay/159 (1073741824 (estimated locally),1.00 per call) 
+stop/164 (stop) @06202738
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  next sharing asm name: 163
+  previous sharing asm name: 167
+  References: 
+  Referring: 
+  Function stop/164 is inline copy in sccb_write_byt/153
+  Clone of stop/145
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) body local
+  Called by: sccb_write_byt/153 (inlined) (1073741824 (estimated locally),1.00 per call) 
+  Calls: MXC_Delay/159 (1073741824 (estimated locally),1.00 per call) MXC_Delay/159 (1073741824 (estimated locally),1.00 per call) MXC_Delay/159 (1073741824 (estimated locally),1.00 per call) 
+stop/163 (stop) @062025e8
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  next sharing asm name: 160
+  previous sharing asm name: 164
+  References: 
+  Referring: 
+  Function stop/163 is inline copy in sccb_write_reg16/155
+  Clone of stop/145
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) body local
+  Called by: sccb_write_reg16/155 (inlined) (1073741824 (estimated locally),1.00 per call) 
+  Calls: MXC_Delay/159 (1073741824 (estimated locally),1.00 per call) MXC_Delay/159 (1073741824 (estimated locally),1.00 per call) MXC_Delay/159 (1073741824 (estimated locally),1.00 per call) 
+send_NACK/162 (send_NACK) @06202498
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  next sharing asm name: 146
+  References: 
+  Referring: 
+  Function send_NACK/162 is inline copy in sccb_read_reg16/154
+  Clone of send_NACK/146
+  Availability: local
+  Function flags: count:87697863 (estimated locally) body local
+  Called by: sccb_read_reg16/154 (inlined) (87697863 (estimated locally),0.08 per call) 
+  Calls: MXC_Delay/159 (87697863 (estimated locally),0.08 per call) MXC_Delay/159 (87697863 (estimated locally),0.08 per call) MXC_Delay/159 (87697863 (estimated locally),0.08 per call) MXC_Delay/159 (87697863 (estimated locally),0.08 per call) 
+start/161 (start) @06202348
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  next sharing asm name: 144
+  previous sharing asm name: 165
+  References: 
+  Referring: 
+  Function start/161 is inline copy in sccb_scan/151
+  Clone of start/144
+  Availability: local
+  Function flags: count:1063004409 (estimated locally) body local
+  Called by: sccb_scan/151 (inlined) (1063004409 (estimated locally),15.36 per call) 
+  Calls: MXC_Delay/159 (1063004409 (estimated locally),15.36 per call) MXC_Delay/159 (1063004409 (estimated locally),15.36 per call) MXC_Delay/159 (1063004409 (estimated locally),15.36 per call) MXC_Delay/159 (1063004409 (estimated locally),15.36 per call) 
+stop/160 (stop) @061fe498
+  Type: function definition analyzed
+  Visibility: semantic_interposition
+  next sharing asm name: 145
+  previous sharing asm name: 163
+  References: 
+  Referring: 
+  Function stop/160 is inline copy in sccb_scan/151
+  Clone of stop/145
+  Availability: local
+  Function flags: count:1063004409 (estimated locally) body local
+  Called by: sccb_scan/151 (inlined) (1063004409 (estimated locally),15.36 per call) 
+  Calls: MXC_Delay/159 (1063004409 (estimated locally),15.36 per call) MXC_Delay/159 (1063004409 (estimated locally),15.36 per call) MXC_Delay/159 (1063004409 (estimated locally),15.36 per call) 
+MXC_Delay/159 (MXC_Delay) @0631de70
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: start/174 (265751100 (estimated locally),0.25 per call) start/174 (265751100 (estimated locally),0.25 per call) start/174 (265751100 (estimated locally),0.25 per call) start/174 (265751100 (estimated locally),0.25 per call) stop/173 (265751100 (estimated locally),0.25 per call) stop/173 (265751100 (estimated locally),0.25 per call) stop/173 (265751100 (estimated locally),0.25 per call) stop/172 (268435456 (estimated locally),0.25 per call) stop/172 (268435456 (estimated locally),0.25 per call) stop/172 (268435456 (estimated locally),0.25 per call) stop/171 (536870911 (estimated locally),0.50 per call) stop/171 (536870911 (estimated locally),0.50 per call) stop/171 (536870911 (estimated locally),0.50 per call) stop/170 (536870911 (estimated locally),0.50 per call) stop/170 (536870911 (estimated locally),0.50 per call) stop/170 (536870911 (estimated locally),0.50 per call) start/169 (1073741824 (estimated locally),1.00 per call) start/169 (1073741824 (estimated locally),1.00 per call) start/169 (1073741824 (estimated locally),1.00 per call) start/169 (1073741824 (estimated locally),1.00 per call) start/168 (1073741823 (estimated locally),1.00 per call) start/168 (1073741823 (estimated locally),1.00 per call) start/168 (1073741823 (estimated locally),1.00 per call) start/168 (1073741823 (estimated locally),1.00 per call) stop/167 (805306369 (estimated locally),0.75 per call) stop/167 (805306369 (estimated locally),0.75 per call) stop/167 (805306369 (estimated locally),0.75 per call) start/166 (1073741824 (estimated locally),1.00 per call) start/166 (1073741824 (estimated locally),1.00 per call) start/166 (1073741824 (estimated locally),1.00 per call) start/166 (1073741824 (estimated locally),1.00 per call) start/165 (1073741824 (estimated locally),1.00 per call) start/165 (1073741824 (estimated locally),1.00 per call) start/165 (1073741824 (estimated locally),1.00 per call) start/165 (1073741824 (estimated locally),1.00 per call) stop/164 (1073741824 (estimated locally),1.00 per call) stop/164 (1073741824 (estimated locally),1.00 per call) stop/164 (1073741824 (estimated locally),1.00 per call) stop/163 (1073741824 (estimated locally),1.00 per call) stop/163 (1073741824 (estimated locally),1.00 per call) stop/163 (1073741824 (estimated locally),1.00 per call) send_NACK/162 (87697863 (estimated locally),0.08 per call) send_NACK/162 (87697863 (estimated locally),0.08 per call) send_NACK/162 (87697863 (estimated locally),0.08 per call) send_NACK/162 (87697863 (estimated locally),0.08 per call) start/161 (1063004409 (estimated locally),15.36 per call) start/161 (1063004409 (estimated locally),15.36 per call) start/161 (1063004409 (estimated locally),15.36 per call) start/161 (1063004409 (estimated locally),15.36 per call) stop/160 (1063004409 (estimated locally),15.36 per call) stop/160 (1063004409 (estimated locally),15.36 per call) stop/160 (1063004409 (estimated locally),15.36 per call) sccb_read_reg16/154 (265751100 (estimated locally),0.25 per call) sccb_write_byt/153 (1073741824 (estimated locally),1.00 per call) sccb_write_byt/153 (1073741824 (estimated locally),1.00 per call) sccb_write_byt/153 (1073741824 (estimated locally),1.00 per call) sccb_read_byt/152 (177167400 (estimated locally),0.16 per call) send_NACK/146 (58465242 (estimated locally),0.05 per call) send_NACK/146 (58465242 (estimated locally),0.05 per call) send_NACK/146 (58465242 (estimated locally),0.05 per call) send_NACK/146 (58465242 (estimated locally),0.05 per call) get_byte/148 (954449107 (estimated locally),8.00 per call) get_byte/148 (954449105 (estimated locally),8.00 per call) get_byte/148 (119292720 (estimated locally),1.00 per call) stop/145 (177167400 (estimated locally),0.16 per call) stop/145 (177167400 (estimated locally),0.16 per call) stop/145 (177167400 (estimated locally),0.16 per call) send_byte/147 (119292720 (estimated locally),1.00 per call) send_byte/147 (119292720 (estimated locally),1.00 per call) send_byte/147 (119292720 (estimated locally),1.00 per call) send_byte/147 (954449105 (estimated locally),8.00 per call) send_byte/147 (954449105 (estimated locally),8.00 per call) start/144 (177167400 (estimated locally),0.16 per call) start/144 (177167400 (estimated locally),0.16 per call) start/144 (177167400 (estimated locally),0.16 per call) start/144 (177167400 (estimated locally),0.16 per call) 
+  Calls: 
+MXC_GPIO_SetVSSEL/158 (MXC_GPIO_SetVSSEL) @0631ddc8
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: sccb_vssel/150 (1073741824 (estimated locally),1.00 per call) sccb_vssel/150 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+MXC_GPIO_OutGet/157 (MXC_GPIO_OutGet) @0631dd20
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: sccb_vssel/150 (1073741824 (estimated locally),1.00 per call) sccb_vssel/150 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+MXC_GPIO_Config/156 (MXC_GPIO_Config) @0631dc78
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: sccb_init/149 (1073741824 (estimated locally),1.00 per call) sccb_init/149 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+sccb_write_reg16/155 (sccb_write_reg16) @0631dbd0
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: stop/163 (inlined) (1073741824 (estimated locally),1.00 per call) send_byte/147 (275991376 (estimated locally),0.26 per call) send_byte/147 (116930483 (estimated locally),0.11 per call) send_byte/147 (354334800 (estimated locally),0.33 per call) send_byte/147 (1073741824 (estimated locally),1.00 per call) start/166 (inlined) (1073741824 (estimated locally),1.00 per call) 
+sccb_read_reg16/154 (sccb_read_reg16) @0631da80
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: stop/173 (inlined) (265751100 (estimated locally),0.25 per call) send_NACK/162 (inlined) (87697863 (estimated locally),0.08 per call) get_byte/148 (87697863 (estimated locally),0.08 per call) send_byte/147 (265751100 (estimated locally),0.25 per call) start/174 (inlined) (265751100 (estimated locally),0.25 per call) MXC_Delay/159 (265751100 (estimated locally),0.25 per call) stop/167 (inlined) (805306369 (estimated locally),0.75 per call) send_byte/147 (268435456 (estimated locally),0.25 per call) stop/172 (inlined) (268435456 (estimated locally),0.25 per call) send_byte/147 (536870913 (estimated locally),0.50 per call) send_byte/147 (1073741824 (estimated locally),1.00 per call) start/169 (inlined) (1073741824 (estimated locally),1.00 per call) 
+sccb_write_byt/153 (sccb_write_byt) @0631d930
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: stop/164 (inlined) (1073741824 (estimated locally),1.00 per call) MXC_Delay/159 (1073741824 (estimated locally),1.00 per call) send_byte/147 (354334800 (estimated locally),0.33 per call) MXC_Delay/159 (1073741824 (estimated locally),1.00 per call) send_byte/147 (354334800 (estimated locally),0.33 per call) MXC_Delay/159 (1073741824 (estimated locally),1.00 per call) send_byte/147 (1073741824 (estimated locally),1.00 per call) start/165 (inlined) (1073741824 (estimated locally),1.00 per call) 
+sccb_read_byt/152 (sccb_read_byt) @0631d7e0
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741823 (estimated locally) body
+  Called by: 
+  Calls: stop/145 (inlined) (177167400 (estimated locally),0.16 per call) send_NACK/146 (inlined) (58465242 (estimated locally),0.05 per call) get_byte/148 (58465242 (estimated locally),0.05 per call) send_byte/147 (177167400 (estimated locally),0.16 per call) start/144 (inlined) (177167400 (estimated locally),0.16 per call) MXC_Delay/159 (177167400 (estimated locally),0.16 per call) stop/171 (inlined) (536870911 (estimated locally),0.50 per call) send_byte/147 (536870911 (estimated locally),0.50 per call) stop/170 (inlined) (536870911 (estimated locally),0.50 per call) send_byte/147 (1073741823 (estimated locally),1.00 per call) start/168 (inlined) (1073741823 (estimated locally),1.00 per call) 
+sccb_scan/151 (sccb_scan) @0631d690
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:69202658 (estimated locally) body
+  Called by: 
+  Calls: stop/160 (inlined) (1063004409 (estimated locally),15.36 per call) send_byte/147 (1063004409 (estimated locally),15.36 per call) start/161 (inlined) (1063004409 (estimated locally),15.36 per call) 
+sccb_vssel/150 (sccb_vssel) @0631d540
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: MXC_GPIO_SetVSSEL/158 (1073741824 (estimated locally),1.00 per call) MXC_GPIO_SetVSSEL/158 (1073741824 (estimated locally),1.00 per call) MXC_GPIO_OutGet/157 (1073741824 (estimated locally),1.00 per call) MXC_GPIO_OutGet/157 (1073741824 (estimated locally),1.00 per call) 
+sccb_init/149 (sccb_init) @0631d3f0
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition public
+  References: gpio_cfg_scl/142 (addr) gpio_cfg_sda/143 (addr) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body
+  Called by: 
+  Calls: MXC_GPIO_Config/156 (1073741824 (estimated locally),1.00 per call) MXC_GPIO_Config/156 (1073741824 (estimated locally),1.00 per call) 
+get_byte/148 (get_byte) @0631d2a0
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:119292720 (estimated locally) body local
+  Called by: sccb_read_reg16/154 (87697863 (estimated locally),0.08 per call) sccb_read_byt/152 (58465242 (estimated locally),0.05 per call) 
+  Calls: MXC_Delay/159 (954449107 (estimated locally),8.00 per call) MXC_Delay/159 (954449105 (estimated locally),8.00 per call) MXC_Delay/159 (119292720 (estimated locally),1.00 per call) 
+send_byte/147 (send_byte) @0631d150
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:119292720 (estimated locally) body local
+  Called by: sccb_write_reg16/155 (275991376 (estimated locally),0.26 per call) sccb_write_reg16/155 (116930483 (estimated locally),0.11 per call) sccb_write_reg16/155 (354334800 (estimated locally),0.33 per call) sccb_write_reg16/155 (1073741824 (estimated locally),1.00 per call) sccb_read_reg16/154 (265751100 (estimated locally),0.25 per call) sccb_read_reg16/154 (268435456 (estimated locally),0.25 per call) sccb_read_reg16/154 (536870913 (estimated locally),0.50 per call) sccb_read_reg16/154 (1073741824 (estimated locally),1.00 per call) sccb_write_byt/153 (354334800 (estimated locally),0.33 per call) sccb_write_byt/153 (354334800 (estimated locally),0.33 per call) sccb_write_byt/153 (1073741824 (estimated locally),1.00 per call) sccb_read_byt/152 (177167400 (estimated locally),0.16 per call) sccb_read_byt/152 (536870911 (estimated locally),0.50 per call) sccb_read_byt/152 (1073741823 (estimated locally),1.00 per call) sccb_scan/151 (1063004409 (estimated locally),15.36 per call) 
+  Calls: MXC_Delay/159 (119292720 (estimated locally),1.00 per call) MXC_Delay/159 (119292720 (estimated locally),1.00 per call) MXC_Delay/159 (119292720 (estimated locally),1.00 per call) MXC_Delay/159 (954449105 (estimated locally),8.00 per call) MXC_Delay/159 (954449105 (estimated locally),8.00 per call) 
+send_NACK/146 (send_NACK) @0631d000
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  previous sharing asm name: 162
+  References: 
+  Referring: 
+  Function send_NACK/146 is inline copy in sccb_read_byt/152
+  Availability: local
+  Function flags: count:58465242 (estimated locally) body local
+  Called by: sccb_read_byt/152 (inlined) (58465242 (estimated locally),0.05 per call) 
+  Calls: MXC_Delay/159 (58465242 (estimated locally),0.05 per call) MXC_Delay/159 (58465242 (estimated locally),0.05 per call) MXC_Delay/159 (58465242 (estimated locally),0.05 per call) MXC_Delay/159 (58465242 (estimated locally),0.05 per call) 
+stop/145 (stop) @06310690
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  previous sharing asm name: 160
+  References: 
+  Referring: 
+  Function stop/145 is inline copy in sccb_read_byt/152
+  Availability: local
+  Function flags: count:177167400 (estimated locally) body local
+  Called by: sccb_read_byt/152 (inlined) (177167400 (estimated locally),0.16 per call) 
+  Calls: MXC_Delay/159 (177167400 (estimated locally),0.16 per call) MXC_Delay/159 (177167400 (estimated locally),0.16 per call) MXC_Delay/159 (177167400 (estimated locally),0.16 per call) 
+start/144 (start) @063103f0
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  previous sharing asm name: 161
+  References: 
+  Referring: 
+  Function start/144 is inline copy in sccb_read_byt/152
+  Availability: local
+  Function flags: count:177167400 (estimated locally) body local
+  Called by: sccb_read_byt/152 (inlined) (177167400 (estimated locally),0.16 per call) 
+  Calls: MXC_Delay/159 (177167400 (estimated locally),0.16 per call) MXC_Delay/159 (177167400 (estimated locally),0.16 per call) MXC_Delay/159 (177167400 (estimated locally),0.16 per call) MXC_Delay/159 (177167400 (estimated locally),0.16 per call) 
+gpio_cfg_sda/143 (gpio_cfg_sda) @06314120
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: sccb_init/149 (addr) 
+  Availability: available
+  Varpool flags: initialized used-by-single-function read-only const-value-known
+gpio_cfg_scl/142 (gpio_cfg_scl) @06314090
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly
+  References: 
+  Referring: sccb_init/149 (addr) 
+  Availability: available
+  Varpool flags: initialized used-by-single-function read-only const-value-known
+Trivially needed variables: gpio_cfg_sda/143 gpio_cfg_scl/142
+Removing variables:
+
+Final Symbol table:
+
+MXC_Delay/159 (MXC_Delay) @0631de70
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+MXC_GPIO_SetVSSEL/158 (MXC_GPIO_SetVSSEL) @0631ddc8
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+MXC_GPIO_OutGet/157 (MXC_GPIO_OutGet) @0631dd20
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+MXC_GPIO_Config/156 (MXC_GPIO_Config) @0631dc78
+  Type: function
+  Visibility: semantic_interposition external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+sccb_write_reg16/155 (sccb_write_reg16) @0631dbd0
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.sccb_write_reg16 (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+sccb_read_reg16/154 (sccb_read_reg16) @0631da80
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.sccb_read_reg16 (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+sccb_write_byt/153 (sccb_write_byt) @0631d930
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.sccb_write_byt (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+sccb_read_byt/152 (sccb_read_byt) @0631d7e0
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.sccb_read_byt (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741823 (estimated locally)
+  Called by: 
+  Calls: 
+sccb_scan/151 (sccb_scan) @0631d690
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.sccb_scan (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:69202658 (estimated locally)
+  Called by: 
+  Calls: 
+sccb_vssel/150 (sccb_vssel) @0631d540
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.sccb_vssel (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+sccb_init/149 (sccb_init) @0631d3f0
+  Type: function definition analyzed
+  Visibility: externally_visible semantic_interposition asm_written public section:.text.sccb_init (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally)
+  Called by: 
+  Calls: 
+get_byte/148 (get_byte) @0631d2a0
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.get_byte (implicit_section)
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:119292720 (estimated locally) local
+  Called by: 
+  Calls: 
+send_byte/147 (send_byte) @0631d150
+  Type: function definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.send_byte (implicit_section)
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:119292720 (estimated locally) local
+  Called by: 
+  Calls: 
+gpio_cfg_sda/143 (gpio_cfg_sda) @06314120
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.rodata.gpio_cfg_sda (implicit_section)
+  Aux: @00000001
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags: initialized used-by-single-function read-only const-value-known
+gpio_cfg_scl/142 (gpio_cfg_scl) @06314090
+  Type: variable definition analyzed
+  Visibility: semantic_interposition prevailing_def_ironly asm_written section:.rodata.gpio_cfg_scl (implicit_section)
+  Aux: @06314120
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags: initialized used-by-single-function read-only const-value-known
