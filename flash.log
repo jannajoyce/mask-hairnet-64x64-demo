@@ -2,8 +2,8 @@ set log_output to "flash.log"
 Info : CMSIS-DAP: SWD supported
 Info : CMSIS-DAP: Atomic commands supported
 Info : CMSIS-DAP: Test domain timer supported
-Info : CMSIS-DAP: FW Version = 2.0.0
-Info : CMSIS-DAP: Serial# = 042317027179ca8500000000000000000000000097969906
+Info : CMSIS-DAP: FW Version = 2.1.0
+Info : CMSIS-DAP: Serial# = 042317025279ca6a00000000000000000000000097969906
 Info : CMSIS-DAP: Interface Initialised (SWD)
 Info : SWCLK/TCK = 1 SWDIO/TMS = 1 TDI = 0 TDO = 0 nTRST = 0 nRESET = 1
 Info : CMSIS-DAP: Interface ready
@@ -25,7 +25,6 @@ Warn : No RTOS could be auto-detected!
 Info : SWD DPIDR 0x2ba01477
 [max32xxx.cpu] halted due to debug-request, current mode: Thread 
 xPSR: 0x81000000 pc: 0x00002124 msp: 0x20003ff0
-Info : Padding image section 0 at 0x1001d5d8 with 8 bytes
 Info : SWD DPIDR 0x2ba01477
 [max32xxx.cpu] halted due to breakpoint, current mode: Thread 
 xPSR: 0x81000000 pc: 0x00002124 msp: 0x20003ff0

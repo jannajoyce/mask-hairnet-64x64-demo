@@ -71,4 +71,6 @@ C:/MaximSDK/Examples/MAX78000/CNN/final-mask-hairnet-demo-64/build/main.o: \
  C:/analog/cfs/1.0.0/SDK/MAX/Libraries/PeriphDrivers/Include/MAX78000/mxc_delay.h \
  C:/analog/cfs/1.0.0/SDK/MAX/Libraries/MiscDrivers/Camera/camera.h \
  C:/analog/cfs/1.0.0/SDK/MAX/Libraries/MiscDrivers/Camera/ov7692_regs.h \
- C:/analog/cfs/1.0.0/SDK/MAX/Libraries/MiscDrivers/Camera/debayering.h
+ C:/analog/cfs/1.0.0/SDK/MAX/Libraries/MiscDrivers/Camera/debayering.h \
+ C:/analog/cfs/1.0.0/SDK/MAX/Libraries/PeriphDrivers/Include/MAX78000/wdt.h \
+ C:/analog/cfs/1.0.0/SDK/MAX/Libraries/CMSIS/Device/Maxim/MAX78000/Include/wdt_regs.h

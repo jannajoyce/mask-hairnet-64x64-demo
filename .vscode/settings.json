@@ -5,11 +5,12 @@
   "cfs.configureWorkspace": "Yes",
   "cfs.project.target": "MAX78000",
   "cfs.project.board": "FTHR_RevA",
-  "cfs.programFile": "C:/MaximSDK/Examples/MAX78000/CNN/final-mask-hairnet-demo-64/build/final-mask-hairnet-demo-64.elf",
-  // "cfs.programFile": "${workspaceFolder}/build/${workspaceFolderBasename}.elf",
+  //"cfs.programFile": "C:/MaximSDK/Examples/MAX78000/CNN/final-mask-hairnet-demo-64/build/final-mask-hairnet-demo-64.elf",
+  "cfs.programFile": "${workspaceFolder}/build/${workspaceFolderBasename}.elf",
   "cfs.project.firmwarePlatform": "MSDK",
   "cfs.openocd.target": "target/max78000.cfg",
   "cfs.openocd.interface": "interface/cmsis-dap.cfg",
   "cfs.openocd.riscvTarget": "target/max78000_riscv.cfg",
-  "cfs.openocd.riscvInterface": "interface/ftdi/olimex-arm-usb-ocd-h.cfg"
+  "cfs.openocd.riscvInterface": "interface/ftdi/olimex-arm-usb-ocd-h.cfg",
+  "cfs.sdk.path": "C:/analog/cfs/1.0.0"
 }
