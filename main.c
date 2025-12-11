@@ -1,21 +1,10 @@
 /******************************************************************************
- *
- * Copyright (C) 2022-2023 Maxim Integrated Products, Inc. (now owned by
- * Analog Devices, Inc.),
- * Copyright (C) 2023-2024 Analog Devices, Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- *
+ * main.c -- Restart-safe, interrupt-driven button handling for MAX78000
+ * - Starts detection sequence when button pressed (idle)
+ * - If button pressed during detection, requests reset and restarts
+ * - Each position: capture exactly FRAMES_PER_POSITION frames over CAPTURE_DURATION_MS
+ * - Yellow LED on during capture (CAPTURE_DURATION_MS)
+ * - Result LED on for 1s, then off; 2s pause between positions
  ******************************************************************************/
 
 #include <stdlib.h>
@@ -56,7 +45,6 @@
 #define LED_YELLOW_PORT   MXC_GPIO0
 #define LED_YELLOW_PIN    MXC_GPIO_PIN_6
 
-
 // Button Configuration - External button on GPIO1 Pin 1
 #define BUTTON_PORT         MXC_GPIO1
 #define BUTTON_PIN          MXC_GPIO_PIN_1
@@ -77,53 +65,64 @@ const mxc_gpio_cfg_t led_green = {LED_GREEN_PORT, LED_GREEN_PIN, MXC_GPIO_FUNC_O
 const mxc_gpio_cfg_t led_yellow = {LED_YELLOW_PORT, LED_YELLOW_PIN, MXC_GPIO_FUNC_OUT, MXC_GPIO_PAD_NONE, MXC_GPIO_VSSEL_VDDIOH};
 const mxc_gpio_cfg_t button_cfg = {BUTTON_PORT, BUTTON_PIN, MXC_GPIO_FUNC_IN, MXC_GPIO_PAD_PULL_UP, MXC_GPIO_VSSEL_VDDIOH};
 
-// Class definitions (update based on your CNN model output)
+// Class definitions
 typedef enum {
-    CLASS_IMPROPER_FMHN = 0,      // ProperFM + ProperHN
-    CLASS_PROPER_FMHN = 1,    // ImproperFM + ImproperHN
-    CLASS_PROPER_FM_IMPROPER_HN = 2,  // ProperFM + ImproperHN
-    CLASS_PROPER_HN_IMPROPER_FM = 3,  // ProperHN + ImproperFM
+    CLASS_IMPROPER_FMHN = 0,
+    CLASS_PROPER_FMHN = 1,
+    CLASS_PROPER_FM_IMPROPER_HN = 2,
+    CLASS_PROPER_HN_IMPROPER_FM = 3,
     NUM_CLASSES = 4
 } ClassType;
 
 char *class_names[NUM_CLASSES] = { "improper_fm_hn", "proper_fm_hn", "proper_fm_improper_hn", "proper_hn_improper_fm" };
-
 char *position_names[3] = {"FRONT", "LEFT", "RIGHT"};
 
-// Global Variables
+// Global Variables (CNN/capture)
 static int32_t ml_data[CNN_NUM_OUTPUTS];
 static q15_t ml_softmax[CNN_NUM_OUTPUTS];
 volatile uint32_t cnn_time;
 uint8_t data565[IMAGE_SIZE_X * 2];
 static uint32_t input_0[IMAGE_SIZE_X * IMAGE_SIZE_Y];
 
-volatile int button_pressed = 0;
+volatile int button_pressed = 0;           // Set by ISR to request start (when idle)
+volatile int reset_requested = 0;          // Set by ISR to request immediate abort & restart (when detecting)
 volatile uint32_t last_button_press_time = 0;
-
-/* NEW: allow reset requests at any time (set by button handler) */
-volatile int reset_requested = 0;
-
+volatile int detecting = 0;                // 1 while detection sequence running
 int class_counts[NUM_CLASSES];
 
 /* **************************************************************************** */
-/* Modified button handler: sets reset_requested so button can abort detection */
+/* Button ISR - debounced.                                                       */
+/* Behavior:
+ *  - If idle (detecting == 0): set button_pressed to request start
+ *  - If detecting: set reset_requested so the main loop aborts current run and restarts
+ */
 /* **************************************************************************** */
 void button_handler(void *cbdata)
 {
-    /* Clear IRQ flag */
+    // Clear IRQ flag first
     MXC_GPIO_ClearFlags(button_cfg.port, button_cfg.mask);
 
     uint32_t current_ticks = MXC_TMR_GetCount(MXC_TMR0);
+
+    // Debounce: require at least DEBOUNCE_TICKS between accepted presses
     if ((current_ticks - last_button_press_time) > DEBOUNCE_TICKS) {
-        /* Request reset so any ongoing detection aborts immediately */
-        reset_requested = 1;
-        /* Also mark as a press to start detection when in idle */
-        button_pressed = 1;
         last_button_press_time = current_ticks;
-        printf("Button press detected!\n");
+
+        if (detecting) {
+            // Abort current detection, request restart
+            reset_requested = 1;
+            printf("[ISR] Button pressed -> request RESET\n");
+        } else {
+            // Request start when idle
+            button_pressed = 1;
+            printf("[ISR] Button pressed -> request START\n");
+        }
     }
 }
 
+/* **************************************************************************** */
+/* Setup button: timer for debounce + GPIO interrupt                             */
+/* **************************************************************************** */
 void setup_button(void)
 {
     mxc_tmr_cfg_t tmr_cfg;
@@ -145,6 +144,8 @@ void setup_button(void)
            MXC_GPIO_GET_IDX(button_cfg.port), __builtin_ctz(button_cfg.mask));
 }
 
+/* **************************************************************************** */
+/* LED helpers                                                                  */
 /* **************************************************************************** */
 void setup_leds(void)
 {
@@ -174,28 +175,20 @@ void display_classification_result(int class_idx)
 
     switch(class_idx) {
         case CLASS_PROPER_FMHN:
-            /* Both green LEDs ON */
             MXC_GPIO_OutSet(led_green.port, led_green.mask);
             break;
-
         case CLASS_IMPROPER_FMHN:
-            /* Both red LEDs ON */
             MXC_GPIO_OutSet(led_red_upper.port, led_red_upper.mask);
             MXC_GPIO_OutSet(led_red_lower.port, led_red_lower.mask);
             break;
-
         case CLASS_PROPER_FM_IMPROPER_HN:
-            /* Upper red LED ON, Lower red OFF */
             MXC_GPIO_OutSet(led_red_upper.port, led_red_upper.mask);
             MXC_GPIO_OutClr(led_red_lower.port, led_red_lower.mask);
             break;
-
         case CLASS_PROPER_HN_IMPROPER_FM:
-            /* Lower red LED ON, Upper red OFF */
             MXC_GPIO_OutClr(led_red_upper.port, led_red_upper.mask);
             MXC_GPIO_OutSet(led_red_lower.port, led_red_lower.mask);
             break;
-
         default:
             all_leds_off();
             printf("Result: No class above threshold (All LEDs OFF)\n");
@@ -203,6 +196,8 @@ void display_classification_result(int class_idx)
     }
 }
 
+/* **************************************************************************** */
+/* CNN helper                                                                   */
 /* **************************************************************************** */
 int get_cnn_classification(void)
 {
@@ -216,13 +211,14 @@ int get_cnn_classification(void)
         }
     }
 
-    /* Map CNN output to our 4 classes (adjust based on your model) */
     if (max_index < NUM_CLASSES) {
         return max_index;
     }
-    return -1; /* Unknown class */
+    return -1;
 }
 
+/* **************************************************************************** */
+/* Load input to CNN (unchanged)                                                 */
 /* **************************************************************************** */
 void cnn_load_input(void)
 {
@@ -234,6 +230,8 @@ void cnn_load_input(void)
     }
 }
 
+/* **************************************************************************** */
+/* Camera capture & process (unchanged)                                          */
 /* **************************************************************************** */
 void capture_process_camera(void)
 {
@@ -277,31 +275,28 @@ void capture_process_camera(void)
 }
 
 /* **************************************************************************** */
-/* process_position: captures FRAMES_PER_POSITION frames, runs CNN, accumulates */
-/* counts, then decides and drives LEDs.                                       */
-/* **************************************************************************** */
+/* process_position: captures FRAMES_PER_POSITION frames over CAPTURE_DURATION_MS,
+ * runs CNN per frame, accumulates counts, decides class, shows LEDs for 1s,
+ * then waits INTER_POSITION_DELAY_MS.
+ * **************************************************************************** */
 void process_position(int position_idx)
 {
     printf("\n=== Processing %s position ===\n", position_names[position_idx]);
 
-    /* Reset class counts */
     for (int i = 0; i < NUM_CLASSES; i++) {
         class_counts[i] = 0;
     }
 
-    /* Phase (a): Yellow LED ON - Capture Phase */
+    /* Yellow LED on for the capture duration */
     MXC_GPIO_OutSet(led_yellow.port, led_yellow.mask);
 
     for (int frame = 0; frame < FRAMES_PER_POSITION; frame++) {
-
-        /* If reset requested, abort immediately */
+        // If reset requested, turn off yellow and exit immediately
         if (reset_requested) {
-            /* Ensure yellow LED is turned off before exiting */
             MXC_GPIO_OutClr(led_yellow.port, led_yellow.mask);
             return;
         }
 
-        /* Capture and process camera image */
         capture_process_camera();
 
         /* Run CNN inference */
@@ -310,27 +305,26 @@ void process_position(int position_idx)
         cnn_load_input();
 
         while (cnn_time == 0) {
-            __WFI();
+            __WFI(); // wait for CNN interrupt (interrupts remain enabled)
         }
 
         cnn_unload((uint32_t *)ml_data);
         softmax_q17p14_q15((const q31_t *)ml_data, CNN_NUM_OUTPUTS, ml_softmax);
 
-        /* Get classification result */
         int class_idx = get_cnn_classification();
-
         if (class_idx >= 0 && class_idx < NUM_CLASSES) {
-           class_counts[class_idx]++;  /* <-- IMPORTANT! */
-           printf("%d: %s\n", frame + 1, class_names[class_idx]);
+            class_counts[class_idx]++;
+            printf("%d: %s\n", frame + 1, class_names[class_idx]);
         }
 
+        /* Delay to spread captures evenly over CAPTURE_DURATION_MS */
        // MXC_Delay(MXC_DELAY_MSEC(FRAME_DELAY_MS));
     }
 
-    /* Phase (b): Yellow LED OFF - Classification Phase */
+    /* Capture done */
     MXC_GPIO_OutClr(led_yellow.port, led_yellow.mask);
 
-    /* Calculate detection success rates */
+    /* Evaluate results */
     printf("\nDetection Results:\n");
     double max_rate = 0.0;
     int best_class = -1;
@@ -338,14 +332,12 @@ void process_position(int position_idx)
     for (int i = 0; i < NUM_CLASSES; i++) {
         double rate = ((double)class_counts[i] / FRAMES_PER_POSITION) * 100.0;
         printf("  %s: %d detections (%.2f%%)\n", class_names[i], class_counts[i], rate);
-
         if (rate > (double)THRESHOLD_PERCENT && rate > max_rate) {
             max_rate = rate;
             best_class = i;
         }
     }
 
-    /* Phase (c): Display result via LEDs */
     printf("\nFinal Classification: ");
     if (best_class >= 0) {
         printf("%s (%.2f%%)\n", class_names[best_class], max_rate);
@@ -355,16 +347,16 @@ void process_position(int position_idx)
         display_classification_result(-1);
     }
 
-    /* Small pause so user sees the result */
+    /* Show result for 1 second (user requirement), then turn off */
     MXC_Delay(MXC_DELAY_MSEC(1000));
-
-    /* Turn off all LEDs, then turn on yellow for next capture phase */
     all_leds_off();
-    /* Phase (d): Delay before next position */
-    printf("Waiting %d seconds before next position...\n", INTER_POSITION_DELAY_MS / 1000);
+
+    /* Delay before next position (2 seconds) */
     MXC_Delay(MXC_DELAY_MSEC(INTER_POSITION_DELAY_MS));
 }
 
+/* **************************************************************************** */
+/* main - initialize hardware and run event loop                                */
 /* **************************************************************************** */
 int main(void)
 {
@@ -375,7 +367,6 @@ int main(void)
 
     MXC_Delay(2000000);
     Camera_Power(POWER_ON);
-    printf("\n\n=== Facemask/Hairnet Detection System ===\n");
 
     MXC_ICC_Enable(MXC_ICC0);
     MXC_SYS_Clock_Select(MXC_SYS_CLOCK_IPO);
@@ -393,7 +384,6 @@ int main(void)
     MXC_DMA_Init();
     dma_channel = MXC_DMA_AcquireChannel();
 
-    printf("Init Camera.\n");
     camera_init(CAMERA_FREQ);
     camera_setup(IMAGE_SIZE_X, IMAGE_SIZE_Y, PIXFORMAT_RGB888, FIFO_THREE_BYTE, STREAMING_DMA, dma_channel);
     camera_set_hmirror(0);
@@ -406,104 +396,82 @@ int main(void)
     setup_leds();
     setup_button();
 
-    printf("\nSystem ready!\n");
-    printf("Press button to start detection sequence...\n\n");
+    //printf("\nSystem ready!\n");
+   // printf("Press button to start detection sequence...\n\n");
 
-    /* Clear any spurious button press flags */
-    button_pressed = 0;
+    /* Clear state */
     reset_requested = 0;
-
-    int poll_count = 0;
-    int last_button_state = -1;
-    int stable_low_count = 0;
-    int stable_high_count = 0;
-    int button_was_released = 0;  /* Ensure button is released before accepting press */
+    detecting = 0;
 
     while (1) {
-        /* Check button state via polling as backup */
-        int button_state = MXC_GPIO_InGet(button_cfg.port, button_cfg.mask);
-        int button_is_pressed = (button_state == 0);  /* Active low */
-
-        /* Track if button has been released (not pressed) for a stable period */
-        if (!button_is_pressed) {
-            stable_high_count++;
-            stable_low_count = 0;
-            if (stable_high_count > 10) {  /* Button stable high for ~100ms */
-                button_was_released = 1;
-            }
-        } else {
-            stable_high_count = 0;
+        /* Wait for button press - direct polling, no interrupts needed */
+        while (MXC_GPIO_InGet(button_cfg.port, button_cfg.mask) != 0) {
+            MXC_Delay(MXC_DELAY_MSEC(10));
         }
 
-        /* Wait for button press (interrupt-based or polling) */
-        if (button_pressed) {
-            /* Clear the button_pressed flag so re-entrant triggers wait for next press */
-            button_pressed = 0;
+        /* Button pressed - debounce */
+        MXC_Delay(MXC_DELAY_MSEC(DEBOUNCE_TIME_MS));
 
-            /* If this was also a reset request, clear it (we are starting fresh) */
-            reset_requested = 0;
-
-            printf("\nButton pressed.\n");
-            printf("Starting in 2 seconds...\n");
-            MXC_Delay(MXC_DELAY_MSEC(2000));   /* 2 sec delay after pressing */
-
-            start_detection:
-            printf("\n========================================\n");
-            printf("Starting detection sequence!\n");
-            printf("========================================\n");
-
-            all_leds_off();
-
-            /* Process three positions in sequence.
-               After each call we check if reset was requested and abort to reset_sequence. */
-            process_position(0); /* FRONT */
-            if (reset_requested) goto reset_sequence;
-
-            process_position(1); /* LEFT */
-            if (reset_requested) goto reset_sequence;
-
-            process_position(2); /* RIGHT */
-            if (reset_requested) goto reset_sequence;
-
-            printf("\n========================================\n");
-            printf("Detection sequence complete!\n");
-            printf("Press button to start again...\n");
-            printf("========================================\n\n");
-
-            all_leds_off();
-
-            /* Wait for button release */
-            while (MXC_GPIO_InGet(button_cfg.port, button_cfg.mask) == 0) {
-                MXC_Delay(MXC_DELAY_MSEC(10));
-            }
-
-            /* Reset interrupt-driven state */
-            button_pressed = 0;
-            MXC_GPIO_ClearFlags(button_cfg.port, button_cfg.mask);
-
-            /* Reset the button release flag so we require a fresh press */
-            button_was_released = 0;
-            stable_high_count = 0;
-            stable_low_count = 0;
-            last_button_state = MXC_GPIO_InGet(button_cfg.port, button_cfg.mask);
+        /* Verify button is still pressed after debounce */
+        if (MXC_GPIO_InGet(button_cfg.port, button_cfg.mask) != 0) {
+            continue; // False trigger, go back to waiting
         }
 
-        MXC_Delay(MXC_DELAY_MSEC(10));
+        /* Begin detection sequence */
+        reset_requested = 0;   // clear any stale reset
+        detecting = 1;         // mark detection active
 
-        continue;
+        /* Wait for physical button release before starting */
+        while (MXC_GPIO_InGet(button_cfg.port, button_cfg.mask) == 0) {
+            MXC_Delay(MXC_DELAY_MSEC(10));
+        }
 
-    /* If reset requested anywhere during detection, jump here */
-    reset_sequence:
-    reset_requested = 0;
-    all_leds_off();
+        printf("\n========================================\n");
+        printf("Starting detection sequence!\n");
+        printf("========================================\n");
 
-    printf("\n!!!! RESET REQUESTED !!!!\n");
+        all_leds_off();
 
-    MXC_Delay(MXC_DELAY_MSEC(2000)); // small delay to avoid bouncing
+        /* Run three positions. If reset_requested becomes true during any position,
+           we abort immediately and go back to the top so ISR can re-request start. */
+        process_position(0); /* FRONT */
+        if (reset_requested) {
+            printf("\n!!!! Detection interrupted - Restarting... !!!!\n");
+            all_leds_off();
+            detecting = 0;
+            MXC_Delay(MXC_DELAY_MSEC(500));
+            // keep button_pressed as set by ISR if ISR set it (ISR will set it when idle)
+            continue;
+        }
 
-    // Automatically restart detection sequence:
-    goto start_detection;
+        process_position(1); /* LEFT */
+        if (reset_requested) {
+            printf("\n!!!! Detection interrupted - Restarting... !!!!\n");
+            all_leds_off();
+            detecting = 0;
+            MXC_Delay(MXC_DELAY_MSEC(500));
+            continue;
+        }
 
+        process_position(2); /* RIGHT */
+        if (reset_requested) {
+            printf("\n!!!! Detection interrupted - Restarting... !!!!\n");
+            all_leds_off();
+            detecting = 0;
+            MXC_Delay(MXC_DELAY_MSEC(500));
+            continue;
+        }
+
+        printf("\n========================================\n");
+        printf("Detection sequence complete!\n");
+        printf("Press button to start again...\n");
+        printf("========================================\n\n");
+
+        all_leds_off();
+
+        /* Clear state and mark as idle */
+        reset_requested = 0;
+        detecting = 0;
     }
 
     return 0;

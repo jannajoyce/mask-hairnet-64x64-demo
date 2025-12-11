@@ -25,6 +25,7 @@ Warn : No RTOS could be auto-detected!
 Info : SWD DPIDR 0x2ba01477
 [max32xxx.cpu] halted due to debug-request, current mode: Thread 
 xPSR: 0x81000000 pc: 0x00002124 msp: 0x20003ff0
+Info : Padding image section 0 at 0x1001d638 with 8 bytes
 Info : SWD DPIDR 0x2ba01477
 [max32xxx.cpu] halted due to breakpoint, current mode: Thread 
 xPSR: 0x81000000 pc: 0x00002124 msp: 0x20003ff0

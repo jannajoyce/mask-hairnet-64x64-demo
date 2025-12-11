@@ -3,7 +3,7 @@ Trivially needed symbols: _sbrk/1
 
 Initial Symbol table:
 
-__errno/4 (__errno) @061f7bd0
+__errno/4 (__errno) @060f2bd0
   Type: function
   Visibility: semantic_interposition external public
   References: 
@@ -11,21 +11,21 @@ __errno/4 (__errno) @061f7bd0
   Function flags:
   Called by: _sbrk/1 
   Calls: 
-__HeapLimit/3 (__HeapLimit) @05f1c948
+__HeapLimit/3 (__HeapLimit) @0521c948
   Type: variable
   Visibility: semantic_interposition external public
   References: 
   Referring: _sbrk/1 (addr) 
   Availability: not-ready
   Varpool flags:
-__HeapBase/2 (__HeapBase) @05f1c900
+__HeapBase/2 (__HeapBase) @0521c900
   Type: variable
   Visibility: semantic_interposition external public
   References: 
   Referring: _sbrk/1 (addr) 
   Availability: not-ready
   Varpool flags:
-_sbrk/1 (_sbrk) @061f7888
+_sbrk/1 (_sbrk) @060f2888
   Type: function definition analyzed
   Visibility: semantic_interposition public
   Aux: @01c61e00
@@ -34,7 +34,7 @@ _sbrk/1 (_sbrk) @061f7888
   Function flags: body
   Called by: 
   Calls: __errno/4 
-heap_end/0 (heap_end) @05f1c5a0
+heap_end/0 (heap_end) @0521c5a0
   Type: variable definition analyzed
   Visibility: semantic_interposition
   Aux: @01c61e00
@@ -47,7 +47,7 @@ Removing unused symbols:
 
 Reclaimed Symbol table:
 
-__errno/4 (__errno) @061f7bd0
+__errno/4 (__errno) @060f2bd0
   Type: function
   Visibility: semantic_interposition external public
   References: 
@@ -55,21 +55,21 @@ __errno/4 (__errno) @061f7bd0
   Function flags:
   Called by: _sbrk/1 
   Calls: 
-__HeapLimit/3 (__HeapLimit) @05f1c948
+__HeapLimit/3 (__HeapLimit) @0521c948
   Type: variable
   Visibility: semantic_interposition external public
   References: 
   Referring: _sbrk/1 (addr) 
   Availability: not-ready
   Varpool flags:
-__HeapBase/2 (__HeapBase) @05f1c900
+__HeapBase/2 (__HeapBase) @0521c900
   Type: variable
   Visibility: semantic_interposition external public
   References: 
   Referring: _sbrk/1 (addr) 
   Availability: not-ready
   Varpool flags:
-_sbrk/1 (_sbrk) @061f7888
+_sbrk/1 (_sbrk) @060f2888
   Type: function definition analyzed
   Visibility: semantic_interposition public
   References: heap_end/0 (read) heap_end/0 (write) __HeapBase/2 (addr) heap_end/0 (read) heap_end/0 (read) __HeapLimit/3 (addr) heap_end/0 (read) heap_end/0 (write) 
@@ -77,7 +77,7 @@ _sbrk/1 (_sbrk) @061f7888
   Function flags: body
   Called by: 
   Calls: __errno/4 
-heap_end/0 (heap_end) @05f1c5a0
+heap_end/0 (heap_end) @0521c5a0
   Type: variable definition analyzed
   Visibility: semantic_interposition
   References: 
@@ -88,7 +88,7 @@ heap_end/0 (heap_end) @05f1c5a0
 
 Initial Symbol table:
 
-__errno/4 (__errno) @061f7bd0
+__errno/4 (__errno) @060f2bd0
   Type: function
   Visibility: semantic_interposition external public
   References: 
@@ -96,21 +96,21 @@ __errno/4 (__errno) @061f7bd0
   Function flags:
   Called by: _sbrk/1 
   Calls: 
-__HeapLimit/3 (__HeapLimit) @05f1c948
+__HeapLimit/3 (__HeapLimit) @0521c948
   Type: variable
   Visibility: semantic_interposition external public
   References: 
   Referring: _sbrk/1 (addr) 
   Availability: not-ready
   Varpool flags:
-__HeapBase/2 (__HeapBase) @05f1c900
+__HeapBase/2 (__HeapBase) @0521c900
   Type: variable
   Visibility: semantic_interposition external public
   References: 
   Referring: _sbrk/1 (addr) 
   Availability: not-ready
   Varpool flags:
-_sbrk/1 (_sbrk) @061f7888
+_sbrk/1 (_sbrk) @060f2888
   Type: function definition analyzed
   Visibility: semantic_interposition public
   References: heap_end/0 (read) heap_end/0 (write) __HeapBase/2 (addr) heap_end/0 (read) heap_end/0 (read) __HeapLimit/3 (addr) heap_end/0 (read) heap_end/0 (write) 
@@ -118,7 +118,7 @@ _sbrk/1 (_sbrk) @061f7888
   Function flags: body
   Called by: 
   Calls: __errno/4 
-heap_end/0 (heap_end) @05f1c5a0
+heap_end/0 (heap_end) @0521c5a0
   Type: variable definition analyzed
   Visibility: semantic_interposition
   References: 
@@ -130,7 +130,7 @@ Removing unused symbols:
 
 Reclaimed Symbol table:
 
-__errno/4 (__errno) @061f7bd0
+__errno/4 (__errno) @060f2bd0
   Type: function
   Visibility: semantic_interposition external public
   References: 
@@ -138,21 +138,21 @@ __errno/4 (__errno) @061f7bd0
   Function flags:
   Called by: _sbrk/1 
   Calls: 
-__HeapLimit/3 (__HeapLimit) @05f1c948
+__HeapLimit/3 (__HeapLimit) @0521c948
   Type: variable
   Visibility: semantic_interposition external public
   References: 
   Referring: _sbrk/1 (addr) 
   Availability: not-ready
   Varpool flags:
-__HeapBase/2 (__HeapBase) @05f1c900
+__HeapBase/2 (__HeapBase) @0521c900
   Type: variable
   Visibility: semantic_interposition external public
   References: 
   Referring: _sbrk/1 (addr) 
   Availability: not-ready
   Varpool flags:
-_sbrk/1 (_sbrk) @061f7888
+_sbrk/1 (_sbrk) @060f2888
   Type: function definition analyzed
   Visibility: semantic_interposition public
   References: heap_end/0 (read) heap_end/0 (write) __HeapBase/2 (addr) heap_end/0 (read) heap_end/0 (read) __HeapLimit/3 (addr) heap_end/0 (read) heap_end/0 (write) 
@@ -160,7 +160,7 @@ _sbrk/1 (_sbrk) @061f7888
   Function flags: body
   Called by: 
   Calls: __errno/4 
-heap_end/0 (heap_end) @05f1c5a0
+heap_end/0 (heap_end) @0521c5a0
   Type: variable definition analyzed
   Visibility: semantic_interposition
   References: 
@@ -173,7 +173,7 @@ Reclaiming variables:
 Clearing address taken flags:
 Optimized Symbol table:
 
-__errno/4 (__errno) @061f7bd0
+__errno/4 (__errno) @060f2bd0
   Type: function
   Visibility: semantic_interposition external public
   References: 
@@ -182,7 +182,7 @@ __errno/4 (__errno) @061f7bd0
   Function flags:
   Called by: _sbrk/1 (217325344 (estimated locally),0.20 per call) 
   Calls: 
-__HeapLimit/3 (__HeapLimit) @05f1c948
+__HeapLimit/3 (__HeapLimit) @0521c948
   Type: variable
   Body removed by symtab_remove_unreachable_nodes
   Visibility: semantic_interposition external public
@@ -190,7 +190,7 @@ __HeapLimit/3 (__HeapLimit) @05f1c948
   Referring: _sbrk/1 (addr) 
   Availability: not_available
   Varpool flags:
-__HeapBase/2 (__HeapBase) @05f1c900
+__HeapBase/2 (__HeapBase) @0521c900
   Type: variable
   Body removed by symtab_remove_unreachable_nodes
   Visibility: semantic_interposition external public
@@ -198,7 +198,7 @@ __HeapBase/2 (__HeapBase) @05f1c900
   Referring: _sbrk/1 (addr) 
   Availability: not_available
   Varpool flags:
-_sbrk/1 (_sbrk) @061f7888
+_sbrk/1 (_sbrk) @060f2888
   Type: function definition analyzed
   Visibility: externally_visible semantic_interposition public
   References: heap_end/0 (read) heap_end/0 (write) __HeapBase/2 (addr) heap_end/0 (read) __HeapLimit/3 (addr) heap_end/0 (write) 
@@ -207,7 +207,7 @@ _sbrk/1 (_sbrk) @061f7888
   Function flags: count:1073741824 (estimated locally) body
   Called by: 
   Calls: __errno/4 (217325344 (estimated locally),0.20 per call) 
-heap_end/0 (heap_end) @05f1c5a0
+heap_end/0 (heap_end) @0521c5a0
   Type: variable definition analyzed
   Visibility: semantic_interposition prevailing_def_ironly
   References: 
@@ -219,7 +219,7 @@ Removing variables:
 
 Final Symbol table:
 
-__errno/4 (__errno) @061f7bd0
+__errno/4 (__errno) @060f2bd0
   Type: function
   Visibility: semantic_interposition external public
   References: 
@@ -228,7 +228,7 @@ __errno/4 (__errno) @061f7bd0
   Function flags:
   Called by: 
   Calls: 
-__HeapLimit/3 (__HeapLimit) @05f1c948
+__HeapLimit/3 (__HeapLimit) @0521c948
   Type: variable
   Body removed by symtab_remove_unreachable_nodes
   Visibility: semantic_interposition external public
@@ -236,7 +236,7 @@ __HeapLimit/3 (__HeapLimit) @05f1c948
   Referring: 
   Availability: not_available
   Varpool flags:
-__HeapBase/2 (__HeapBase) @05f1c900
+__HeapBase/2 (__HeapBase) @0521c900
   Type: variable
   Body removed by symtab_remove_unreachable_nodes
   Visibility: semantic_interposition external public
@@ -244,7 +244,7 @@ __HeapBase/2 (__HeapBase) @05f1c900
   Referring: 
   Availability: not_available
   Varpool flags:
-_sbrk/1 (_sbrk) @061f7888
+_sbrk/1 (_sbrk) @060f2888
   Type: function definition analyzed
   Visibility: externally_visible semantic_interposition asm_written public section:.text._sbrk (implicit_section)
   References: 
@@ -253,7 +253,7 @@ _sbrk/1 (_sbrk) @061f7888
   Function flags: count:1073741824 (estimated locally)
   Called by: 
   Calls: 
-heap_end/0 (heap_end) @05f1c5a0
+heap_end/0 (heap_end) @0521c5a0
   Type: variable definition analyzed
   Visibility: semantic_interposition prevailing_def_ironly asm_written section:.bss.heap_end (implicit_section)
   Aux: @00000001

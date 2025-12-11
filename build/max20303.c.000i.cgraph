@@ -3,7 +3,7 @@ Trivially needed symbols: max20303_init/152 max20303_gpio/151 max20303_sd_power/
 
 Initial Symbol table:
 
-MXC_I2C_SetRXThreshold/157 (MXC_I2C_SetRXThreshold) @06286738
+MXC_I2C_SetRXThreshold/157 (MXC_I2C_SetRXThreshold) @0626f738
   Type: function
   Visibility: semantic_interposition external public
   References: 
@@ -11,7 +11,7 @@ MXC_I2C_SetRXThreshold/157 (MXC_I2C_SetRXThreshold) @06286738
   Function flags:
   Called by: max20303_init/152 
   Calls: 
-MXC_I2C_SetTXThreshold/156 (MXC_I2C_SetTXThreshold) @06286690
+MXC_I2C_SetTXThreshold/156 (MXC_I2C_SetTXThreshold) @0626f690
   Type: function
   Visibility: semantic_interposition external public
   References: 
@@ -19,7 +19,7 @@ MXC_I2C_SetTXThreshold/156 (MXC_I2C_SetTXThreshold) @06286690
   Function flags:
   Called by: max20303_init/152 
   Calls: 
-MXC_I2C_SetFrequency/155 (MXC_I2C_SetFrequency) @062865e8
+MXC_I2C_SetFrequency/155 (MXC_I2C_SetFrequency) @0626f5e8
   Type: function
   Visibility: semantic_interposition external public
   References: 
@@ -27,7 +27,7 @@ MXC_I2C_SetFrequency/155 (MXC_I2C_SetFrequency) @062865e8
   Function flags:
   Called by: max20303_init/152 
   Calls: 
-MXC_I2C_Init/154 (MXC_I2C_Init) @06286540
+MXC_I2C_Init/154 (MXC_I2C_Init) @0626f540
   Type: function
   Visibility: semantic_interposition external public
   References: 
@@ -35,7 +35,7 @@ MXC_I2C_Init/154 (MXC_I2C_Init) @06286540
   Function flags:
   Called by: max20303_init/152 
   Calls: 
-MXC_Delay/153 (MXC_Delay) @06286498
+MXC_Delay/153 (MXC_Delay) @0626f498
   Type: function
   Visibility: semantic_interposition external public
   References: 
@@ -43,7 +43,7 @@ MXC_Delay/153 (MXC_Delay) @06286498
   Function flags:
   Called by: max20303_gpio/151 max20303_gpio/151 max20303_gpio/151 max20303_sd_power/150 max20303_sd_power/150 max20303_sd_power/150 max20303_camera_power/149 max20303_mic_power/148 
   Calls: 
-max20303_init/152 (max20303_init) @062863f0
+max20303_init/152 (max20303_init) @0626f3f0
   Type: function definition analyzed
   Visibility: semantic_interposition public
   Aux: @01c61e00
@@ -52,123 +52,123 @@ max20303_init/152 (max20303_init) @062863f0
   Function flags: body
   Called by: 
   Calls: reg_read/143 MXC_I2C_SetRXThreshold/157 MXC_I2C_SetTXThreshold/156 MXC_I2C_SetFrequency/155 MXC_I2C_Init/154 
-max20303_gpio/151 (max20303_gpio) @062862a0
+max20303_gpio/151 (max20303_gpio) @0626f2a0
   Type: function definition analyzed
   Visibility: semantic_interposition public
-  Aux: @062863f0
+  Aux: @0626f3f0
   References: i2c/139 (read) 
   Referring: 
   Function flags: body
   Called by: 
   Calls: reg_read/143 MXC_Delay/153 reg_write/141 reg_write_buf/142 reg_read/143 reg_read/143 MXC_Delay/153 reg_write/141 reg_read/143 MXC_Delay/153 reg_write/141 reg_write_buf/142 
-max20303_sd_power/150 (max20303_sd_power) @06286150
+max20303_sd_power/150 (max20303_sd_power) @0626f150
   Type: function definition analyzed
   Visibility: semantic_interposition public
-  Aux: @062862a0
+  Aux: @0626f2a0
   References: i2c/139 (read) 
   Referring: 
   Function flags: body
   Called by: 
   Calls: reg_read/143 MXC_Delay/153 reg_write/141 reg_write_buf/142 reg_read/143 reg_read/143 MXC_Delay/153 reg_write/141 reg_read/143 MXC_Delay/153 reg_write/141 reg_write_buf/142 
-max20303_camera_power/149 (max20303_camera_power) @06286000
+max20303_camera_power/149 (max20303_camera_power) @0626f000
   Type: function definition analyzed
   Visibility: semantic_interposition public
-  Aux: @06286150
+  Aux: @0626f150
   References: i2c/139 (read) 
   Referring: 
   Function flags: body
   Called by: 
   Calls: reg_read/143 MXC_Delay/153 reg_write/141 reg_write_buf/142 
-max20303_mic_power/148 (max20303_mic_power) @0626fe70
+max20303_mic_power/148 (max20303_mic_power) @06258e70
   Type: function definition analyzed
   Visibility: semantic_interposition public
-  Aux: @06286000
+  Aux: @0626f000
   References: i2c/139 (read) 
   Referring: 
   Function flags: body
   Called by: 
   Calls: reg_read/143 MXC_Delay/153 reg_write/141 reg_write_buf/142 
-max20303_led_blue/147 (max20303_led_blue) @0626fd20
+max20303_led_blue/147 (max20303_led_blue) @06258d20
   Type: function definition analyzed
   Visibility: semantic_interposition public
-  Aux: @0626fe70
+  Aux: @06258e70
   References: i2c/139 (read) 
   Referring: 
   Function flags: body
   Called by: 
   Calls: reg_write/141 
-max20303_led_green/146 (max20303_led_green) @0626fbd0
+max20303_led_green/146 (max20303_led_green) @06258bd0
   Type: function definition analyzed
   Visibility: semantic_interposition public
-  Aux: @0626fd20
+  Aux: @06258d20
   References: i2c/139 (read) 
   Referring: 
   Function flags: body
   Called by: 
   Calls: reg_write/141 
-max20303_led_red/145 (max20303_led_red) @0626fa80
+max20303_led_red/145 (max20303_led_red) @06258a80
   Type: function definition analyzed
   Visibility: semantic_interposition public
-  Aux: @0626fbd0
+  Aux: @06258bd0
   References: i2c/139 (read) 
   Referring: 
   Function flags: body
   Called by: 
   Calls: reg_write/141 
-max20303_led/144 (max20303_led) @0626f930
+max20303_led/144 (max20303_led) @06258930
   Type: function definition analyzed
   Visibility: semantic_interposition public
-  Aux: @0626fa80
+  Aux: @06258a80
   References: i2c/139 (read) 
   Referring: 
   Function flags: body
   Called by: 
   Calls: reg_write/141 
-reg_read/143 (reg_read) @0626f7e0
+reg_read/143 (reg_read) @062587e0
   Type: function definition analyzed
   Visibility: semantic_interposition
-  Aux: @06286000
+  Aux: @0626f000
   References: i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) 
   Referring: 
   Function flags: body
   Called by: max20303_init/152 max20303_gpio/151 max20303_gpio/151 max20303_gpio/151 max20303_gpio/151 max20303_sd_power/150 max20303_sd_power/150 max20303_sd_power/150 max20303_sd_power/150 max20303_camera_power/149 max20303_mic_power/148 
   Calls: i2c_flush/140 
-reg_write_buf/142 (reg_write_buf) @0626f690
+reg_write_buf/142 (reg_write_buf) @06258690
   Type: function definition analyzed
   Visibility: semantic_interposition
-  Aux: @0626f7e0
+  Aux: @062587e0
   References: i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) 
   Referring: 
   Function flags: body
   Called by: max20303_gpio/151 max20303_gpio/151 max20303_sd_power/150 max20303_sd_power/150 max20303_camera_power/149 max20303_mic_power/148 
   Calls: i2c_flush/140 
-reg_write/141 (reg_write) @0626f540
+reg_write/141 (reg_write) @06258540
   Type: function definition analyzed
   Visibility: semantic_interposition
-  Aux: @0626fa80
+  Aux: @06258a80
   References: i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) 
   Referring: 
   Function flags: body
   Called by: max20303_gpio/151 max20303_gpio/151 max20303_gpio/151 max20303_sd_power/150 max20303_sd_power/150 max20303_sd_power/150 max20303_camera_power/149 max20303_mic_power/148 max20303_led_blue/147 max20303_led_green/146 max20303_led_red/145 max20303_led/144 
   Calls: i2c_flush/140 
-i2c_flush/140 (i2c_flush) @0626f3f0
+i2c_flush/140 (i2c_flush) @062583f0
   Type: function definition analyzed
   Visibility: semantic_interposition
-  Aux: @0626fa80
+  Aux: @06258a80
   References: i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) 
   Referring: 
   Function flags: body
   Called by: reg_read/143 reg_write_buf/142 reg_write/141 
   Calls: 
-i2c/139 (i2c) @0625d750
+i2c/139 (i2c) @06246750
   Type: variable definition analyzed
   Visibility: semantic_interposition
-  Aux: @0626f540
+  Aux: @06258540
   References: 
   Referring: max20303_led/144 (read) reg_write/141 (read) reg_write/141 (read) reg_write/141 (read) reg_write/141 (read) reg_write/141 (read) reg_write/141 (read) reg_write/141 (read) reg_write/141 (read) reg_write/141 (read) reg_write/141 (read) i2c_flush/140 (read) i2c_flush/140 (read) i2c_flush/140 (read) i2c_flush/140 (read) i2c_flush/140 (read) i2c_flush/140 (read) i2c_flush/140 (read) i2c_flush/140 (read) i2c_flush/140 (read) i2c_flush/140 (read) max20303_led_red/145 (read) max20303_led_green/146 (read) max20303_led_blue/147 (read) max20303_mic_power/148 (read) reg_write_buf/142 (read) reg_write_buf/142 (read) reg_write_buf/142 (read) reg_write_buf/142 (read) reg_write_buf/142 (read) reg_write_buf/142 (read) reg_write_buf/142 (read) reg_write_buf/142 (read) reg_write_buf/142 (read) reg_write_buf/142 (read) reg_read/143 (read) reg_read/143 (read) reg_read/143 (read) reg_read/143 (read) reg_read/143 (read) reg_read/143 (read) reg_read/143 (read) reg_read/143 (read) reg_read/143 (read) reg_read/143 (read) reg_read/143 (read) reg_read/143 (read) reg_read/143 (read) reg_read/143 (read) max20303_camera_power/149 (read) max20303_sd_power/150 (read) max20303_gpio/151 (read) max20303_init/152 (read) max20303_init/152 (write) max20303_init/152 (read) max20303_init/152 (read) max20303_init/152 (read) max20303_init/152 (read) max20303_init/152 (read) 
   Availability: not-ready
   Varpool flags: initialized
-MXC_SYS_In_Crit_Section/138 (MXC_SYS_In_Crit_Section) @06226738
+MXC_SYS_In_Crit_Section/138 (MXC_SYS_In_Crit_Section) @06217738
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -176,7 +176,7 @@ MXC_SYS_In_Crit_Section/138 (MXC_SYS_In_Crit_Section) @06226738
   Function flags:
   Called by: 
   Calls: 
-MXC_SYS_Crit_Exit/137 (MXC_SYS_Crit_Exit) @062265e8
+MXC_SYS_Crit_Exit/137 (MXC_SYS_Crit_Exit) @062175e8
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -184,7 +184,7 @@ MXC_SYS_Crit_Exit/137 (MXC_SYS_Crit_Exit) @062265e8
   Function flags:
   Called by: 
   Calls: 
-MXC_SYS_Crit_Enter/136 (MXC_SYS_Crit_Enter) @06226498
+MXC_SYS_Crit_Enter/136 (MXC_SYS_Crit_Enter) @06217498
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -192,7 +192,7 @@ MXC_SYS_Crit_Enter/136 (MXC_SYS_Crit_Enter) @06226498
   Function flags:
   Called by: 
   Calls: 
-_mxc_crit_get_state/135 (_mxc_crit_get_state) @06226348
+_mxc_crit_get_state/135 (_mxc_crit_get_state) @06217348
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -200,14 +200,14 @@ _mxc_crit_get_state/135 (_mxc_crit_get_state) @06226348
   Function flags:
   Called by: 
   Calls: 
-_state/134 (_state) @06214678
+_state/134 (_state) @0620e678
   Type: variable definition
   Visibility: semantic_interposition
   References: 
   Referring: 
   Availability: not-ready
   Varpool flags: initialized
-ITM_CheckChar/133 (ITM_CheckChar) @061afb28
+ITM_CheckChar/133 (ITM_CheckChar) @061a2b28
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -215,7 +215,7 @@ ITM_CheckChar/133 (ITM_CheckChar) @061afb28
   Function flags:
   Called by: 
   Calls: 
-ITM_ReceiveChar/132 (ITM_ReceiveChar) @061af9d8
+ITM_ReceiveChar/132 (ITM_ReceiveChar) @061a29d8
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -223,7 +223,7 @@ ITM_ReceiveChar/132 (ITM_ReceiveChar) @061af9d8
   Function flags:
   Called by: 
   Calls: 
-ITM_SendChar/131 (ITM_SendChar) @061af888
+ITM_SendChar/131 (ITM_SendChar) @061a2888
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -231,7 +231,7 @@ ITM_SendChar/131 (ITM_SendChar) @061af888
   Function flags:
   Called by: 
   Calls: 
-SysTick_Config/130 (SysTick_Config) @061af540
+SysTick_Config/130 (SysTick_Config) @061a2540
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -239,7 +239,7 @@ SysTick_Config/130 (SysTick_Config) @061af540
   Function flags:
   Called by: 
   Calls: 
-SCB_GetFPUType/129 (SCB_GetFPUType) @061af3f0
+SCB_GetFPUType/129 (SCB_GetFPUType) @061a23f0
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -247,7 +247,7 @@ SCB_GetFPUType/129 (SCB_GetFPUType) @061af3f0
   Function flags:
   Called by: 
   Calls: 
-ARM_MPU_Load/128 (ARM_MPU_Load) @061af2a0
+ARM_MPU_Load/128 (ARM_MPU_Load) @061a22a0
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -255,7 +255,7 @@ ARM_MPU_Load/128 (ARM_MPU_Load) @061af2a0
   Function flags:
   Called by: 
   Calls: 
-ARM_MPU_OrderedMemcpy/127 (ARM_MPU_OrderedMemcpy) @061af150
+ARM_MPU_OrderedMemcpy/127 (ARM_MPU_OrderedMemcpy) @061a2150
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -263,7 +263,7 @@ ARM_MPU_OrderedMemcpy/127 (ARM_MPU_OrderedMemcpy) @061af150
   Function flags:
   Called by: 
   Calls: 
-ARM_MPU_SetRegionEx/126 (ARM_MPU_SetRegionEx) @061af000
+ARM_MPU_SetRegionEx/126 (ARM_MPU_SetRegionEx) @061a2000
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -271,7 +271,7 @@ ARM_MPU_SetRegionEx/126 (ARM_MPU_SetRegionEx) @061af000
   Function flags:
   Called by: 
   Calls: 
-ARM_MPU_SetRegion/125 (ARM_MPU_SetRegion) @06191930
+ARM_MPU_SetRegion/125 (ARM_MPU_SetRegion) @06182930
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -279,7 +279,7 @@ ARM_MPU_SetRegion/125 (ARM_MPU_SetRegion) @06191930
   Function flags:
   Called by: 
   Calls: 
-ARM_MPU_ClrRegion/124 (ARM_MPU_ClrRegion) @06191e70
+ARM_MPU_ClrRegion/124 (ARM_MPU_ClrRegion) @06182e70
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -287,7 +287,7 @@ ARM_MPU_ClrRegion/124 (ARM_MPU_ClrRegion) @06191e70
   Function flags:
   Called by: 
   Calls: 
-ARM_MPU_Disable/123 (ARM_MPU_Disable) @06191d20
+ARM_MPU_Disable/123 (ARM_MPU_Disable) @06182d20
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -295,7 +295,7 @@ ARM_MPU_Disable/123 (ARM_MPU_Disable) @06191d20
   Function flags:
   Called by: 
   Calls: 
-ARM_MPU_Enable/122 (ARM_MPU_Enable) @06191bd0
+ARM_MPU_Enable/122 (ARM_MPU_Enable) @06182bd0
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -303,7 +303,7 @@ ARM_MPU_Enable/122 (ARM_MPU_Enable) @06191bd0
   Function flags:
   Called by: 
   Calls: 
-__NVIC_SystemReset/121 (__NVIC_SystemReset) @0618c3f0
+__NVIC_SystemReset/121 (__NVIC_SystemReset) @0617d3f0
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -311,7 +311,7 @@ __NVIC_SystemReset/121 (__NVIC_SystemReset) @0618c3f0
   Function flags:
   Called by: 
   Calls: 
-__NVIC_GetVector/120 (__NVIC_GetVector) @0618c2a0
+__NVIC_GetVector/120 (__NVIC_GetVector) @0617d2a0
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -319,7 +319,7 @@ __NVIC_GetVector/120 (__NVIC_GetVector) @0618c2a0
   Function flags:
   Called by: 
   Calls: 
-__NVIC_SetVector/119 (__NVIC_SetVector) @0618c150
+__NVIC_SetVector/119 (__NVIC_SetVector) @0617d150
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -327,7 +327,7 @@ __NVIC_SetVector/119 (__NVIC_SetVector) @0618c150
   Function flags:
   Called by: 
   Calls: 
-NVIC_DecodePriority/118 (NVIC_DecodePriority) @0618c000
+NVIC_DecodePriority/118 (NVIC_DecodePriority) @0617d000
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -335,7 +335,7 @@ NVIC_DecodePriority/118 (NVIC_DecodePriority) @0618c000
   Function flags:
   Called by: 
   Calls: 
-NVIC_EncodePriority/117 (NVIC_EncodePriority) @06183e70
+NVIC_EncodePriority/117 (NVIC_EncodePriority) @06174e70
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -343,7 +343,7 @@ NVIC_EncodePriority/117 (NVIC_EncodePriority) @06183e70
   Function flags:
   Called by: 
   Calls: 
-__NVIC_GetPriority/116 (__NVIC_GetPriority) @06183d20
+__NVIC_GetPriority/116 (__NVIC_GetPriority) @06174d20
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -351,7 +351,7 @@ __NVIC_GetPriority/116 (__NVIC_GetPriority) @06183d20
   Function flags:
   Called by: 
   Calls: 
-__NVIC_SetPriority/115 (__NVIC_SetPriority) @06183bd0
+__NVIC_SetPriority/115 (__NVIC_SetPriority) @06174bd0
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -359,7 +359,7 @@ __NVIC_SetPriority/115 (__NVIC_SetPriority) @06183bd0
   Function flags:
   Called by: 
   Calls: 
-__NVIC_GetActive/114 (__NVIC_GetActive) @06183a80
+__NVIC_GetActive/114 (__NVIC_GetActive) @06174a80
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -367,7 +367,7 @@ __NVIC_GetActive/114 (__NVIC_GetActive) @06183a80
   Function flags:
   Called by: 
   Calls: 
-__NVIC_ClearPendingIRQ/113 (__NVIC_ClearPendingIRQ) @06183930
+__NVIC_ClearPendingIRQ/113 (__NVIC_ClearPendingIRQ) @06174930
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -375,7 +375,7 @@ __NVIC_ClearPendingIRQ/113 (__NVIC_ClearPendingIRQ) @06183930
   Function flags:
   Called by: 
   Calls: 
-__NVIC_SetPendingIRQ/112 (__NVIC_SetPendingIRQ) @061837e0
+__NVIC_SetPendingIRQ/112 (__NVIC_SetPendingIRQ) @061747e0
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -383,7 +383,7 @@ __NVIC_SetPendingIRQ/112 (__NVIC_SetPendingIRQ) @061837e0
   Function flags:
   Called by: 
   Calls: 
-__NVIC_GetPendingIRQ/111 (__NVIC_GetPendingIRQ) @06183690
+__NVIC_GetPendingIRQ/111 (__NVIC_GetPendingIRQ) @06174690
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -391,7 +391,7 @@ __NVIC_GetPendingIRQ/111 (__NVIC_GetPendingIRQ) @06183690
   Function flags:
   Called by: 
   Calls: 
-__NVIC_DisableIRQ/110 (__NVIC_DisableIRQ) @06183540
+__NVIC_DisableIRQ/110 (__NVIC_DisableIRQ) @06174540
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -399,7 +399,7 @@ __NVIC_DisableIRQ/110 (__NVIC_DisableIRQ) @06183540
   Function flags:
   Called by: 
   Calls: 
-__NVIC_GetEnableIRQ/109 (__NVIC_GetEnableIRQ) @061833f0
+__NVIC_GetEnableIRQ/109 (__NVIC_GetEnableIRQ) @061743f0
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -407,7 +407,7 @@ __NVIC_GetEnableIRQ/109 (__NVIC_GetEnableIRQ) @061833f0
   Function flags:
   Called by: 
   Calls: 
-__NVIC_EnableIRQ/108 (__NVIC_EnableIRQ) @061832a0
+__NVIC_EnableIRQ/108 (__NVIC_EnableIRQ) @061742a0
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -415,7 +415,7 @@ __NVIC_EnableIRQ/108 (__NVIC_EnableIRQ) @061832a0
   Function flags:
   Called by: 
   Calls: 
-__NVIC_GetPriorityGrouping/107 (__NVIC_GetPriorityGrouping) @06183150
+__NVIC_GetPriorityGrouping/107 (__NVIC_GetPriorityGrouping) @06174150
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -423,7 +423,7 @@ __NVIC_GetPriorityGrouping/107 (__NVIC_GetPriorityGrouping) @06183150
   Function flags:
   Called by: 
   Calls: 
-__NVIC_SetPriorityGrouping/106 (__NVIC_SetPriorityGrouping) @06183000
+__NVIC_SetPriorityGrouping/106 (__NVIC_SetPriorityGrouping) @06174000
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -431,7 +431,7 @@ __NVIC_SetPriorityGrouping/106 (__NVIC_SetPriorityGrouping) @06183000
   Function flags:
   Called by: 
   Calls: 
-__SMMLA/105 (__SMMLA) @0614b1f8
+__SMMLA/105 (__SMMLA) @0612c1f8
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -439,7 +439,7 @@ __SMMLA/105 (__SMMLA) @0614b1f8
   Function flags:
   Called by: 
   Calls: 
-__QSUB/104 (__QSUB) @0614b0a8
+__QSUB/104 (__QSUB) @0612c0a8
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -447,7 +447,7 @@ __QSUB/104 (__QSUB) @0614b0a8
   Function flags:
   Called by: 
   Calls: 
-__QADD/103 (__QADD) @06144f18
+__QADD/103 (__QADD) @06125f18
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -455,7 +455,7 @@ __QADD/103 (__QADD) @06144f18
   Function flags:
   Called by: 
   Calls: 
-__SEL/102 (__SEL) @06144dc8
+__SEL/102 (__SEL) @06125dc8
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -463,7 +463,7 @@ __SEL/102 (__SEL) @06144dc8
   Function flags:
   Called by: 
   Calls: 
-__SMLSLDX/101 (__SMLSLDX) @06144c78
+__SMLSLDX/101 (__SMLSLDX) @06125c78
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -471,7 +471,7 @@ __SMLSLDX/101 (__SMLSLDX) @06144c78
   Function flags:
   Called by: 
   Calls: 
-__SMLSLD/100 (__SMLSLD) @06144b28
+__SMLSLD/100 (__SMLSLD) @06125b28
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -479,7 +479,7 @@ __SMLSLD/100 (__SMLSLD) @06144b28
   Function flags:
   Called by: 
   Calls: 
-__SMLSDX/99 (__SMLSDX) @061449d8
+__SMLSDX/99 (__SMLSDX) @061259d8
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -487,7 +487,7 @@ __SMLSDX/99 (__SMLSDX) @061449d8
   Function flags:
   Called by: 
   Calls: 
-__SMLSD/98 (__SMLSD) @06144888
+__SMLSD/98 (__SMLSD) @06125888
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -495,7 +495,7 @@ __SMLSD/98 (__SMLSD) @06144888
   Function flags:
   Called by: 
   Calls: 
-__SMUSDX/97 (__SMUSDX) @06144738
+__SMUSDX/97 (__SMUSDX) @06125738
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -503,7 +503,7 @@ __SMUSDX/97 (__SMUSDX) @06144738
   Function flags:
   Called by: 
   Calls: 
-__SMUSD/96 (__SMUSD) @061445e8
+__SMUSD/96 (__SMUSD) @061255e8
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -511,7 +511,7 @@ __SMUSD/96 (__SMUSD) @061445e8
   Function flags:
   Called by: 
   Calls: 
-__SMLALDX/95 (__SMLALDX) @06144498
+__SMLALDX/95 (__SMLALDX) @06125498
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -519,7 +519,7 @@ __SMLALDX/95 (__SMLALDX) @06144498
   Function flags:
   Called by: 
   Calls: 
-__SMLALD/94 (__SMLALD) @06144348
+__SMLALD/94 (__SMLALD) @06125348
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -527,7 +527,7 @@ __SMLALD/94 (__SMLALD) @06144348
   Function flags:
   Called by: 
   Calls: 
-__SMLADX/93 (__SMLADX) @061441f8
+__SMLADX/93 (__SMLADX) @061251f8
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -535,7 +535,7 @@ __SMLADX/93 (__SMLADX) @061441f8
   Function flags:
   Called by: 
   Calls: 
-__SMLAD/92 (__SMLAD) @061440a8
+__SMLAD/92 (__SMLAD) @061250a8
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -543,7 +543,7 @@ __SMLAD/92 (__SMLAD) @061440a8
   Function flags:
   Called by: 
   Calls: 
-__SMUADX/91 (__SMUADX) @06137f18
+__SMUADX/91 (__SMUADX) @06115f18
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -551,7 +551,7 @@ __SMUADX/91 (__SMUADX) @06137f18
   Function flags:
   Called by: 
   Calls: 
-__SMUAD/90 (__SMUAD) @06137dc8
+__SMUAD/90 (__SMUAD) @06115dc8
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -559,7 +559,7 @@ __SMUAD/90 (__SMUAD) @06137dc8
   Function flags:
   Called by: 
   Calls: 
-__SXTAB16_RORn/89 (__SXTAB16_RORn) @06137c78
+__SXTAB16_RORn/89 (__SXTAB16_RORn) @06115c78
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -567,7 +567,7 @@ __SXTAB16_RORn/89 (__SXTAB16_RORn) @06137c78
   Function flags:
   Called by: 
   Calls: 
-__SXTAB16/88 (__SXTAB16) @06137b28
+__SXTAB16/88 (__SXTAB16) @06115b28
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -575,7 +575,7 @@ __SXTAB16/88 (__SXTAB16) @06137b28
   Function flags:
   Called by: 
   Calls: 
-__SXTB16_RORn/87 (__SXTB16_RORn) @061379d8
+__SXTB16_RORn/87 (__SXTB16_RORn) @061159d8
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -583,7 +583,7 @@ __SXTB16_RORn/87 (__SXTB16_RORn) @061379d8
   Function flags:
   Called by: 
   Calls: 
-__SXTB16/86 (__SXTB16) @06137888
+__SXTB16/86 (__SXTB16) @06115888
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -591,7 +591,7 @@ __SXTB16/86 (__SXTB16) @06137888
   Function flags:
   Called by: 
   Calls: 
-__UXTAB16/85 (__UXTAB16) @06137738
+__UXTAB16/85 (__UXTAB16) @06115738
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -599,7 +599,7 @@ __UXTAB16/85 (__UXTAB16) @06137738
   Function flags:
   Called by: 
   Calls: 
-__UXTB16/84 (__UXTB16) @061375e8
+__UXTB16/84 (__UXTB16) @061155e8
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -607,7 +607,7 @@ __UXTB16/84 (__UXTB16) @061375e8
   Function flags:
   Called by: 
   Calls: 
-__USADA8/83 (__USADA8) @06137348
+__USADA8/83 (__USADA8) @06115348
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -615,7 +615,7 @@ __USADA8/83 (__USADA8) @06137348
   Function flags:
   Called by: 
   Calls: 
-__USAD8/82 (__USAD8) @061371f8
+__USAD8/82 (__USAD8) @061151f8
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -623,7 +623,7 @@ __USAD8/82 (__USAD8) @061371f8
   Function flags:
   Called by: 
   Calls: 
-__UHSAX/81 (__UHSAX) @061370a8
+__UHSAX/81 (__UHSAX) @061150a8
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -631,7 +631,7 @@ __UHSAX/81 (__UHSAX) @061370a8
   Function flags:
   Called by: 
   Calls: 
-__UQSAX/80 (__UQSAX) @06132f18
+__UQSAX/80 (__UQSAX) @06110f18
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -639,7 +639,7 @@ __UQSAX/80 (__UQSAX) @06132f18
   Function flags:
   Called by: 
   Calls: 
-__USAX/79 (__USAX) @06132dc8
+__USAX/79 (__USAX) @06110dc8
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -647,7 +647,7 @@ __USAX/79 (__USAX) @06132dc8
   Function flags:
   Called by: 
   Calls: 
-__SHSAX/78 (__SHSAX) @06132c78
+__SHSAX/78 (__SHSAX) @06110c78
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -655,7 +655,7 @@ __SHSAX/78 (__SHSAX) @06132c78
   Function flags:
   Called by: 
   Calls: 
-__QSAX/77 (__QSAX) @06132b28
+__QSAX/77 (__QSAX) @06110b28
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -663,7 +663,7 @@ __QSAX/77 (__QSAX) @06132b28
   Function flags:
   Called by: 
   Calls: 
-__SSAX/76 (__SSAX) @061329d8
+__SSAX/76 (__SSAX) @061109d8
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -671,7 +671,7 @@ __SSAX/76 (__SSAX) @061329d8
   Function flags:
   Called by: 
   Calls: 
-__UHASX/75 (__UHASX) @06132888
+__UHASX/75 (__UHASX) @06110888
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -679,7 +679,7 @@ __UHASX/75 (__UHASX) @06132888
   Function flags:
   Called by: 
   Calls: 
-__UQASX/74 (__UQASX) @06132738
+__UQASX/74 (__UQASX) @06110738
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -687,7 +687,7 @@ __UQASX/74 (__UQASX) @06132738
   Function flags:
   Called by: 
   Calls: 
-__UASX/73 (__UASX) @061325e8
+__UASX/73 (__UASX) @061105e8
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -695,7 +695,7 @@ __UASX/73 (__UASX) @061325e8
   Function flags:
   Called by: 
   Calls: 
-__SHASX/72 (__SHASX) @06132498
+__SHASX/72 (__SHASX) @06110498
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -703,7 +703,7 @@ __SHASX/72 (__SHASX) @06132498
   Function flags:
   Called by: 
   Calls: 
-__QASX/71 (__QASX) @06132348
+__QASX/71 (__QASX) @06110348
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -711,7 +711,7 @@ __QASX/71 (__QASX) @06132348
   Function flags:
   Called by: 
   Calls: 
-__SASX/70 (__SASX) @061321f8
+__SASX/70 (__SASX) @061101f8
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -719,7 +719,7 @@ __SASX/70 (__SASX) @061321f8
   Function flags:
   Called by: 
   Calls: 
-__UHSUB16/69 (__UHSUB16) @061320a8
+__UHSUB16/69 (__UHSUB16) @061100a8
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -727,7 +727,7 @@ __UHSUB16/69 (__UHSUB16) @061320a8
   Function flags:
   Called by: 
   Calls: 
-__UQSUB16/68 (__UQSUB16) @0612cf18
+__UQSUB16/68 (__UQSUB16) @0610af18
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -735,7 +735,7 @@ __UQSUB16/68 (__UQSUB16) @0612cf18
   Function flags:
   Called by: 
   Calls: 
-__USUB16/67 (__USUB16) @0612cdc8
+__USUB16/67 (__USUB16) @0610adc8
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -743,7 +743,7 @@ __USUB16/67 (__USUB16) @0612cdc8
   Function flags:
   Called by: 
   Calls: 
-__SHSUB16/66 (__SHSUB16) @0612cc78
+__SHSUB16/66 (__SHSUB16) @0610ac78
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -751,7 +751,7 @@ __SHSUB16/66 (__SHSUB16) @0612cc78
   Function flags:
   Called by: 
   Calls: 
-__QSUB16/65 (__QSUB16) @0612cb28
+__QSUB16/65 (__QSUB16) @0610ab28
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -759,7 +759,7 @@ __QSUB16/65 (__QSUB16) @0612cb28
   Function flags:
   Called by: 
   Calls: 
-__SSUB16/64 (__SSUB16) @0612c9d8
+__SSUB16/64 (__SSUB16) @0610a9d8
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -767,7 +767,7 @@ __SSUB16/64 (__SSUB16) @0612c9d8
   Function flags:
   Called by: 
   Calls: 
-__UHADD16/63 (__UHADD16) @0612c888
+__UHADD16/63 (__UHADD16) @0610a888
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -775,7 +775,7 @@ __UHADD16/63 (__UHADD16) @0612c888
   Function flags:
   Called by: 
   Calls: 
-__UQADD16/62 (__UQADD16) @0612c738
+__UQADD16/62 (__UQADD16) @0610a738
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -783,7 +783,7 @@ __UQADD16/62 (__UQADD16) @0612c738
   Function flags:
   Called by: 
   Calls: 
-__UADD16/61 (__UADD16) @0612c5e8
+__UADD16/61 (__UADD16) @0610a5e8
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -791,7 +791,7 @@ __UADD16/61 (__UADD16) @0612c5e8
   Function flags:
   Called by: 
   Calls: 
-__SHADD16/60 (__SHADD16) @0612c498
+__SHADD16/60 (__SHADD16) @0610a498
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -799,7 +799,7 @@ __SHADD16/60 (__SHADD16) @0612c498
   Function flags:
   Called by: 
   Calls: 
-__QADD16/59 (__QADD16) @0612c348
+__QADD16/59 (__QADD16) @0610a348
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -807,7 +807,7 @@ __QADD16/59 (__QADD16) @0612c348
   Function flags:
   Called by: 
   Calls: 
-__SADD16/58 (__SADD16) @0612c1f8
+__SADD16/58 (__SADD16) @0610a1f8
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -815,7 +815,7 @@ __SADD16/58 (__SADD16) @0612c1f8
   Function flags:
   Called by: 
   Calls: 
-__UHSUB8/57 (__UHSUB8) @0612c0a8
+__UHSUB8/57 (__UHSUB8) @0610a0a8
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -823,7 +823,7 @@ __UHSUB8/57 (__UHSUB8) @0612c0a8
   Function flags:
   Called by: 
   Calls: 
-__UQSUB8/56 (__UQSUB8) @06125f18
+__UQSUB8/56 (__UQSUB8) @06103f18
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -831,7 +831,7 @@ __UQSUB8/56 (__UQSUB8) @06125f18
   Function flags:
   Called by: 
   Calls: 
-__USUB8/55 (__USUB8) @06125dc8
+__USUB8/55 (__USUB8) @06103dc8
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -839,7 +839,7 @@ __USUB8/55 (__USUB8) @06125dc8
   Function flags:
   Called by: 
   Calls: 
-__SHSUB8/54 (__SHSUB8) @06125c78
+__SHSUB8/54 (__SHSUB8) @06103c78
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -847,7 +847,7 @@ __SHSUB8/54 (__SHSUB8) @06125c78
   Function flags:
   Called by: 
   Calls: 
-__QSUB8/53 (__QSUB8) @06125b28
+__QSUB8/53 (__QSUB8) @06103b28
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -855,7 +855,7 @@ __QSUB8/53 (__QSUB8) @06125b28
   Function flags:
   Called by: 
   Calls: 
-__SSUB8/52 (__SSUB8) @061259d8
+__SSUB8/52 (__SSUB8) @061039d8
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -863,7 +863,7 @@ __SSUB8/52 (__SSUB8) @061259d8
   Function flags:
   Called by: 
   Calls: 
-__UHADD8/51 (__UHADD8) @06125888
+__UHADD8/51 (__UHADD8) @06103888
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -871,7 +871,7 @@ __UHADD8/51 (__UHADD8) @06125888
   Function flags:
   Called by: 
   Calls: 
-__UQADD8/50 (__UQADD8) @06125738
+__UQADD8/50 (__UQADD8) @06103738
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -879,7 +879,7 @@ __UQADD8/50 (__UQADD8) @06125738
   Function flags:
   Called by: 
   Calls: 
-__UADD8/49 (__UADD8) @061255e8
+__UADD8/49 (__UADD8) @061035e8
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -887,7 +887,7 @@ __UADD8/49 (__UADD8) @061255e8
   Function flags:
   Called by: 
   Calls: 
-__SHADD8/48 (__SHADD8) @06125498
+__SHADD8/48 (__SHADD8) @06103498
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -895,7 +895,7 @@ __SHADD8/48 (__SHADD8) @06125498
   Function flags:
   Called by: 
   Calls: 
-__QADD8/47 (__QADD8) @06125348
+__QADD8/47 (__QADD8) @06103348
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -903,7 +903,7 @@ __QADD8/47 (__QADD8) @06125348
   Function flags:
   Called by: 
   Calls: 
-__SADD8/46 (__SADD8) @061251f8
+__SADD8/46 (__SADD8) @061031f8
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -911,7 +911,7 @@ __SADD8/46 (__SADD8) @061251f8
   Function flags:
   Called by: 
   Calls: 
-__set_FPSCR/45 (__set_FPSCR) @061250a8
+__set_FPSCR/45 (__set_FPSCR) @061030a8
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -919,7 +919,7 @@ __set_FPSCR/45 (__set_FPSCR) @061250a8
   Function flags:
   Called by: 
   Calls: 
-__get_FPSCR/44 (__get_FPSCR) @0611df18
+__get_FPSCR/44 (__get_FPSCR) @060fbf18
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -927,7 +927,7 @@ __get_FPSCR/44 (__get_FPSCR) @0611df18
   Function flags:
   Called by: 
   Calls: 
-__set_FAULTMASK/43 (__set_FAULTMASK) @0611ddc8
+__set_FAULTMASK/43 (__set_FAULTMASK) @060fbdc8
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -935,7 +935,7 @@ __set_FAULTMASK/43 (__set_FAULTMASK) @0611ddc8
   Function flags:
   Called by: 
   Calls: 
-__get_FAULTMASK/42 (__get_FAULTMASK) @0611dc78
+__get_FAULTMASK/42 (__get_FAULTMASK) @060fbc78
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -943,7 +943,7 @@ __get_FAULTMASK/42 (__get_FAULTMASK) @0611dc78
   Function flags:
   Called by: 
   Calls: 
-__set_BASEPRI_MAX/41 (__set_BASEPRI_MAX) @0611db28
+__set_BASEPRI_MAX/41 (__set_BASEPRI_MAX) @060fbb28
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -951,7 +951,7 @@ __set_BASEPRI_MAX/41 (__set_BASEPRI_MAX) @0611db28
   Function flags:
   Called by: 
   Calls: 
-__set_BASEPRI/40 (__set_BASEPRI) @0611d9d8
+__set_BASEPRI/40 (__set_BASEPRI) @060fb9d8
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -959,7 +959,7 @@ __set_BASEPRI/40 (__set_BASEPRI) @0611d9d8
   Function flags:
   Called by: 
   Calls: 
-__get_BASEPRI/39 (__get_BASEPRI) @0611d888
+__get_BASEPRI/39 (__get_BASEPRI) @060fb888
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -967,7 +967,7 @@ __get_BASEPRI/39 (__get_BASEPRI) @0611d888
   Function flags:
   Called by: 
   Calls: 
-__disable_fault_irq/38 (__disable_fault_irq) @0611d738
+__disable_fault_irq/38 (__disable_fault_irq) @060fb738
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -975,7 +975,7 @@ __disable_fault_irq/38 (__disable_fault_irq) @0611d738
   Function flags:
   Called by: 
   Calls: 
-__enable_fault_irq/37 (__enable_fault_irq) @0611d5e8
+__enable_fault_irq/37 (__enable_fault_irq) @060fb5e8
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -983,7 +983,7 @@ __enable_fault_irq/37 (__enable_fault_irq) @0611d5e8
   Function flags:
   Called by: 
   Calls: 
-__set_PRIMASK/36 (__set_PRIMASK) @0611d498
+__set_PRIMASK/36 (__set_PRIMASK) @060fb498
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -991,7 +991,7 @@ __set_PRIMASK/36 (__set_PRIMASK) @0611d498
   Function flags:
   Called by: 
   Calls: 
-__get_PRIMASK/35 (__get_PRIMASK) @0611d348
+__get_PRIMASK/35 (__get_PRIMASK) @060fb348
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -999,7 +999,7 @@ __get_PRIMASK/35 (__get_PRIMASK) @0611d348
   Function flags:
   Called by: 
   Calls: 
-__set_MSP/34 (__set_MSP) @0611d1f8
+__set_MSP/34 (__set_MSP) @060fb1f8
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -1007,7 +1007,7 @@ __set_MSP/34 (__set_MSP) @0611d1f8
   Function flags:
   Called by: 
   Calls: 
-__get_MSP/33 (__get_MSP) @0611d0a8
+__get_MSP/33 (__get_MSP) @060fb0a8
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -1015,7 +1015,7 @@ __get_MSP/33 (__get_MSP) @0611d0a8
   Function flags:
   Called by: 
   Calls: 
-__set_PSP/32 (__set_PSP) @06117f18
+__set_PSP/32 (__set_PSP) @060f5f18
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -1023,7 +1023,7 @@ __set_PSP/32 (__set_PSP) @06117f18
   Function flags:
   Called by: 
   Calls: 
-__get_PSP/31 (__get_PSP) @06117dc8
+__get_PSP/31 (__get_PSP) @060f5dc8
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -1031,7 +1031,7 @@ __get_PSP/31 (__get_PSP) @06117dc8
   Function flags:
   Called by: 
   Calls: 
-__get_xPSR/30 (__get_xPSR) @06117c78
+__get_xPSR/30 (__get_xPSR) @060f5c78
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -1039,7 +1039,7 @@ __get_xPSR/30 (__get_xPSR) @06117c78
   Function flags:
   Called by: 
   Calls: 
-__get_APSR/29 (__get_APSR) @06117b28
+__get_APSR/29 (__get_APSR) @060f5b28
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -1047,7 +1047,7 @@ __get_APSR/29 (__get_APSR) @06117b28
   Function flags:
   Called by: 
   Calls: 
-__get_IPSR/28 (__get_IPSR) @061179d8
+__get_IPSR/28 (__get_IPSR) @060f59d8
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -1055,7 +1055,7 @@ __get_IPSR/28 (__get_IPSR) @061179d8
   Function flags:
   Called by: 
   Calls: 
-__set_CONTROL/27 (__set_CONTROL) @06117888
+__set_CONTROL/27 (__set_CONTROL) @060f5888
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -1063,7 +1063,7 @@ __set_CONTROL/27 (__set_CONTROL) @06117888
   Function flags:
   Called by: 
   Calls: 
-__get_CONTROL/26 (__get_CONTROL) @06117738
+__get_CONTROL/26 (__get_CONTROL) @060f5738
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -1071,7 +1071,7 @@ __get_CONTROL/26 (__get_CONTROL) @06117738
   Function flags:
   Called by: 
   Calls: 
-__disable_irq/25 (__disable_irq) @061175e8
+__disable_irq/25 (__disable_irq) @060f55e8
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -1079,7 +1079,7 @@ __disable_irq/25 (__disable_irq) @061175e8
   Function flags:
   Called by: 
   Calls: 
-__enable_irq/24 (__enable_irq) @06117498
+__enable_irq/24 (__enable_irq) @060f5498
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -1087,7 +1087,7 @@ __enable_irq/24 (__enable_irq) @06117498
   Function flags:
   Called by: 
   Calls: 
-__STRT/23 (__STRT) @06117348
+__STRT/23 (__STRT) @060f5348
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -1095,7 +1095,7 @@ __STRT/23 (__STRT) @06117348
   Function flags:
   Called by: 
   Calls: 
-__STRHT/22 (__STRHT) @061171f8
+__STRHT/22 (__STRHT) @060f51f8
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -1103,7 +1103,7 @@ __STRHT/22 (__STRHT) @061171f8
   Function flags:
   Called by: 
   Calls: 
-__STRBT/21 (__STRBT) @061170a8
+__STRBT/21 (__STRBT) @060f50a8
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -1111,7 +1111,7 @@ __STRBT/21 (__STRBT) @061170a8
   Function flags:
   Called by: 
   Calls: 
-__LDRT/20 (__LDRT) @06111f18
+__LDRT/20 (__LDRT) @060eff18
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -1119,7 +1119,7 @@ __LDRT/20 (__LDRT) @06111f18
   Function flags:
   Called by: 
   Calls: 
-__LDRHT/19 (__LDRHT) @06111dc8
+__LDRHT/19 (__LDRHT) @060efdc8
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -1127,7 +1127,7 @@ __LDRHT/19 (__LDRHT) @06111dc8
   Function flags:
   Called by: 
   Calls: 
-__LDRBT/18 (__LDRBT) @06111c78
+__LDRBT/18 (__LDRBT) @060efc78
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -1135,7 +1135,7 @@ __LDRBT/18 (__LDRBT) @06111c78
   Function flags:
   Called by: 
   Calls: 
-__RRX/17 (__RRX) @06111b28
+__RRX/17 (__RRX) @060efb28
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -1143,7 +1143,7 @@ __RRX/17 (__RRX) @06111b28
   Function flags:
   Called by: 
   Calls: 
-__CLREX/16 (__CLREX) @06111888
+__CLREX/16 (__CLREX) @060ef888
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -1151,7 +1151,7 @@ __CLREX/16 (__CLREX) @06111888
   Function flags:
   Called by: 
   Calls: 
-__STREXW/15 (__STREXW) @06111738
+__STREXW/15 (__STREXW) @060ef738
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -1159,7 +1159,7 @@ __STREXW/15 (__STREXW) @06111738
   Function flags:
   Called by: 
   Calls: 
-__STREXH/14 (__STREXH) @061115e8
+__STREXH/14 (__STREXH) @060ef5e8
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -1167,7 +1167,7 @@ __STREXH/14 (__STREXH) @061115e8
   Function flags:
   Called by: 
   Calls: 
-__STREXB/13 (__STREXB) @06111498
+__STREXB/13 (__STREXB) @060ef498
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -1175,7 +1175,7 @@ __STREXB/13 (__STREXB) @06111498
   Function flags:
   Called by: 
   Calls: 
-__LDREXW/12 (__LDREXW) @06111348
+__LDREXW/12 (__LDREXW) @060ef348
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -1183,7 +1183,7 @@ __LDREXW/12 (__LDREXW) @06111348
   Function flags:
   Called by: 
   Calls: 
-__LDREXH/11 (__LDREXH) @061111f8
+__LDREXH/11 (__LDREXH) @060ef1f8
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -1191,7 +1191,7 @@ __LDREXH/11 (__LDREXH) @061111f8
   Function flags:
   Called by: 
   Calls: 
-__LDREXB/10 (__LDREXB) @061110a8
+__LDREXB/10 (__LDREXB) @060ef0a8
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -1199,7 +1199,7 @@ __LDREXB/10 (__LDREXB) @061110a8
   Function flags:
   Called by: 
   Calls: 
-__CLZ/9 (__CLZ) @060c7738
+__CLZ/9 (__CLZ) @060a7738
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -1207,7 +1207,7 @@ __CLZ/9 (__CLZ) @060c7738
   Function flags:
   Called by: 
   Calls: 
-__RBIT/8 (__RBIT) @060c75e8
+__RBIT/8 (__RBIT) @060a75e8
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -1215,7 +1215,7 @@ __RBIT/8 (__RBIT) @060c75e8
   Function flags:
   Called by: 
   Calls: 
-__ROR/7 (__ROR) @060c73f0
+__ROR/7 (__ROR) @060a73f0
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -1223,7 +1223,7 @@ __ROR/7 (__ROR) @060c73f0
   Function flags:
   Called by: 
   Calls: 
-__REVSH/6 (__REVSH) @060c72a0
+__REVSH/6 (__REVSH) @060a72a0
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -1231,7 +1231,7 @@ __REVSH/6 (__REVSH) @060c72a0
   Function flags:
   Called by: 
   Calls: 
-__REV16/5 (__REV16) @060c7f18
+__REV16/5 (__REV16) @060a7f18
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -1239,7 +1239,7 @@ __REV16/5 (__REV16) @060c7f18
   Function flags:
   Called by: 
   Calls: 
-__REV/4 (__REV) @060c7dc8
+__REV/4 (__REV) @060a7dc8
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -1247,7 +1247,7 @@ __REV/4 (__REV) @060c7dc8
   Function flags:
   Called by: 
   Calls: 
-__DMB/3 (__DMB) @060c7c78
+__DMB/3 (__DMB) @060a7c78
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -1255,7 +1255,7 @@ __DMB/3 (__DMB) @060c7c78
   Function flags:
   Called by: 
   Calls: 
-__DSB/2 (__DSB) @060c7b28
+__DSB/2 (__DSB) @060a7b28
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -1263,7 +1263,7 @@ __DSB/2 (__DSB) @060c7b28
   Function flags:
   Called by: 
   Calls: 
-__ISB/1 (__ISB) @060c79d8
+__ISB/1 (__ISB) @060a79d8
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -1271,7 +1271,7 @@ __ISB/1 (__ISB) @060c79d8
   Function flags:
   Called by: 
   Calls: 
-__cmsis_start/0 (__cmsis_start) @060c7888
+__cmsis_start/0 (__cmsis_start) @060a7888
   Type: function definition
   Visibility: semantic_interposition
   References: 
@@ -1284,7 +1284,7 @@ Removing unused symbols: MXC_SYS_In_Crit_Section/138 MXC_SYS_Crit_Exit/137 MXC_S
 
 Reclaimed Symbol table:
 
-MXC_I2C_SetRXThreshold/157 (MXC_I2C_SetRXThreshold) @06286738
+MXC_I2C_SetRXThreshold/157 (MXC_I2C_SetRXThreshold) @0626f738
   Type: function
   Visibility: semantic_interposition external public
   References: 
@@ -1292,7 +1292,7 @@ MXC_I2C_SetRXThreshold/157 (MXC_I2C_SetRXThreshold) @06286738
   Function flags:
   Called by: max20303_init/152 
   Calls: 
-MXC_I2C_SetTXThreshold/156 (MXC_I2C_SetTXThreshold) @06286690
+MXC_I2C_SetTXThreshold/156 (MXC_I2C_SetTXThreshold) @0626f690
   Type: function
   Visibility: semantic_interposition external public
   References: 
@@ -1300,7 +1300,7 @@ MXC_I2C_SetTXThreshold/156 (MXC_I2C_SetTXThreshold) @06286690
   Function flags:
   Called by: max20303_init/152 
   Calls: 
-MXC_I2C_SetFrequency/155 (MXC_I2C_SetFrequency) @062865e8
+MXC_I2C_SetFrequency/155 (MXC_I2C_SetFrequency) @0626f5e8
   Type: function
   Visibility: semantic_interposition external public
   References: 
@@ -1308,7 +1308,7 @@ MXC_I2C_SetFrequency/155 (MXC_I2C_SetFrequency) @062865e8
   Function flags:
   Called by: max20303_init/152 
   Calls: 
-MXC_I2C_Init/154 (MXC_I2C_Init) @06286540
+MXC_I2C_Init/154 (MXC_I2C_Init) @0626f540
   Type: function
   Visibility: semantic_interposition external public
   References: 
@@ -1316,7 +1316,7 @@ MXC_I2C_Init/154 (MXC_I2C_Init) @06286540
   Function flags:
   Called by: max20303_init/152 
   Calls: 
-MXC_Delay/153 (MXC_Delay) @06286498
+MXC_Delay/153 (MXC_Delay) @0626f498
   Type: function
   Visibility: semantic_interposition external public
   References: 
@@ -1324,7 +1324,7 @@ MXC_Delay/153 (MXC_Delay) @06286498
   Function flags:
   Called by: max20303_gpio/151 max20303_gpio/151 max20303_gpio/151 max20303_sd_power/150 max20303_sd_power/150 max20303_sd_power/150 max20303_camera_power/149 max20303_mic_power/148 
   Calls: 
-max20303_init/152 (max20303_init) @062863f0
+max20303_init/152 (max20303_init) @0626f3f0
   Type: function definition analyzed
   Visibility: semantic_interposition public
   References: i2c/139 (read) i2c/139 (write) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) 
@@ -1332,7 +1332,7 @@ max20303_init/152 (max20303_init) @062863f0
   Function flags: body
   Called by: 
   Calls: reg_read/143 MXC_I2C_SetRXThreshold/157 MXC_I2C_SetTXThreshold/156 MXC_I2C_SetFrequency/155 MXC_I2C_Init/154 
-max20303_gpio/151 (max20303_gpio) @062862a0
+max20303_gpio/151 (max20303_gpio) @0626f2a0
   Type: function definition analyzed
   Visibility: semantic_interposition public
   References: i2c/139 (read) 
@@ -1340,7 +1340,7 @@ max20303_gpio/151 (max20303_gpio) @062862a0
   Function flags: body
   Called by: 
   Calls: reg_read/143 MXC_Delay/153 reg_write/141 reg_write_buf/142 reg_read/143 reg_read/143 MXC_Delay/153 reg_write/141 reg_read/143 MXC_Delay/153 reg_write/141 reg_write_buf/142 
-max20303_sd_power/150 (max20303_sd_power) @06286150
+max20303_sd_power/150 (max20303_sd_power) @0626f150
   Type: function definition analyzed
   Visibility: semantic_interposition public
   References: i2c/139 (read) 
@@ -1348,7 +1348,7 @@ max20303_sd_power/150 (max20303_sd_power) @06286150
   Function flags: body
   Called by: 
   Calls: reg_read/143 MXC_Delay/153 reg_write/141 reg_write_buf/142 reg_read/143 reg_read/143 MXC_Delay/153 reg_write/141 reg_read/143 MXC_Delay/153 reg_write/141 reg_write_buf/142 
-max20303_camera_power/149 (max20303_camera_power) @06286000
+max20303_camera_power/149 (max20303_camera_power) @0626f000
   Type: function definition analyzed
   Visibility: semantic_interposition public
   References: i2c/139 (read) 
@@ -1356,7 +1356,7 @@ max20303_camera_power/149 (max20303_camera_power) @06286000
   Function flags: body
   Called by: 
   Calls: reg_read/143 MXC_Delay/153 reg_write/141 reg_write_buf/142 
-max20303_mic_power/148 (max20303_mic_power) @0626fe70
+max20303_mic_power/148 (max20303_mic_power) @06258e70
   Type: function definition analyzed
   Visibility: semantic_interposition public
   References: i2c/139 (read) 
@@ -1364,7 +1364,7 @@ max20303_mic_power/148 (max20303_mic_power) @0626fe70
   Function flags: body
   Called by: 
   Calls: reg_read/143 MXC_Delay/153 reg_write/141 reg_write_buf/142 
-max20303_led_blue/147 (max20303_led_blue) @0626fd20
+max20303_led_blue/147 (max20303_led_blue) @06258d20
   Type: function definition analyzed
   Visibility: semantic_interposition public
   References: i2c/139 (read) 
@@ -1372,7 +1372,7 @@ max20303_led_blue/147 (max20303_led_blue) @0626fd20
   Function flags: body
   Called by: 
   Calls: reg_write/141 
-max20303_led_green/146 (max20303_led_green) @0626fbd0
+max20303_led_green/146 (max20303_led_green) @06258bd0
   Type: function definition analyzed
   Visibility: semantic_interposition public
   References: i2c/139 (read) 
@@ -1380,7 +1380,7 @@ max20303_led_green/146 (max20303_led_green) @0626fbd0
   Function flags: body
   Called by: 
   Calls: reg_write/141 
-max20303_led_red/145 (max20303_led_red) @0626fa80
+max20303_led_red/145 (max20303_led_red) @06258a80
   Type: function definition analyzed
   Visibility: semantic_interposition public
   References: i2c/139 (read) 
@@ -1388,7 +1388,7 @@ max20303_led_red/145 (max20303_led_red) @0626fa80
   Function flags: body
   Called by: 
   Calls: reg_write/141 
-max20303_led/144 (max20303_led) @0626f930
+max20303_led/144 (max20303_led) @06258930
   Type: function definition analyzed
   Visibility: semantic_interposition public
   References: i2c/139 (read) 
@@ -1396,7 +1396,7 @@ max20303_led/144 (max20303_led) @0626f930
   Function flags: body
   Called by: 
   Calls: reg_write/141 
-reg_read/143 (reg_read) @0626f7e0
+reg_read/143 (reg_read) @062587e0
   Type: function definition analyzed
   Visibility: semantic_interposition
   References: i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) 
@@ -1404,7 +1404,7 @@ reg_read/143 (reg_read) @0626f7e0
   Function flags: body
   Called by: max20303_init/152 max20303_gpio/151 max20303_gpio/151 max20303_gpio/151 max20303_gpio/151 max20303_sd_power/150 max20303_sd_power/150 max20303_sd_power/150 max20303_sd_power/150 max20303_camera_power/149 max20303_mic_power/148 
   Calls: i2c_flush/140 
-reg_write_buf/142 (reg_write_buf) @0626f690
+reg_write_buf/142 (reg_write_buf) @06258690
   Type: function definition analyzed
   Visibility: semantic_interposition
   References: i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) 
@@ -1412,7 +1412,7 @@ reg_write_buf/142 (reg_write_buf) @0626f690
   Function flags: body
   Called by: max20303_gpio/151 max20303_gpio/151 max20303_sd_power/150 max20303_sd_power/150 max20303_camera_power/149 max20303_mic_power/148 
   Calls: i2c_flush/140 
-reg_write/141 (reg_write) @0626f540
+reg_write/141 (reg_write) @06258540
   Type: function definition analyzed
   Visibility: semantic_interposition
   References: i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) 
@@ -1420,7 +1420,7 @@ reg_write/141 (reg_write) @0626f540
   Function flags: body
   Called by: max20303_gpio/151 max20303_gpio/151 max20303_gpio/151 max20303_sd_power/150 max20303_sd_power/150 max20303_sd_power/150 max20303_camera_power/149 max20303_mic_power/148 max20303_led_blue/147 max20303_led_green/146 max20303_led_red/145 max20303_led/144 
   Calls: i2c_flush/140 
-i2c_flush/140 (i2c_flush) @0626f3f0
+i2c_flush/140 (i2c_flush) @062583f0
   Type: function definition analyzed
   Visibility: semantic_interposition
   References: i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) 
@@ -1428,7 +1428,7 @@ i2c_flush/140 (i2c_flush) @0626f3f0
   Function flags: body
   Called by: reg_read/143 reg_write_buf/142 reg_write/141 
   Calls: 
-i2c/139 (i2c) @0625d750
+i2c/139 (i2c) @06246750
   Type: variable definition analyzed
   Visibility: semantic_interposition
   References: 
@@ -1439,7 +1439,7 @@ i2c/139 (i2c) @0625d750
 
 Initial Symbol table:
 
-MXC_I2C_SetRXThreshold/157 (MXC_I2C_SetRXThreshold) @06286738
+MXC_I2C_SetRXThreshold/157 (MXC_I2C_SetRXThreshold) @0626f738
   Type: function
   Visibility: semantic_interposition external public
   References: 
@@ -1447,7 +1447,7 @@ MXC_I2C_SetRXThreshold/157 (MXC_I2C_SetRXThreshold) @06286738
   Function flags:
   Called by: max20303_init/152 
   Calls: 
-MXC_I2C_SetTXThreshold/156 (MXC_I2C_SetTXThreshold) @06286690
+MXC_I2C_SetTXThreshold/156 (MXC_I2C_SetTXThreshold) @0626f690
   Type: function
   Visibility: semantic_interposition external public
   References: 
@@ -1455,7 +1455,7 @@ MXC_I2C_SetTXThreshold/156 (MXC_I2C_SetTXThreshold) @06286690
   Function flags:
   Called by: max20303_init/152 
   Calls: 
-MXC_I2C_SetFrequency/155 (MXC_I2C_SetFrequency) @062865e8
+MXC_I2C_SetFrequency/155 (MXC_I2C_SetFrequency) @0626f5e8
   Type: function
   Visibility: semantic_interposition external public
   References: 
@@ -1463,7 +1463,7 @@ MXC_I2C_SetFrequency/155 (MXC_I2C_SetFrequency) @062865e8
   Function flags:
   Called by: max20303_init/152 
   Calls: 
-MXC_I2C_Init/154 (MXC_I2C_Init) @06286540
+MXC_I2C_Init/154 (MXC_I2C_Init) @0626f540
   Type: function
   Visibility: semantic_interposition external public
   References: 
@@ -1471,7 +1471,7 @@ MXC_I2C_Init/154 (MXC_I2C_Init) @06286540
   Function flags:
   Called by: max20303_init/152 
   Calls: 
-MXC_Delay/153 (MXC_Delay) @06286498
+MXC_Delay/153 (MXC_Delay) @0626f498
   Type: function
   Visibility: semantic_interposition external public
   References: 
@@ -1479,7 +1479,7 @@ MXC_Delay/153 (MXC_Delay) @06286498
   Function flags:
   Called by: max20303_gpio/151 max20303_gpio/151 max20303_gpio/151 max20303_sd_power/150 max20303_sd_power/150 max20303_sd_power/150 max20303_camera_power/149 max20303_mic_power/148 
   Calls: 
-max20303_init/152 (max20303_init) @062863f0
+max20303_init/152 (max20303_init) @0626f3f0
   Type: function definition analyzed
   Visibility: semantic_interposition public
   References: i2c/139 (read) i2c/139 (write) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) 
@@ -1487,7 +1487,7 @@ max20303_init/152 (max20303_init) @062863f0
   Function flags: body
   Called by: 
   Calls: reg_read/143 MXC_I2C_SetRXThreshold/157 MXC_I2C_SetTXThreshold/156 MXC_I2C_SetFrequency/155 MXC_I2C_Init/154 
-max20303_gpio/151 (max20303_gpio) @062862a0
+max20303_gpio/151 (max20303_gpio) @0626f2a0
   Type: function definition analyzed
   Visibility: semantic_interposition public
   References: i2c/139 (read) 
@@ -1495,7 +1495,7 @@ max20303_gpio/151 (max20303_gpio) @062862a0
   Function flags: body
   Called by: 
   Calls: reg_read/143 MXC_Delay/153 reg_write/141 reg_write_buf/142 reg_read/143 reg_read/143 MXC_Delay/153 reg_write/141 reg_read/143 MXC_Delay/153 reg_write/141 reg_write_buf/142 
-max20303_sd_power/150 (max20303_sd_power) @06286150
+max20303_sd_power/150 (max20303_sd_power) @0626f150
   Type: function definition analyzed
   Visibility: semantic_interposition public
   References: i2c/139 (read) 
@@ -1503,7 +1503,7 @@ max20303_sd_power/150 (max20303_sd_power) @06286150
   Function flags: body
   Called by: 
   Calls: reg_read/143 MXC_Delay/153 reg_write/141 reg_write_buf/142 reg_read/143 reg_read/143 MXC_Delay/153 reg_write/141 reg_read/143 MXC_Delay/153 reg_write/141 reg_write_buf/142 
-max20303_camera_power/149 (max20303_camera_power) @06286000
+max20303_camera_power/149 (max20303_camera_power) @0626f000
   Type: function definition analyzed
   Visibility: semantic_interposition public
   References: i2c/139 (read) 
@@ -1511,7 +1511,7 @@ max20303_camera_power/149 (max20303_camera_power) @06286000
   Function flags: body
   Called by: 
   Calls: reg_read/143 MXC_Delay/153 reg_write/141 reg_write_buf/142 
-max20303_mic_power/148 (max20303_mic_power) @0626fe70
+max20303_mic_power/148 (max20303_mic_power) @06258e70
   Type: function definition analyzed
   Visibility: semantic_interposition public
   References: i2c/139 (read) 
@@ -1519,7 +1519,7 @@ max20303_mic_power/148 (max20303_mic_power) @0626fe70
   Function flags: body
   Called by: 
   Calls: reg_read/143 MXC_Delay/153 reg_write/141 reg_write_buf/142 
-max20303_led_blue/147 (max20303_led_blue) @0626fd20
+max20303_led_blue/147 (max20303_led_blue) @06258d20
   Type: function definition analyzed
   Visibility: semantic_interposition public
   References: i2c/139 (read) 
@@ -1527,7 +1527,7 @@ max20303_led_blue/147 (max20303_led_blue) @0626fd20
   Function flags: body
   Called by: 
   Calls: reg_write/141 
-max20303_led_green/146 (max20303_led_green) @0626fbd0
+max20303_led_green/146 (max20303_led_green) @06258bd0
   Type: function definition analyzed
   Visibility: semantic_interposition public
   References: i2c/139 (read) 
@@ -1535,7 +1535,7 @@ max20303_led_green/146 (max20303_led_green) @0626fbd0
   Function flags: body
   Called by: 
   Calls: reg_write/141 
-max20303_led_red/145 (max20303_led_red) @0626fa80
+max20303_led_red/145 (max20303_led_red) @06258a80
   Type: function definition analyzed
   Visibility: semantic_interposition public
   References: i2c/139 (read) 
@@ -1543,7 +1543,7 @@ max20303_led_red/145 (max20303_led_red) @0626fa80
   Function flags: body
   Called by: 
   Calls: reg_write/141 
-max20303_led/144 (max20303_led) @0626f930
+max20303_led/144 (max20303_led) @06258930
   Type: function definition analyzed
   Visibility: semantic_interposition public
   References: i2c/139 (read) 
@@ -1551,7 +1551,7 @@ max20303_led/144 (max20303_led) @0626f930
   Function flags: body
   Called by: 
   Calls: reg_write/141 
-reg_read/143 (reg_read) @0626f7e0
+reg_read/143 (reg_read) @062587e0
   Type: function definition analyzed
   Visibility: semantic_interposition
   References: i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) 
@@ -1559,7 +1559,7 @@ reg_read/143 (reg_read) @0626f7e0
   Function flags: body
   Called by: max20303_init/152 max20303_gpio/151 max20303_gpio/151 max20303_gpio/151 max20303_gpio/151 max20303_sd_power/150 max20303_sd_power/150 max20303_sd_power/150 max20303_sd_power/150 max20303_camera_power/149 max20303_mic_power/148 
   Calls: i2c_flush/140 
-reg_write_buf/142 (reg_write_buf) @0626f690
+reg_write_buf/142 (reg_write_buf) @06258690
   Type: function definition analyzed
   Visibility: semantic_interposition
   References: i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) 
@@ -1567,7 +1567,7 @@ reg_write_buf/142 (reg_write_buf) @0626f690
   Function flags: body
   Called by: max20303_gpio/151 max20303_gpio/151 max20303_sd_power/150 max20303_sd_power/150 max20303_camera_power/149 max20303_mic_power/148 
   Calls: i2c_flush/140 
-reg_write/141 (reg_write) @0626f540
+reg_write/141 (reg_write) @06258540
   Type: function definition analyzed
   Visibility: semantic_interposition
   References: i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) 
@@ -1575,7 +1575,7 @@ reg_write/141 (reg_write) @0626f540
   Function flags: body
   Called by: max20303_gpio/151 max20303_gpio/151 max20303_gpio/151 max20303_sd_power/150 max20303_sd_power/150 max20303_sd_power/150 max20303_camera_power/149 max20303_mic_power/148 max20303_led_blue/147 max20303_led_green/146 max20303_led_red/145 max20303_led/144 
   Calls: i2c_flush/140 
-i2c_flush/140 (i2c_flush) @0626f3f0
+i2c_flush/140 (i2c_flush) @062583f0
   Type: function definition analyzed
   Visibility: semantic_interposition
   References: i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) 
@@ -1583,7 +1583,7 @@ i2c_flush/140 (i2c_flush) @0626f3f0
   Function flags: body
   Called by: reg_read/143 reg_write_buf/142 reg_write/141 
   Calls: 
-i2c/139 (i2c) @0625d750
+i2c/139 (i2c) @06246750
   Type: variable definition analyzed
   Visibility: semantic_interposition
   References: 
@@ -1595,7 +1595,7 @@ Removing unused symbols:
 
 Reclaimed Symbol table:
 
-MXC_I2C_SetRXThreshold/157 (MXC_I2C_SetRXThreshold) @06286738
+MXC_I2C_SetRXThreshold/157 (MXC_I2C_SetRXThreshold) @0626f738
   Type: function
   Visibility: semantic_interposition external public
   References: 
@@ -1603,7 +1603,7 @@ MXC_I2C_SetRXThreshold/157 (MXC_I2C_SetRXThreshold) @06286738
   Function flags:
   Called by: max20303_init/152 
   Calls: 
-MXC_I2C_SetTXThreshold/156 (MXC_I2C_SetTXThreshold) @06286690
+MXC_I2C_SetTXThreshold/156 (MXC_I2C_SetTXThreshold) @0626f690
   Type: function
   Visibility: semantic_interposition external public
   References: 
@@ -1611,7 +1611,7 @@ MXC_I2C_SetTXThreshold/156 (MXC_I2C_SetTXThreshold) @06286690
   Function flags:
   Called by: max20303_init/152 
   Calls: 
-MXC_I2C_SetFrequency/155 (MXC_I2C_SetFrequency) @062865e8
+MXC_I2C_SetFrequency/155 (MXC_I2C_SetFrequency) @0626f5e8
   Type: function
   Visibility: semantic_interposition external public
   References: 
@@ -1619,7 +1619,7 @@ MXC_I2C_SetFrequency/155 (MXC_I2C_SetFrequency) @062865e8
   Function flags:
   Called by: max20303_init/152 
   Calls: 
-MXC_I2C_Init/154 (MXC_I2C_Init) @06286540
+MXC_I2C_Init/154 (MXC_I2C_Init) @0626f540
   Type: function
   Visibility: semantic_interposition external public
   References: 
@@ -1627,7 +1627,7 @@ MXC_I2C_Init/154 (MXC_I2C_Init) @06286540
   Function flags:
   Called by: max20303_init/152 
   Calls: 
-MXC_Delay/153 (MXC_Delay) @06286498
+MXC_Delay/153 (MXC_Delay) @0626f498
   Type: function
   Visibility: semantic_interposition external public
   References: 
@@ -1635,7 +1635,7 @@ MXC_Delay/153 (MXC_Delay) @06286498
   Function flags:
   Called by: max20303_gpio/151 max20303_gpio/151 max20303_gpio/151 max20303_sd_power/150 max20303_sd_power/150 max20303_sd_power/150 max20303_camera_power/149 max20303_mic_power/148 
   Calls: 
-max20303_init/152 (max20303_init) @062863f0
+max20303_init/152 (max20303_init) @0626f3f0
   Type: function definition analyzed
   Visibility: semantic_interposition public
   References: i2c/139 (read) i2c/139 (write) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) 
@@ -1643,7 +1643,7 @@ max20303_init/152 (max20303_init) @062863f0
   Function flags: body
   Called by: 
   Calls: reg_read/143 MXC_I2C_SetRXThreshold/157 MXC_I2C_SetTXThreshold/156 MXC_I2C_SetFrequency/155 MXC_I2C_Init/154 
-max20303_gpio/151 (max20303_gpio) @062862a0
+max20303_gpio/151 (max20303_gpio) @0626f2a0
   Type: function definition analyzed
   Visibility: semantic_interposition public
   References: i2c/139 (read) 
@@ -1651,7 +1651,7 @@ max20303_gpio/151 (max20303_gpio) @062862a0
   Function flags: body
   Called by: 
   Calls: reg_read/143 MXC_Delay/153 reg_write/141 reg_write_buf/142 reg_read/143 reg_read/143 MXC_Delay/153 reg_write/141 reg_read/143 MXC_Delay/153 reg_write/141 reg_write_buf/142 
-max20303_sd_power/150 (max20303_sd_power) @06286150
+max20303_sd_power/150 (max20303_sd_power) @0626f150
   Type: function definition analyzed
   Visibility: semantic_interposition public
   References: i2c/139 (read) 
@@ -1659,7 +1659,7 @@ max20303_sd_power/150 (max20303_sd_power) @06286150
   Function flags: body
   Called by: 
   Calls: reg_read/143 MXC_Delay/153 reg_write/141 reg_write_buf/142 reg_read/143 reg_read/143 MXC_Delay/153 reg_write/141 reg_read/143 MXC_Delay/153 reg_write/141 reg_write_buf/142 
-max20303_camera_power/149 (max20303_camera_power) @06286000
+max20303_camera_power/149 (max20303_camera_power) @0626f000
   Type: function definition analyzed
   Visibility: semantic_interposition public
   References: i2c/139 (read) 
@@ -1667,7 +1667,7 @@ max20303_camera_power/149 (max20303_camera_power) @06286000
   Function flags: body
   Called by: 
   Calls: reg_read/143 MXC_Delay/153 reg_write/141 reg_write_buf/142 
-max20303_mic_power/148 (max20303_mic_power) @0626fe70
+max20303_mic_power/148 (max20303_mic_power) @06258e70
   Type: function definition analyzed
   Visibility: semantic_interposition public
   References: i2c/139 (read) 
@@ -1675,7 +1675,7 @@ max20303_mic_power/148 (max20303_mic_power) @0626fe70
   Function flags: body
   Called by: 
   Calls: reg_read/143 MXC_Delay/153 reg_write/141 reg_write_buf/142 
-max20303_led_blue/147 (max20303_led_blue) @0626fd20
+max20303_led_blue/147 (max20303_led_blue) @06258d20
   Type: function definition analyzed
   Visibility: semantic_interposition public
   References: i2c/139 (read) 
@@ -1683,7 +1683,7 @@ max20303_led_blue/147 (max20303_led_blue) @0626fd20
   Function flags: body
   Called by: 
   Calls: reg_write/141 
-max20303_led_green/146 (max20303_led_green) @0626fbd0
+max20303_led_green/146 (max20303_led_green) @06258bd0
   Type: function definition analyzed
   Visibility: semantic_interposition public
   References: i2c/139 (read) 
@@ -1691,7 +1691,7 @@ max20303_led_green/146 (max20303_led_green) @0626fbd0
   Function flags: body
   Called by: 
   Calls: reg_write/141 
-max20303_led_red/145 (max20303_led_red) @0626fa80
+max20303_led_red/145 (max20303_led_red) @06258a80
   Type: function definition analyzed
   Visibility: semantic_interposition public
   References: i2c/139 (read) 
@@ -1699,7 +1699,7 @@ max20303_led_red/145 (max20303_led_red) @0626fa80
   Function flags: body
   Called by: 
   Calls: reg_write/141 
-max20303_led/144 (max20303_led) @0626f930
+max20303_led/144 (max20303_led) @06258930
   Type: function definition analyzed
   Visibility: semantic_interposition public
   References: i2c/139 (read) 
@@ -1707,7 +1707,7 @@ max20303_led/144 (max20303_led) @0626f930
   Function flags: body
   Called by: 
   Calls: reg_write/141 
-reg_read/143 (reg_read) @0626f7e0
+reg_read/143 (reg_read) @062587e0
   Type: function definition analyzed
   Visibility: semantic_interposition
   References: i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) 
@@ -1715,7 +1715,7 @@ reg_read/143 (reg_read) @0626f7e0
   Function flags: body
   Called by: max20303_init/152 max20303_gpio/151 max20303_gpio/151 max20303_gpio/151 max20303_gpio/151 max20303_sd_power/150 max20303_sd_power/150 max20303_sd_power/150 max20303_sd_power/150 max20303_camera_power/149 max20303_mic_power/148 
   Calls: i2c_flush/140 
-reg_write_buf/142 (reg_write_buf) @0626f690
+reg_write_buf/142 (reg_write_buf) @06258690
   Type: function definition analyzed
   Visibility: semantic_interposition
   References: i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) 
@@ -1723,7 +1723,7 @@ reg_write_buf/142 (reg_write_buf) @0626f690
   Function flags: body
   Called by: max20303_gpio/151 max20303_gpio/151 max20303_sd_power/150 max20303_sd_power/150 max20303_camera_power/149 max20303_mic_power/148 
   Calls: i2c_flush/140 
-reg_write/141 (reg_write) @0626f540
+reg_write/141 (reg_write) @06258540
   Type: function definition analyzed
   Visibility: semantic_interposition
   References: i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) 
@@ -1731,7 +1731,7 @@ reg_write/141 (reg_write) @0626f540
   Function flags: body
   Called by: max20303_gpio/151 max20303_gpio/151 max20303_gpio/151 max20303_sd_power/150 max20303_sd_power/150 max20303_sd_power/150 max20303_camera_power/149 max20303_mic_power/148 max20303_led_blue/147 max20303_led_green/146 max20303_led_red/145 max20303_led/144 
   Calls: i2c_flush/140 
-i2c_flush/140 (i2c_flush) @0626f3f0
+i2c_flush/140 (i2c_flush) @062583f0
   Type: function definition analyzed
   Visibility: semantic_interposition
   References: i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) i2c/139 (read) 
@@ -1739,7 +1739,7 @@ i2c_flush/140 (i2c_flush) @0626f3f0
   Function flags: body
   Called by: reg_read/143 reg_write_buf/142 reg_write/141 
   Calls: 
-i2c/139 (i2c) @0625d750
+i2c/139 (i2c) @06246750
   Type: variable definition analyzed
   Visibility: semantic_interposition
   References: 
@@ -1752,7 +1752,7 @@ Reclaiming variables:
 Clearing address taken flags:
 Optimized Symbol table:
 
-i2c_flush/160 (i2c_flush) @06132f18
+i2c_flush/160 (i2c_flush) @06110f18
   Type: function definition analyzed
   Visibility: semantic_interposition
   next sharing asm name: 159
@@ -1764,7 +1764,7 @@ i2c_flush/160 (i2c_flush) @06132f18
   Function flags: count:118111600 (estimated locally) body local nonfreeing_fn
   Called by: reg_write_buf.constprop.0/158 (inlined) (118111600 (estimated locally),0.98 per call) 
   Calls: 
-i2c_flush/159 (i2c_flush) @06125498
+i2c_flush/159 (i2c_flush) @06103498
   Type: function definition analyzed
   Visibility: semantic_interposition
   next sharing asm name: 140
@@ -1777,7 +1777,7 @@ i2c_flush/159 (i2c_flush) @06125498
   Function flags: count:118111600 (estimated locally) body local nonfreeing_fn
   Called by: reg_write/141 (inlined) (118111600 (estimated locally),1.00 per call) 
   Calls: 
-reg_write_buf.constprop.0/158 (reg_write_buf.constprop) @0612cb28
+reg_write_buf.constprop.0/158 (reg_write_buf.constprop) @0610ab28
   Type: function definition analyzed
   Visibility:
   References: i2c/139 (read) 
@@ -1787,7 +1787,7 @@ reg_write_buf.constprop.0/158 (reg_write_buf.constprop) @0612cb28
   Function flags: count:120632827 (estimated locally) local nonfreeing_fn
   Called by: max20303_mic_power/148 (1068909985 (estimated locally),1.00 per call) max20303_camera_power/149 (1063970777 (estimated locally),0.99 per call) max20303_sd_power/150 (1063970777 (estimated locally),0.99 per call) max20303_sd_power/150 (32936578 (estimated locally),0.03 per call) max20303_gpio/151 (1026367362 (estimated locally),0.96 per call) max20303_gpio/151 (31772517 (estimated locally),0.03 per call) 
   Calls: i2c_flush/160 (inlined) (118111600 (estimated locally),0.98 per call) 
-MXC_I2C_SetRXThreshold/157 (MXC_I2C_SetRXThreshold) @06286738
+MXC_I2C_SetRXThreshold/157 (MXC_I2C_SetRXThreshold) @0626f738
   Type: function
   Visibility: semantic_interposition external public
   References: 
@@ -1796,7 +1796,7 @@ MXC_I2C_SetRXThreshold/157 (MXC_I2C_SetRXThreshold) @06286738
   Function flags:
   Called by: max20303_init/152 (154892040 (estimated locally),0.14 per call) 
   Calls: 
-MXC_I2C_SetTXThreshold/156 (MXC_I2C_SetTXThreshold) @06286690
+MXC_I2C_SetTXThreshold/156 (MXC_I2C_SetTXThreshold) @0626f690
   Type: function
   Visibility: semantic_interposition external public
   References: 
@@ -1805,7 +1805,7 @@ MXC_I2C_SetTXThreshold/156 (MXC_I2C_SetTXThreshold) @06286690
   Function flags:
   Called by: max20303_init/152 (154892040 (estimated locally),0.14 per call) 
   Calls: 
-MXC_I2C_SetFrequency/155 (MXC_I2C_SetFrequency) @062865e8
+MXC_I2C_SetFrequency/155 (MXC_I2C_SetFrequency) @0626f5e8
   Type: function
   Visibility: semantic_interposition external public
   References: 
@@ -1814,7 +1814,7 @@ MXC_I2C_SetFrequency/155 (MXC_I2C_SetFrequency) @062865e8
   Function flags:
   Called by: max20303_init/152 (154892040 (estimated locally),0.14 per call) 
   Calls: 
-MXC_I2C_Init/154 (MXC_I2C_Init) @06286540
+MXC_I2C_Init/154 (MXC_I2C_Init) @0626f540
   Type: function
   Visibility: semantic_interposition external public
   References: 
@@ -1823,7 +1823,7 @@ MXC_I2C_Init/154 (MXC_I2C_Init) @06286540
   Function flags:
   Called by: max20303_init/152 (316882244 (estimated locally),0.30 per call) 
   Calls: 
-MXC_Delay/153 (MXC_Delay) @06286498
+MXC_Delay/153 (MXC_Delay) @0626f498
   Type: function
   Visibility: semantic_interposition external public
   References: 
@@ -1832,7 +1832,7 @@ MXC_Delay/153 (MXC_Delay) @06286498
   Function flags:
   Called by: max20303_gpio/151 (7591262 (estimated locally),0.01 per call) max20303_gpio/151 (75962990 (estimated locally),0.07 per call) max20303_gpio/151 (245225270 (estimated locally),0.23 per call) max20303_sd_power/150 (7869386 (estimated locally),0.01 per call) max20303_sd_power/150 (78746075 (estimated locally),0.07 per call) max20303_sd_power/150 (254209683 (estimated locally),0.24 per call) max20303_camera_power/149 (254209683 (estimated locally),0.24 per call) max20303_mic_power/148 (255389785 (estimated locally),0.24 per call) 
   Calls: 
-max20303_init/152 (max20303_init) @062863f0
+max20303_init/152 (max20303_init) @0626f3f0
   Type: function definition analyzed
   Visibility: externally_visible semantic_interposition public
   References: i2c/139 (read) i2c/139 (write) i2c/139 (read) i2c/139 (read) i2c/139 (read) 
@@ -1841,7 +1841,7 @@ max20303_init/152 (max20303_init) @062863f0
   Function flags: count:1073741824 (estimated locally) body
   Called by: 
   Calls: reg_read/143 (154892040 (estimated locally),0.14 per call) MXC_I2C_SetRXThreshold/157 (154892040 (estimated locally),0.14 per call) MXC_I2C_SetTXThreshold/156 (154892040 (estimated locally),0.14 per call) MXC_I2C_SetFrequency/155 (154892040 (estimated locally),0.14 per call) MXC_I2C_Init/154 (316882244 (estimated locally),0.30 per call) 
-max20303_gpio/151 (max20303_gpio) @062862a0
+max20303_gpio/151 (max20303_gpio) @0626f2a0
   Type: function definition analyzed
   Visibility: externally_visible semantic_interposition public
   References: i2c/139 (read) 
@@ -1850,7 +1850,7 @@ max20303_gpio/151 (max20303_gpio) @062862a0
   Function flags: count:1073741823 (estimated locally) body
   Called by: 
   Calls: reg_read/143 (7591262 (estimated locally),0.01 per call) MXC_Delay/153 (7591262 (estimated locally),0.01 per call) reg_write/141 (15530406 (estimated locally),0.01 per call) reg_write_buf.constprop.0/158 (31772517 (estimated locally),0.03 per call) reg_read/143 (48140177 (estimated locally),0.04 per call) reg_read/143 (75962990 (estimated locally),0.07 per call) MXC_Delay/153 (75962990 (estimated locally),0.07 per call) reg_write/141 (155407100 (estimated locally),0.14 per call) reg_read/143 (245225270 (estimated locally),0.23 per call) MXC_Delay/153 (245225270 (estimated locally),0.23 per call) reg_write/141 (501688363 (estimated locally),0.47 per call) reg_write_buf.constprop.0/158 (1026367362 (estimated locally),0.96 per call) 
-max20303_sd_power/150 (max20303_sd_power) @06286150
+max20303_sd_power/150 (max20303_sd_power) @0626f150
   Type: function definition analyzed
   Visibility: externally_visible semantic_interposition public
   References: i2c/139 (read) 
@@ -1859,7 +1859,7 @@ max20303_sd_power/150 (max20303_sd_power) @06286150
   Function flags: count:1073741824 (estimated locally) body
   Called by: 
   Calls: reg_read/143 (7869386 (estimated locally),0.01 per call) MXC_Delay/153 (7869386 (estimated locally),0.01 per call) reg_write/141 (16099399 (estimated locally),0.01 per call) reg_write_buf.constprop.0/158 (32936578 (estimated locally),0.03 per call) reg_read/143 (49903907 (estimated locally),0.05 per call) reg_read/143 (78746075 (estimated locally),0.07 per call) MXC_Delay/153 (78746075 (estimated locally),0.07 per call) reg_write/141 (161100809 (estimated locally),0.15 per call) reg_read/143 (254209683 (estimated locally),0.24 per call) MXC_Delay/153 (254209683 (estimated locally),0.24 per call) reg_write/141 (520068912 (estimated locally),0.48 per call) reg_write_buf.constprop.0/158 (1063970777 (estimated locally),0.99 per call) 
-max20303_camera_power/149 (max20303_camera_power) @06286000
+max20303_camera_power/149 (max20303_camera_power) @0626f000
   Type: function definition analyzed
   Visibility: externally_visible semantic_interposition public
   References: i2c/139 (read) 
@@ -1868,7 +1868,7 @@ max20303_camera_power/149 (max20303_camera_power) @06286000
   Function flags: count:1073741824 (estimated locally) body
   Called by: 
   Calls: reg_read/143 (254209683 (estimated locally),0.24 per call) MXC_Delay/153 (254209683 (estimated locally),0.24 per call) reg_write/141 (520068912 (estimated locally),0.48 per call) reg_write_buf.constprop.0/158 (1063970777 (estimated locally),0.99 per call) 
-max20303_mic_power/148 (max20303_mic_power) @0626fe70
+max20303_mic_power/148 (max20303_mic_power) @06258e70
   Type: function definition analyzed
   Visibility: externally_visible semantic_interposition public
   References: i2c/139 (read) 
@@ -1877,7 +1877,7 @@ max20303_mic_power/148 (max20303_mic_power) @0626fe70
   Function flags: count:1073741824 (estimated locally) body
   Called by: 
   Calls: reg_read/143 (255389785 (estimated locally),0.24 per call) MXC_Delay/153 (255389785 (estimated locally),0.24 per call) reg_write/141 (522483197 (estimated locally),0.49 per call) reg_write_buf.constprop.0/158 (1068909985 (estimated locally),1.00 per call) 
-max20303_led_blue/147 (max20303_led_blue) @0626fd20
+max20303_led_blue/147 (max20303_led_blue) @06258d20
   Type: function definition analyzed
   Visibility: externally_visible semantic_interposition public
   References: i2c/139 (read) 
@@ -1886,7 +1886,7 @@ max20303_led_blue/147 (max20303_led_blue) @0626fd20
   Function flags: count:1073741824 (estimated locally) body nonfreeing_fn
   Called by: 
   Calls: reg_write/141 (1068909985 (estimated locally),1.00 per call) 
-max20303_led_green/146 (max20303_led_green) @0626fbd0
+max20303_led_green/146 (max20303_led_green) @06258bd0
   Type: function definition analyzed
   Visibility: externally_visible semantic_interposition public
   References: i2c/139 (read) 
@@ -1895,7 +1895,7 @@ max20303_led_green/146 (max20303_led_green) @0626fbd0
   Function flags: count:1073741824 (estimated locally) body nonfreeing_fn
   Called by: 
   Calls: reg_write/141 (1068909985 (estimated locally),1.00 per call) 
-max20303_led_red/145 (max20303_led_red) @0626fa80
+max20303_led_red/145 (max20303_led_red) @06258a80
   Type: function definition analyzed
   Visibility: externally_visible semantic_interposition public
   References: i2c/139 (read) 
@@ -1904,7 +1904,7 @@ max20303_led_red/145 (max20303_led_red) @0626fa80
   Function flags: count:1073741824 (estimated locally) body nonfreeing_fn
   Called by: 
   Calls: reg_write/141 (1068909985 (estimated locally),1.00 per call) 
-max20303_led/144 (max20303_led) @0626f930
+max20303_led/144 (max20303_led) @06258930
   Type: function definition analyzed
   Visibility: externally_visible semantic_interposition public
   References: i2c/139 (read) 
@@ -1913,7 +1913,7 @@ max20303_led/144 (max20303_led) @0626f930
   Function flags: count:1073741824 (estimated locally) body nonfreeing_fn
   Called by: 
   Calls: reg_write/141 (1047531782 (estimated locally),0.98 per call) 
-reg_read/143 (reg_read) @0626f7e0
+reg_read/143 (reg_read) @062587e0
   Type: function definition analyzed
   Visibility: semantic_interposition prevailing_def_ironly
   References: i2c/139 (read) 
@@ -1922,7 +1922,7 @@ reg_read/143 (reg_read) @0626f7e0
   Function flags: count:118111600 (estimated locally) body local nonfreeing_fn
   Called by: max20303_init/152 (154892040 (estimated locally),0.14 per call) max20303_gpio/151 (7591262 (estimated locally),0.01 per call) max20303_gpio/151 (48140177 (estimated locally),0.04 per call) max20303_gpio/151 (75962990 (estimated locally),0.07 per call) max20303_gpio/151 (245225270 (estimated locally),0.23 per call) max20303_sd_power/150 (7869386 (estimated locally),0.01 per call) max20303_sd_power/150 (49903907 (estimated locally),0.05 per call) max20303_sd_power/150 (78746075 (estimated locally),0.07 per call) max20303_sd_power/150 (254209683 (estimated locally),0.24 per call) max20303_camera_power/149 (254209683 (estimated locally),0.24 per call) max20303_mic_power/148 (255389785 (estimated locally),0.24 per call) 
   Calls: i2c_flush/140 (inlined) (118111600 (estimated locally),1.00 per call) 
-reg_write_buf/142 (reg_write_buf) @0626f690
+reg_write_buf/142 (reg_write_buf) @06258690
   Type: function
   Body removed by symtab_remove_unreachable_nodes
   Visibility: semantic_interposition prevailing_def_ironly
@@ -1932,7 +1932,7 @@ reg_write_buf/142 (reg_write_buf) @0626f690
   Function flags: count:120632827 (estimated locally) body
   Called by: 
   Calls: 
-reg_write/141 (reg_write) @0626f540
+reg_write/141 (reg_write) @06258540
   Type: function definition analyzed
   Visibility: semantic_interposition prevailing_def_ironly
   References: i2c/139 (read) 
@@ -1941,7 +1941,7 @@ reg_write/141 (reg_write) @0626f540
   Function flags: count:118111600 (estimated locally) body local nonfreeing_fn
   Called by: max20303_gpio/151 (15530406 (estimated locally),0.01 per call) max20303_gpio/151 (155407100 (estimated locally),0.14 per call) max20303_gpio/151 (501688363 (estimated locally),0.47 per call) max20303_sd_power/150 (16099399 (estimated locally),0.01 per call) max20303_sd_power/150 (161100809 (estimated locally),0.15 per call) max20303_sd_power/150 (520068912 (estimated locally),0.48 per call) max20303_camera_power/149 (520068912 (estimated locally),0.48 per call) max20303_mic_power/148 (522483197 (estimated locally),0.49 per call) max20303_led_blue/147 (1068909985 (estimated locally),1.00 per call) max20303_led_green/146 (1068909985 (estimated locally),1.00 per call) max20303_led_red/145 (1068909985 (estimated locally),1.00 per call) max20303_led/144 (1047531782 (estimated locally),0.98 per call) 
   Calls: i2c_flush/159 (inlined) (118111600 (estimated locally),1.00 per call) 
-i2c_flush/140 (i2c_flush) @0626f3f0
+i2c_flush/140 (i2c_flush) @062583f0
   Type: function definition analyzed
   Visibility: semantic_interposition prevailing_def_ironly
   previous sharing asm name: 159
@@ -1952,7 +1952,7 @@ i2c_flush/140 (i2c_flush) @0626f3f0
   Function flags: count:118111600 (estimated locally) body local nonfreeing_fn
   Called by: reg_read/143 (inlined) (118111600 (estimated locally),1.00 per call) 
   Calls: 
-i2c/139 (i2c) @0625d750
+i2c/139 (i2c) @06246750
   Type: variable definition analyzed
   Visibility: semantic_interposition prevailing_def_ironly
   References: 
@@ -2203,7 +2203,7 @@ Removing variables:
 
 Final Symbol table:
 
-reg_write_buf.constprop.0/158 (reg_write_buf.constprop) @0612cb28
+reg_write_buf.constprop.0/158 (reg_write_buf.constprop) @0610ab28
   Type: function definition analyzed
   Visibility: asm_written section:.text.reg_write_buf.constprop.0 (implicit_section) artificial
   References: 
@@ -2212,7 +2212,7 @@ reg_write_buf.constprop.0/158 (reg_write_buf.constprop) @0612cb28
   Function flags: count:120632827 (estimated locally) local nonfreeing_fn
   Called by: 
   Calls: 
-MXC_I2C_SetRXThreshold/157 (MXC_I2C_SetRXThreshold) @06286738
+MXC_I2C_SetRXThreshold/157 (MXC_I2C_SetRXThreshold) @0626f738
   Type: function
   Visibility: semantic_interposition external public
   References: 
@@ -2221,7 +2221,7 @@ MXC_I2C_SetRXThreshold/157 (MXC_I2C_SetRXThreshold) @06286738
   Function flags:
   Called by: 
   Calls: 
-MXC_I2C_SetTXThreshold/156 (MXC_I2C_SetTXThreshold) @06286690
+MXC_I2C_SetTXThreshold/156 (MXC_I2C_SetTXThreshold) @0626f690
   Type: function
   Visibility: semantic_interposition external public
   References: 
@@ -2230,7 +2230,7 @@ MXC_I2C_SetTXThreshold/156 (MXC_I2C_SetTXThreshold) @06286690
   Function flags:
   Called by: 
   Calls: 
-MXC_I2C_SetFrequency/155 (MXC_I2C_SetFrequency) @062865e8
+MXC_I2C_SetFrequency/155 (MXC_I2C_SetFrequency) @0626f5e8
   Type: function
   Visibility: semantic_interposition external public
   References: 
@@ -2239,7 +2239,7 @@ MXC_I2C_SetFrequency/155 (MXC_I2C_SetFrequency) @062865e8
   Function flags:
   Called by: 
   Calls: 
-MXC_I2C_Init/154 (MXC_I2C_Init) @06286540
+MXC_I2C_Init/154 (MXC_I2C_Init) @0626f540
   Type: function
   Visibility: semantic_interposition external public
   References: 
@@ -2248,7 +2248,7 @@ MXC_I2C_Init/154 (MXC_I2C_Init) @06286540
   Function flags:
   Called by: 
   Calls: 
-MXC_Delay/153 (MXC_Delay) @06286498
+MXC_Delay/153 (MXC_Delay) @0626f498
   Type: function
   Visibility: semantic_interposition external public
   References: 
@@ -2257,7 +2257,7 @@ MXC_Delay/153 (MXC_Delay) @06286498
   Function flags:
   Called by: 
   Calls: 
-max20303_init/152 (max20303_init) @062863f0
+max20303_init/152 (max20303_init) @0626f3f0
   Type: function definition analyzed
   Visibility: externally_visible semantic_interposition asm_written public section:.text.max20303_init (implicit_section)
   References: 
@@ -2266,7 +2266,7 @@ max20303_init/152 (max20303_init) @062863f0
   Function flags: count:1073741824 (estimated locally)
   Called by: 
   Calls: 
-max20303_gpio/151 (max20303_gpio) @062862a0
+max20303_gpio/151 (max20303_gpio) @0626f2a0
   Type: function definition analyzed
   Visibility: externally_visible semantic_interposition asm_written public section:.text.max20303_gpio (implicit_section)
   References: 
@@ -2275,7 +2275,7 @@ max20303_gpio/151 (max20303_gpio) @062862a0
   Function flags: count:1073741823 (estimated locally)
   Called by: 
   Calls: 
-max20303_sd_power/150 (max20303_sd_power) @06286150
+max20303_sd_power/150 (max20303_sd_power) @0626f150
   Type: function definition analyzed
   Visibility: externally_visible semantic_interposition asm_written public section:.text.max20303_sd_power (implicit_section)
   References: 
@@ -2284,7 +2284,7 @@ max20303_sd_power/150 (max20303_sd_power) @06286150
   Function flags: count:1073741824 (estimated locally)
   Called by: 
   Calls: 
-max20303_camera_power/149 (max20303_camera_power) @06286000
+max20303_camera_power/149 (max20303_camera_power) @0626f000
   Type: function definition analyzed
   Visibility: externally_visible semantic_interposition asm_written public section:.text.max20303_camera_power (implicit_section)
   References: 
@@ -2293,7 +2293,7 @@ max20303_camera_power/149 (max20303_camera_power) @06286000
   Function flags: count:1073741824 (estimated locally)
   Called by: 
   Calls: 
-max20303_mic_power/148 (max20303_mic_power) @0626fe70
+max20303_mic_power/148 (max20303_mic_power) @06258e70
   Type: function definition analyzed
   Visibility: externally_visible semantic_interposition asm_written public section:.text.max20303_mic_power (implicit_section)
   References: 
@@ -2302,7 +2302,7 @@ max20303_mic_power/148 (max20303_mic_power) @0626fe70
   Function flags: count:1073741824 (estimated locally)
   Called by: 
   Calls: 
-max20303_led_blue/147 (max20303_led_blue) @0626fd20
+max20303_led_blue/147 (max20303_led_blue) @06258d20
   Type: function definition analyzed
   Visibility: externally_visible semantic_interposition asm_written public section:.text.max20303_led_blue (implicit_section)
   References: 
@@ -2311,7 +2311,7 @@ max20303_led_blue/147 (max20303_led_blue) @0626fd20
   Function flags: count:1073741824 (estimated locally) nonfreeing_fn
   Called by: 
   Calls: 
-max20303_led_green/146 (max20303_led_green) @0626fbd0
+max20303_led_green/146 (max20303_led_green) @06258bd0
   Type: function definition analyzed
   Visibility: externally_visible semantic_interposition asm_written public section:.text.max20303_led_green (implicit_section)
   References: 
@@ -2320,7 +2320,7 @@ max20303_led_green/146 (max20303_led_green) @0626fbd0
   Function flags: count:1073741824 (estimated locally) nonfreeing_fn
   Called by: 
   Calls: 
-max20303_led_red/145 (max20303_led_red) @0626fa80
+max20303_led_red/145 (max20303_led_red) @06258a80
   Type: function definition analyzed
   Visibility: externally_visible semantic_interposition asm_written public section:.text.max20303_led_red (implicit_section)
   References: 
@@ -2329,7 +2329,7 @@ max20303_led_red/145 (max20303_led_red) @0626fa80
   Function flags: count:1073741824 (estimated locally) nonfreeing_fn
   Called by: 
   Calls: 
-max20303_led/144 (max20303_led) @0626f930
+max20303_led/144 (max20303_led) @06258930
   Type: function definition analyzed
   Visibility: externally_visible semantic_interposition asm_written public section:.text.max20303_led (implicit_section)
   References: 
@@ -2338,7 +2338,7 @@ max20303_led/144 (max20303_led) @0626f930
   Function flags: count:1073741824 (estimated locally) nonfreeing_fn
   Called by: 
   Calls: 
-reg_read/143 (reg_read) @0626f7e0
+reg_read/143 (reg_read) @062587e0
   Type: function definition analyzed
   Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.reg_read (implicit_section)
   References: 
@@ -2347,7 +2347,7 @@ reg_read/143 (reg_read) @0626f7e0
   Function flags: count:118111600 (estimated locally) local nonfreeing_fn
   Called by: 
   Calls: 
-reg_write_buf/142 (reg_write_buf) @0626f690
+reg_write_buf/142 (reg_write_buf) @06258690
   Type: function
   Body removed by symtab_remove_unreachable_nodes
   Visibility: semantic_interposition prevailing_def_ironly
@@ -2357,7 +2357,7 @@ reg_write_buf/142 (reg_write_buf) @0626f690
   Function flags: count:120632827 (estimated locally)
   Called by: 
   Calls: 
-reg_write/141 (reg_write) @0626f540
+reg_write/141 (reg_write) @06258540
   Type: function definition analyzed
   Visibility: semantic_interposition prevailing_def_ironly asm_written section:.text.reg_write (implicit_section)
   References: 
@@ -2366,7 +2366,7 @@ reg_write/141 (reg_write) @0626f540
   Function flags: count:118111600 (estimated locally) local nonfreeing_fn
   Called by: 
   Calls: 
-i2c/139 (i2c) @0625d750
+i2c/139 (i2c) @06246750
   Type: variable definition analyzed
   Visibility: semantic_interposition prevailing_def_ironly asm_written section:.bss.i2c (implicit_section)
   Aux: @00000001
