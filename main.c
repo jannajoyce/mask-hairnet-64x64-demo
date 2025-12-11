@@ -66,7 +66,7 @@
 // Detection Parameters
 #define FRAMES_PER_POSITION 110
 #define CAPTURE_DURATION_MS 5000
-#define FRAME_DELAY_MS      (CAPTURE_DURATION_MS / FRAMES_PER_POSITION)
+//#define FRAME_DELAY_MS      (CAPTURE_DURATION_MS / FRAMES_PER_POSITION)
 #define THRESHOLD_PERCENT   50.0
 #define INTER_POSITION_DELAY_MS 2000
 
@@ -324,7 +324,7 @@ void process_position(int position_idx)
            printf("%d: %s\n", frame + 1, class_names[class_idx]);
         }
 
-        MXC_Delay(MXC_DELAY_MSEC(FRAME_DELAY_MS));
+       // MXC_Delay(MXC_DELAY_MSEC(FRAME_DELAY_MS));
     }
 
     /* Phase (b): Yellow LED OFF - Classification Phase */
