@@ -85,7 +85,7 @@ uint8_t data565[IMAGE_SIZE_X * 2];
 static uint32_t input_0[IMAGE_SIZE_X * IMAGE_SIZE_Y];
 
 volatile int button_pressed = 0;           // Set by ISR to request start (when idle)
-volatile int reset_requested = 0;          // Set by ISR to request immediate abort & restart (when detecting)
+//volatile int reset_requested = 0;          // Set by ISR to request immediate abort & restart (when detecting)
 volatile uint32_t last_button_press_time = 0;
 volatile int detecting = 0;                // 1 while detection sequence running
 int class_counts[NUM_CLASSES];
@@ -110,12 +110,12 @@ void button_handler(void *cbdata)
 
         if (detecting) {
             // Abort current detection, request restart
-            reset_requested = 1;
-            printf("[ISR] Button pressed -> request RESET\n");
-        } else {
+          //  reset_requested = 1;
+          //  printf("[ISR] Button pressed -> request RESET\n");
+        //} else {
             // Request start when idle
             button_pressed = 1;
-            printf("[ISR] Button pressed -> request START\n");
+            printf("Button pressed! Start detection...\n");
         }
     }
 }
@@ -140,8 +140,8 @@ void setup_button(void)
     MXC_GPIO_EnableInt(button_cfg.port, button_cfg.mask);
     NVIC_EnableIRQ(MXC_GPIO_GET_IRQ(MXC_GPIO_GET_IDX(button_cfg.port)));
 
-    printf("Button setup complete. IRQ enabled for GPIO%d Pin %d\n",
-           MXC_GPIO_GET_IDX(button_cfg.port), __builtin_ctz(button_cfg.mask));
+    //printf("Button setup complete. IRQ enabled for GPIO%d Pin %d\n",
+         //  MXC_GPIO_GET_IDX(button_cfg.port), __builtin_ctz(button_cfg.mask));
 }
 
 /* **************************************************************************** */
@@ -291,9 +291,10 @@ void process_position(int position_idx)
     MXC_GPIO_OutSet(led_yellow.port, led_yellow.mask);
 
     for (int frame = 0; frame < FRAMES_PER_POSITION; frame++) {
-        // If reset requested, turn off yellow and exit immediately
-        if (reset_requested) {
+        // If button pressed, turn off yellow and exit immediately
+        if (MXC_GPIO_InGet(button_cfg.port, button_cfg.mask) == 0) {
             MXC_GPIO_OutClr(led_yellow.port, led_yellow.mask);
+            printf("\nButton pressed during capture - stop detection.\n");
             return;
         }
 
@@ -400,7 +401,7 @@ int main(void)
    // printf("Press button to start detection sequence...\n\n");
 
     /* Clear state */
-    reset_requested = 0;
+   // reset_requested = 0;
     detecting = 0;
 
     while (1) {
@@ -418,7 +419,7 @@ int main(void)
         }
 
         /* Begin detection sequence */
-        reset_requested = 0;   // clear any stale reset
+       // reset_requested = 0;   // clear any stale reset
         detecting = 1;         // mark detection active
 
         /* Wait for physical button release before starting */
@@ -426,27 +427,25 @@ int main(void)
             MXC_Delay(MXC_DELAY_MSEC(10));
         }
 
-        printf("\n========================================\n");
+        /* 2-second delay before starting detection */
+        printf("\nStarting in 2 seconds...\n");
+        MXC_Delay(MXC_DELAY_MSEC(2000));
+
         printf("Starting detection sequence!\n");
-        printf("========================================\n");
 
         all_leds_off();
 
-        /* Run three positions. If reset_requested becomes true during any position,
-           we abort immediately and go back to the top so ISR can re-request start. */
+        /* Run three positions. If button pressed during detection, restart from position 1 */
         process_position(0); /* FRONT */
-        if (reset_requested) {
-            printf("\n!!!! Detection interrupted - Restarting... !!!!\n");
+        if (MXC_GPIO_InGet(button_cfg.port, button_cfg.mask) == 0) {
             all_leds_off();
             detecting = 0;
             MXC_Delay(MXC_DELAY_MSEC(500));
-            // keep button_pressed as set by ISR if ISR set it (ISR will set it when idle)
             continue;
         }
 
         process_position(1); /* LEFT */
-        if (reset_requested) {
-            printf("\n!!!! Detection interrupted - Restarting... !!!!\n");
+        if (MXC_GPIO_InGet(button_cfg.port, button_cfg.mask) == 0) {
             all_leds_off();
             detecting = 0;
             MXC_Delay(MXC_DELAY_MSEC(500));
@@ -454,23 +453,20 @@ int main(void)
         }
 
         process_position(2); /* RIGHT */
-        if (reset_requested) {
-            printf("\n!!!! Detection interrupted - Restarting... !!!!\n");
+        if (MXC_GPIO_InGet(button_cfg.port, button_cfg.mask) == 0) {
             all_leds_off();
             detecting = 0;
             MXC_Delay(MXC_DELAY_MSEC(500));
             continue;
         }
 
-        printf("\n========================================\n");
         printf("Detection sequence complete!\n");
         printf("Press button to start again...\n");
-        printf("========================================\n\n");
 
         all_leds_off();
 
         /* Clear state and mark as idle */
-        reset_requested = 0;
+       // reset_requested = 0;
         detecting = 0;
     }
 
